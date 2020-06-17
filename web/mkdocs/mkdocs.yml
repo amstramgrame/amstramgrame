@@ -1,0 +1,43 @@
+site_name: Amstramgrame
+site_description: Plateforme web du projet Amstramgrame.
+copyright: Copyright &copy; 2020 <a href="http://www.grame.fr">Grame-CNCM</a> & <a href="https://www.reseau-canope.fr/">Réseau Canopé</a>
+nav:
+    - Parcours pédagogiques:
+      - ' Introduction ' : scenari/introduction.md
+      - ' Niveau 1 ' : scenari/niveau1.md
+      - ' Test ' : scenari/test.md
+    - Outils:
+      - ' Le gramophone ' : tools/gramophone.md
+    - À propos: about.md
+
+theme: 
+  name: mkdocs
+  custom_dir: 'theme'
+#The available installed themes are: mkdocs, readthedocs, cinder, cosmo, flatly, spacelab, united, yeti
+
+site_dir: ../../docs
+
+
+extra:
+    social:
+        - type: github
+          link: https://github.com/grame-cncm/amstramgrame
+        - type: home
+          link: https://www.amstramgrame.fr
+        - type: envelope
+          link: mailto:michony@grame.fr
+
+plugins:
+  - search
+
+extra:
+  search:
+    language: fr
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+    - mdx_math
+    - markdown_include.include:
+        base_path: './docs'

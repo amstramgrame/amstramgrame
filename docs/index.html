@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Plateforme web du projet Amstramgrame.">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Amstramgrame</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="."><img src="./img/logoAmstram.png" width=180></a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Parcours pédagogiques <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="scenari/introduction/" class="dropdown-item"> Introduction </a>
+</li>
+                                    
+<li>
+    <a href="scenari/niveau1/" class="dropdown-item"> Niveau 1 </a>
+</li>
+                                    
+<li>
+    <a href="scenari/test.md" class="dropdown-item"> Test </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Outils <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="tools/gramophone/" class="dropdown-item"> Le gramophone </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="about/" class="nav-link">À propos</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                      
+                      <li class="nav-item">
+                          <a href="https://faustide.grame.fr" class="nav-link">
+                            Coder !
+                          </a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-12 main-container home-container" role="main">
+
+<video autoplay muted id="aniBoule">
+<source src="img/animationBoule.mp4" type="video/mp4" >
+</video>
+
+<h2 id="amstramgrame-quest-ce-que-cest">Amstramgrame qu'est-ce que c'est ?</h2>
+<hr width="60%">
+
+<p><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/r2ySnEmnf1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe></p>
+<h3 id="arts-sciences">ARTS &amp; SCIENCES</h3>
+<div class="row">
+<div class="col-md-6 home-left">
+Un projet pédagogique arts &amp; sciences, réunissant  services et ressources à destination de la communauté éducative. Il permet une mise en application concrète de concepts scientifiques parfois abstraits en utilisant la création musicale et la programmation informatique comme vecteurs.
+</div>
+<div class="col-md-6 home-right">
+<img src="img/bouleAmstram.png" width="50%">
+</div>
+</div>
+
+<h3 id="pour-qui">POUR QUI ?</h3>
+<div class="row">
+<div class="col-md-6 home-left">
+<img src="img/students.png" width=50%>
+</div>
+<div class="col-md-6 home-right">
+Un projet destiné aux élèves de cycle primaire et secondaire, ainsi que leurs enseignants. Il place les sciences et l’ingénierie au cœur de la démarche pédagogique en les inscrivant dans le domaine de la création musicale et sonore.
+</div>
+</div>
+
+<h2 id="les-outils">Les outils</h2>
+<hr width="60%">
+
+<h3 id="faust">FAUST</h3>
+<div class="row">
+<div class="col-md-6 home-left">
+
+<a href="https://faust.grame.fr">FAUST (Functional AUdio STream)</a> est un langage de programmation, créé et développé à <a href="http://www.grame.fr">Grame</a>. Il permet de concevoir de manière simple des synthétiseurs (instrument de musique électronique) et des effets sonores pour un grand nombre de plateformes. Il peut être notamment utilisé pour créer des application web et mobile pour la musique.
+
+</div>
+<div class="col-md-6 home-right">
+<img src="img/faustLogoBlack.png" width="50%">
+</div>
+</div>
+
+<h3 id="le-gramophone">LE GRAMOPHONE</h3>
+<div class="row">
+<div class="col-md-6 home-left">
+<img src="img/gramophone.png" width=50%>
+</div>
+<div class="col-md-6 home-right">
+<a href="tools/gramophone">Le Gramophone</a> est un dispositif audio spécialement conçu pour le projet Amstramgrame. Ses différents capteurs et contrôleurs (ex. accéléromètre, gyroscope, capteur de lumière, etc.) le font réagir aux gestes de l’utilisateur. Sa batterie offrant environ cinq heures d’autonomie et son haut-parleur puissant le rendent indépendant de tout ordinateur, le rapprochant ainsi des instruments de musique acoustiques traditionnels.
+</div>
+</div>
+
+<h3 id="smartfaust">SMARTFAUST</h3>
+<div class="row">
+<div class="col-md-6 home-left">
+SmartFaust est un concept d’applications musicales pour smartphones développé par le langage FAUST. Ces applications ont la particularité de faire uniquement appel aux gestes de l’utilisateur et non pas à un pianotage sur l’écran de l’appareil. Réalisées pour iOS et Android elles savent en outre exploiter les capteurs de mouvement de ces appareils ce qui permet d’en faire de véritables instruments de musique.
+</div>
+<div class="col-md-6 home-right">
+<img src="img/smartFaust.png" width="50%">
+</div>
+</div>
+
+<h3 id="gamelan">GAMELAN</h3>
+<div class="row">
+<div class="col-md-6 home-left">
+<img src="img/gamelan.png" width=50%>
+</div>
+<div class="col-md-6 home-right">
+Ensemble d’applications musicales pour smartphone s’inspirant de la tradition musicale javanaise à laquelle s’ajoute des univers sonores électroniques. Les 7 applications, (Attackey, Baliphone, DroneLAN, Sequenceur, ShakerXY, Sinusoïde, Atomicro) de la famille GameLan peuvent être jouées en solo ou en orchestre utilisant les mouvements du smartphone. Pas de prérequis musical, seul les gestes feront de l’utilisateur un musicien.
+</div>
+</div>
+
+<h2 id="les-partenaires">Les partenaires</h2>
+<hr width="60%">
+
+<h3 id="grame">GRAME</h3>
+<div class="row">
+<div class="col-md-6 home-left">
+Grame est un centre national de création musicale. Sa mission principale est de permettre la conception et la réalisation d’œuvres musicales nouvelles, dans un contexte de transversalité des arts et de synergie arts - sciences.
+</div>
+<div class="col-md-6 home-right">
+<img src="img/logoGrame.png" width="70%">
+</div>
+</div>
+
+<h3 id="canope">CANOPÉ</h3>
+<div class="row">
+<div class="col-md-6 home-left">
+<img src="img/logoCanope.png" width=50%>
+</div>
+<div class="col-md-6 home-right">
+Réseau Canopé est le réseau de création et d’accompagnement pédagogiques placé sous la tutelle du ministère de l’Éducation nationale. Il édite et diffuse des ressources pédagogiques multi-formats répondant aux besoins de la communauté éducative.
+</div>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+                <p>Copyright &copy; 2020 <a href="http://www.grame.fr">Grame-CNCM</a> & <a href="https://www.reseau-canope.fr/">Réseau Canopé</a></p>
+            <p>Website built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Outil de recherche</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fermer</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Que cherchez-vous sur le site d'Amstramgrame ?
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.1
+Build Date UTC : 2020-04-29 12:45:23
+-->
