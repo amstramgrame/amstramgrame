@@ -1,5 +1,17 @@
 # Niveau 1
 
+## Tester son Gramophone
+
+<!-- faust-run -->
+```
+import("stdfaust.lib");
+freq = hslider("freq",440,50,3000,0.01);
+gain = hslider("gain",1,0,1,0.01);
+gate = button("gate");
+process = os.sawtooth(freq);
+```
+<!-- /faust-run -->
+
 ## Prise en main du Gramophone/Smartphone
 
 **Durée** : 2h  

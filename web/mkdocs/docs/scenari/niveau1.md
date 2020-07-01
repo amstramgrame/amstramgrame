@@ -1,5 +1,24 @@
 # Niveau 1
 
+## Tester son Gramophone
+
+<!-- faust-run -->
+<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+~~~
+
+import("stdfaust.lib");
+freq = hslider("freq",440,50,3000,0.01);
+gain = hslider("gain",1,0,1,0.01);
+gate = button("gate");
+process = os.sawtooth(freq);
+
+~~~
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/niveau1/exfaust0/exfaust0.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+<!-- /faust-run -->
+
 ## Prise en main du Gramophone/Smartphone
 
 **Durée** : 2h  
@@ -49,7 +68,7 @@ sur le gramophone permet d’entendre ces différents types de sons et de contr�
 * Le programme étudié pourrait prendre la forme suivante : 
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+<div class="faust-run"><img src="exfaust1/exfaust1.svg" class="mx-auto d-block">
 ~~~
 
 import("stdfaust.lib");
@@ -60,9 +79,8 @@ process = os.sawtooth(freq)*gain*gate;
 
 ~~~
 
-<a href="https://faustide.grame.fr/?code=https://grame-cncm.github.io/amstramgrame//scenari/niveau1/exfaust0/exfaust0.dsp" target="editor">
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/niveau1/exfaust1/exfaust1.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
-<button type="button" class="btn btn-primary">Charger sur le Gramophone >></button></a>
 </div>
 <!-- /faust-run -->
 
