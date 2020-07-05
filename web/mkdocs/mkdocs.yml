@@ -7,7 +7,11 @@ nav:
       - ' Niveau 1 ' : scenari/niveau1.md
       - ' Test ' : scenari/test.md
     - Outils:
-      - ' Le gramophone ' : tools/gramophone.md
+      - ' Le langage Faust ' : tools/faust-lang.md
+      - ' Le Faust Web IDE ' : tools/faust-ide.md
+      - ' Le Faust Playground ' : tools/faust-ide.md
+      - ' Le Gramophone ' : tools/gramophone.md
+      - ' Tutoriel : Programmer le Gramophone ' : tools/prog-gramo.md
     - À propos: about.md
 
 theme: 
