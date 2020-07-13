@@ -52,7 +52,7 @@ body > .container {
     margin: 20px auto 30px auto;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4 {
   color: #000;
 	margin-top: 40px;
 	font-weight: 700;
@@ -60,6 +60,10 @@ h1,h2,h3 {
 
 h3 {
 	font-size: 22px;
+}
+
+h4 {
+	font-size: 18px;
 }
 
 hr {
@@ -190,7 +194,7 @@ footer {
 .bs-sidebar .nav > li > a.active,
 .bs-sidebar .nav > li > a.active:hover,
 .bs-sidebar .nav > li > a.active:focus {
-    font-weight: bold;
+    font-weight: bold !important;
     background-color: transparent;
     border-right: 1px solid;
 }
@@ -423,4 +427,9 @@ pre {
 
 code {
 	color: #775177;
+}
+
+figcaption {
+  margin-top:-1.2rem;
+  font-weight: bold;
 }

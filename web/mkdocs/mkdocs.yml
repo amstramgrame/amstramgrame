@@ -6,17 +6,22 @@ nav:
       - ' Introduction ' : scenari/introduction.md
       - ' Niveau 1 ' : scenari/niveau1.md
       - ' Test ' : scenari/test.md
-    - Outils:
-      - ' Le langage Faust ' : tools/faust-lang.md
-      - ' Le Faust Web IDE ' : tools/faust-ide.md
-      - ' Le Faust Playground ' : tools/faust-ide.md
-      - ' Le Gramophone ' : tools/gramophone.md
-      - ' Tutoriel : Programmer le Gramophone ' : tools/prog-gramo.md
+    - Le Gramophone:
+      - ' Qu&#39;est-ce que c&#39;est ? ' : gramophone/about.md
+      - ' Le GramoLoader ' : gramophone/loader.md
+      - ' Utiliser le Gramophone ' : gramophone/using.md
+      - ' Fabriquer le Gramophone ' : gramophone/making.md
+      - ' Programmes Faust pour Gramophone ' : gramophone/programs.md
+    - Faust:
+      - ' Qu&#39;est-ce que c&#39;est ? ' : faust/about.md
+      - ' Le Faust Web IDE ' : faust/faust-ide.md
+      - ' Le Faust Playground ' : faust/faust-ide.md
     - À propos: about.md
 
 theme: 
   name: mkdocs
   custom_dir: 'theme'
+  navigation_depth: 4
 #The available installed themes are: mkdocs, readthedocs, cinder, cosmo, flatly, spacelab, united, yeti
 
 site_dir: ../../docs

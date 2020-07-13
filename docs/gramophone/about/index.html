@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title> Qu&#39;est-ce que c&#39;est ?  - Amstramgrame</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../.."><img src="../../img/logoAmstram.png" width=180></a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Parcours pédagogiques <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../scenari/introduction/" class="dropdown-item"> Introduction </a>
+</li>
+                                    
+<li>
+    <a href="../../scenari/niveau1/" class="dropdown-item"> Niveau 1 </a>
+</li>
+                                    
+<li>
+    <a href="../../scenari/test.md" class="dropdown-item"> Test </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Le Gramophone <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active"> Qu&#39;est-ce que c&#39;est ? </a>
+</li>
+                                    
+<li>
+    <a href="../loader/" class="dropdown-item"> Le GramoLoader </a>
+</li>
+                                    
+<li>
+    <a href="../using/" class="dropdown-item"> Utiliser le Gramophone </a>
+</li>
+                                    
+<li>
+    <a href="../making/" class="dropdown-item"> Fabriquer le Gramophone </a>
+</li>
+                                    
+<li>
+    <a href="../programs.md" class="dropdown-item"> Programmes Faust pour Gramophone </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Faust <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../faust/about/" class="dropdown-item"> Qu&#39;est-ce que c&#39;est ? </a>
+</li>
+                                    
+<li>
+    <a href="../../faust/faust-ide.md" class="dropdown-item"> Le Faust Web IDE </a>
+</li>
+                                    
+<li>
+    <a href="../../faust/faust-ide.md" class="dropdown-item"> Le Faust Playground </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">À propos</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                      
+                      <li class="nav-item">
+                          <a href="https://faustide.grame.fr" class="nav-link">
+                            Coder !
+                          </a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row"><div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#le-gramophone" class="nav-link">Le Gramophone</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#vue-densemble" class="nav-link">Vue d'ensemble</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#programmation-du-gramophone" class="nav-link">Programmation du Gramophone</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fonctionnement-du-gramophone" class="nav-link">Fonctionnement du Gramophone</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#demarrage-du-gramophone" class="nav-link">Démarrage du Gramophone</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#tenir-le-gramophone" class="nav-link">Tenir le Gramophone</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#controle-du-volume" class="nav-link">Contrôle du volume</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#controle-des-parametres-du-son" class="nav-link">Contrôle des paramètres du son</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#le-bouton-assignable" class="nav-link">Le bouton assignable</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#le-potentiometre-assignable" class="nav-link">Le potentiomètre assignable</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#la-photoresistance" class="nav-link">La photorésistance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#charger-le-gramophone" class="nav-link">Charger le Gramophone</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#passer-dun-programme-a-lautre" class="nav-link">Passer d'un programme à l'autre</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#aller-plus-loin-fabriquer-son-propre-gramophone" class="nav-link">Aller plus loin : fabriquer son propre Gramophone !</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9 main-container" role="main">
+
+<h1 id="le-gramophone">Le Gramophone</h1>
+<figure>
+<img src="img/gramo.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Le Gramophone est un instrument de musique programmable développé à <a href="http://www.grame.fr">Grame</a> dans le cadre du projet AmStramGrame. À l'instar des instruments de musique acoustiques "traditionnels" comme la trompette, le tabla ou le violon, il permet de produire du son, d'être contrôlé par un musicien et est complètement indépendant (il n'a pas besoin d'être branché avec un câble pour fonctionner). À l'inverse des instruments acoustiques, le son qu'il produit et son comportement sont complètement malléables et peuvent être décrits par la programmation informatique grâce au <a href="../../faust/about/">langage Faust</a>.  </p>
+<figure>
+<img src="img/gramo-overview.svg" class="mx-auto d-block" width="60%">
+<center><figcaption>Fonctionnement du Gramophone</figcaption></center>
+</figure>
+
+<h2 id="vue-densemble">Vue d'ensemble</h2>
+<p>Le Gramophone est composé d'une coque en plastique, d'un haut-parleur, d'un ordinateur embarqué, d'une batterie et de <a href="TODO-tutorial">capteurs (accéléromètre, gyroscope, boussole, boutons, potentiomètres et photorésistance)</a>. </p>
+<p>TODO: pics with components (bien parler de bouton assignable).</p>
+<h2 id="programmation-du-gramophone">Programmation du Gramophone</h2>
+<p>Le Gramophone se programme via un câble USB connecté à un ordinateur. Le <a href="../../faust/about/">langage Faust</a> peut être utilisé pour programmer le Gramophone grâce aux plateformes <a href="../faust/playground.md">Faust Playground</a> (programmation graphique pour les débutants) et <a href="../faust/ide.md">Faust Web IDE</a> (programmation écrites/scriptées). Pour que cela fonctionne, il est nécessaire d'installer l'application <a href="../loader/">GramoLoader</a> sur sa machine qui permet de faire le lien entre le navigateur Web et le gramophone.</p>
+<figure>
+<img src="img/gramo-prog.svg" class="mx-auto d-block" width="90%">
+<center><figcaption>Programmation du Gramophone</figcaption></center>
+</figure>
+
+<p>Le tutoriel <a href="../using/">Utiliser le Gramophone</a> donne plus détails sur la programmation du Gramophone.</p>
+<h2 id="fonctionnement-du-gramophone">Fonctionnement du Gramophone</h2>
+<h3 id="demarrage-du-gramophone">Démarrage du Gramophone</h3>
+<p>Le Gramophone abrite un interrupteur qui permet de le démarrer et de l'arrêter. Cet interrupteur a trois positions pour sélectionner le mode de fonctionnement :</p>
+<ul>
+<li>en position centrale, le Gramophone est à l'arrêt ;</li>
+<li>lorsqu'il est enclenché à gauche, le Gramophone est démarré en "mode programmation" ;</li>
+<li>lorsqu'il est enclenché à droite, le Gramophone est démarré en "mode jeu" : il produit du son. </li>
+</ul>
+<p>TODO: pic of the switch</p>
+<p>Le "mode programmation" doit être activé pour pouvoir programmer le Gramophone depuis le <a href="../faust/ide.md">Faust Web IDE</a> ou le <a href="../faust/playground.md">Faust Playground</a> via l'application <a href="../loader/">GramoLoader</a>.</p>
+<p>Le "mode jeu" doit être sélectionné pour pouvoir executer les programmes installés sur le Gramophone.  </p>
+<h3 id="tenir-le-gramophone">Tenir le Gramophone</h3>
+<p>Le Gramophone se tient dans la paume de la main droite avec la sangle autour de la main. Cette dernière peut être ajustée afin de tenir le Gramophone fermement. </p>
+<figure>
+<img src="img/gramo-holding1.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Il est important de noter que la sangle n'est pas placée sur le Gramophone de manière symétrique : la photorésistance doit tomber sous le pouce et le bouton assignable sous le majeur :</p>
+<figure>
+<img src="img/gramo-holding0.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<h3 id="controle-du-volume">Contrôle du volume</h3>
+<p>Le volume du son produit par le Gramophone peut être contrôlé par le potentiomètre se trouvant juste au-dessus de la prise jack (celui qui se trouve en bas de la main lorsque l'on tient le Gramophone) :</p>
+<p>TODO: pic</p>
+<blockquote>
+<p>Il est important de noter que le volume du son produit dépend aussi fortement du programme exécuté sur le Gramophone.</p>
+</blockquote>
+<h3 id="controle-des-parametres-du-son">Contrôle des paramètres du son</h3>
+<p>Le son produit par le Gramophone peut-être contrôlé à l'aide de différents éléments d'interface. Chacun d'entre-eux peut être assigné directement dans un programme Faust à un paramètre du son à l'aide de <a href="TODO">métadatas</a> (le fonctionnement des métadata dans Faust est détaillé dans TODO).</p>
+<h4 id="le-bouton-assignable">Le bouton assignable</h4>
+<p>Le bouton assignable du Gramophone se trouve à l'opposée du <a href="#controle-du-volume">potentiomètre de volume</a> et tombe sous la majeur du musicien :</p>
+<figure>
+<img src="img/gramo-button.svg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Il est adressable dans un programme Faust à l'aide de la métadata suivante : <code>[switch:1]</code></p>
+<h4 id="le-potentiometre-assignable">Le potentiomètre assignable</h4>
+<p>La potentiomètre assignable du Gramophone se trouve juste à gauche du <a href="#bouton-assignable">bouton assignable</a> :</p>
+<figure>
+<img src="img/gramo-pot.svg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Il est "typiquement" actionné par la main gauche de l'instrumentiste.</p>
+<p>Ce potentiomètre est adressable dans un programme Faust à l'aide de la métadata suivante : <code>[knob:3]</code></p>
+<h4 id="la-photoresistance">La photorésistance</h4>
+<p>Le photorésistance assignable du Gramophone se trouve juste à gauche du <a href="#potentiometre-assignable">potentiomètre assignable</a> et tombe sous le pouce de l'instrumentiste :</p>
+<figure>
+<img src="img/gramo-photores.svg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Elle est adressable dans un programme Faust à l'aide de la métadata suivante : <code>TODO</code>.</p>
+<h3 id="charger-le-gramophone">Charger le Gramophone</h3>
+<p>Pour charger la batterie du Gramophone, il suffit de le brancher à un chargeur USB ou à un ordinateur. Pour que la charge puisse s'effectuer, il est nécessaire de mettre le Gramophone en <a href="#demarrage-du-gramophone">mode "jeu" ou "programmation"</a> : le Gramophone ne se chargera pas s'il est éteint !</p>
+<figure>
+<img src="img/gramo-charge.svg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>L'autonomie du Gramophone dépend de la complexité du programme exécuté, de la santé de la batterie, et du temps de charge. Il faut compter environ deux heures pour une charge complète. </p>
+<h3 id="passer-dun-programme-a-lautre">Passer d'un programme à l'autre</h3>
+<p>Plusieurs programmes Faust peuvent être installés sur un seul Gramophone. <!-- TODO: il faut expliquer comment --> Pour passer d'un programme à un autre, il suffit de tourner la molette noire placée en bas du Gramophone :</p>
+<figure>
+<img src="img/gramo-prog-change.svg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Les programmes sont sélectionnés en boucle. Lorsque <a href="#demarrage-du-gramophone">le Gramophone est démarré en mode "jeu"</a>, le premier programme est toujours sélectionné. Pour passer au deuxième programme, il suffit de tourner la molette vers la droite. Pour revenir en arrière, il faut la tourner vers la gauche. Une fois arrivé au dernier programme, tourner la molette vers la droite fait automatiquement revenir au premier programme, etc.</p>
+<h2 id="aller-plus-loin-fabriquer-son-propre-gramophone">Aller plus loin : fabriquer son propre Gramophone !</h2>
+<p>Le Gramophone n'est pour l'instant pas disponible à la vente. En revanche, il est possible de fabriquer son propre Gramophone ! Pour savoir comment faire, n'hésites pas à lire le tutoriel : <a href="../making/">Fabriquer son propre Gramophone !</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+                <p>Copyright &copy; 2020 <a href="http://www.grame.fr">Grame-CNCM</a> & <a href="https://www.reseau-canope.fr/">Réseau Canopé</a></p>
+            <p>Website built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Outil de recherche</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fermer</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Que cherchez-vous sur le site d'Amstramgrame ?
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

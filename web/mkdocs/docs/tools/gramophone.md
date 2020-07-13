@@ -1,3 +1,0 @@
-# Le Gramophone
-
-TODO
