@@ -84,11 +84,11 @@
 </li>
                                     
 <li>
-    <a href="../../faust/faust-ide.md" class="dropdown-item"> Le Faust Web IDE </a>
+    <a href="../../faust/ide/" class="dropdown-item"> Le Faust Web IDE </a>
 </li>
                                     
 <li>
-    <a href="../../faust/faust-ide.md" class="dropdown-item"> Le Faust Playground </a>
+    <a href="../../faust/playground/" class="dropdown-item"> Le Faust Playground </a>
 </li>
                                 </ul>
                             </li>
@@ -128,6 +128,26 @@
             
             <li class="nav-item" data-level="1"><a href="#lapplication-gramoloader" class="nav-link">L'application GramoLoader</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#fonctionnement" class="nav-link">Fonctionnement</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#telechargementinstallation" class="nav-link">Téléchargement/Installation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#windows" class="nav-link">Windows</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#macos" class="nav-link">MacOS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#linux-sources" class="nav-link">Linux (Sources)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -136,7 +156,34 @@
                     <div class="col-md-9 main-container" role="main">
 
 <h1 id="lapplication-gramoloader">L'application GramoLoader</h1>
-<p>TODO</p></div>
+<p>L'application GramoLoader permet de facilement installer des programmes écrits avec le <a href="../../faust/about/">langage de programmation Faust</a> sur le Gramophone. Elle a été spécialement conçue pour être utilisée en tandem avec le <a href="../../faust/ide/">Faust Web IDE</a> ou le <a href="../../faust/playground/">Faust Playground</a> (voir le tutoriel <a href="../using/">Utiliser le Gramophone</a>).</p>
+<figure>
+<img src="img/loader.jpg" class="mx-auto d-block" width="50%">
+</figure>
+
+<h2 id="fonctionnement">Fonctionnement</h2>
+<p>Le <a href="../../faust/ide/">Faust Web IDE</a> et le <a href="../../faust/playground/">Faust Playground</a> génèrent un fichier appelé <code>binary.zip</code> lorsque le bouton "Gramophone" est pressé. Une fois téléchargé sur l'ordinateur (généralement dans le dossier téléchargement), ce fichier peut être sélectionné avec l'application GramoLoader en cliquant sur le bouton "Sélectionner un fichier" pour le transmettre au Gramophone :</p>
+<figure>
+<img src="img/loader-usage.svg" class="mx-auto d-block" width="100%">
+<center><figcaption>Programmation du Gramophone</figcaption></center>
+</figure>
+
+<p>Pour que cela fonctionne, il est nécessaire que le Gramophone soit connecté à l'ordinateur avec un câble USB et <a href="../about/#demarrage-du-gramophone">qu'il soit mis en mode programmation</a>.</p>
+<p>Une fois sélectionné, toute nouvelle version de <code>binary.zip</code> étant téléchargée sur l'ordinateur sera automatiquement envoyée au Gramophone. <strong>L'application GramoLoader doit évidemment rester ouverte pour que cela fonctionne.</strong></p>
+<p>Le bouton "Réessayer" permet de réinitialiser l'envoi de <code>binary.zip</code> au Gramophone. Le bouton "QUITTER" permet de quitter l'application.</p>
+<h2 id="telechargementinstallation">Téléchargement/Installation</h2>
+<p>L'application GramoLoader est téléchargeable gratuitement depuis ce site et est disponible pour Windows, MacOS et Linux.</p>
+<h3 id="windows">Windows</h3>
+<p><a href="https://github.com/amstramgrame/amstramgrame/raw/master/gramophone/autoloader/bin/windows/GramoLoader.exe"><strong>&gt;&gt; Télécharger GramoLoader pour Windows &lt;&lt;</strong></a></p>
+<p>Sous Windows, GramoLoader se présente sous la forme d'un fichier <code>.exe</code>. Ce dernier peut être placé n'importe où sur l'ordinateur. Il suffit de le lancer pour démarrer l'application.</p>
+<h3 id="macos">MacOS</h3>
+<p>Une versions spécifique de GramoLoader est disponible pour chaque version de MacOS :</p>
+<p>TODO: tableau des téléchargeable pour MacOS.</p>
+<p>Sous MacOS, GramoLoader se présente sous la forme d'un fichier <code>.app</code>. Ce dernier peut être placé n'importe où sur l'ordinateur (dans le dossier "Applications", par exemple). Il suffit de le lancer pour démarrer l'application.</p>
+<h3 id="linux-sources">Linux (Sources)</h3>
+<p>Il n'existe pas de version pré-compilée de GramoLoader pour Linux. À l'inverse, les sources de l'application peuvent être trouvées directement sur le Git d'AmStramGrame : <a href="https://github.com/amstramgrame/amstramgrame/tree/master/gramophone/autoloader">https://github.com/amstramgrame/amstramgrame/tree/master/gramophone/autoloader</a> puis lancées en ligne de commande avec :</p>
+<pre><code>python3 src/FlashAppAsync.py
+</code></pre></div>
             </div>
         </div>
 

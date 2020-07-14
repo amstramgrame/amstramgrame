@@ -211,7 +211,7 @@ except:
     pass
 
 
-directory = Label(window, text = zipPath, font=("Helvetica", 12))
+directory = Label(window, text = zipPath, font=("Helvetica", 10))
 directory.place(anchor=NW, x=(5/2), y=(20/2))
 
 changeFileB = Button(window, text=selectLabel, command=changeFile, font=("Helvetica", 15))

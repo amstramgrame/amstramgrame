@@ -14,8 +14,8 @@ nav:
       - ' Programmes Faust pour Gramophone ' : gramophone/programs.md
     - Faust:
       - ' Qu&#39;est-ce que c&#39;est ? ' : faust/about.md
-      - ' Le Faust Web IDE ' : faust/faust-ide.md
-      - ' Le Faust Playground ' : faust/faust-ide.md
+      - ' Le Faust Web IDE ' : faust/ide.md
+      - ' Le Faust Playground ' : faust/playground.md
     - À propos: about.md
 
 theme: 
