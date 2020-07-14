@@ -26,7 +26,7 @@ Le Gramophone se programme via un câble USB connecté à un ordinateur. Le [lan
 <center><figcaption>Programmation du Gramophone</figcaption></center>
 </figure>
 
-Le tutoriel [Utiliser le Gramophone](using.md) donne plus détails sur la programmation du Gramophone.
+Le tutoriel [Programmer le Gramophone](programming.md) donne plus détails sur la programmation du Gramophone.
 
 ## Fonctionnement du Gramophone
 

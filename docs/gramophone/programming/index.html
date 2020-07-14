@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title> Utiliser le Gramophone  - Amstramgrame</title>
+        <title> Programmer le Gramophone  - Amstramgrame</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -63,7 +63,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active"> Utiliser le Gramophone </a>
+    <a href="./" class="dropdown-item active"> Programmer le Gramophone </a>
 </li>
                                     
 <li>
@@ -126,8 +126,20 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#utiliser-le-gramophone" class="nav-link">Utiliser le Gramophone</a>
+            <li class="nav-item" data-level="1"><a href="#programmer-le-gramophone" class="nav-link">Programmer le Gramophone</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#avec-le-faust-web-ide" class="nav-link">Avec le Faust Web IDE</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#produire-du-son" class="nav-link">Produire du son</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#avec-le-faust-playground" class="nav-link">Avec le Faust Playground</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -135,8 +147,42 @@
 </div></div>
                     <div class="col-md-9 main-container" role="main">
 
-<h1 id="utiliser-le-gramophone">Utiliser le Gramophone</h1>
-<p>TODO</p></div>
+<h1 id="programmer-le-gramophone">Programmer le Gramophone</h1>
+<p>Dans ce court tutoriel, nous montrons comment programmer le Gramophone avec le <a href="../../faust/ide/">Faust Web IDE</a> et le <a href="../../faust/playground/">Faust Playground</a>. </p>
+<h2 id="avec-le-faust-web-ide">Avec le Faust Web IDE</h2>
+<p><strong>Avant de débuter ce tutoriel, il est recommandé de lire <a href="../../faust/ide/">la page sur le Faust Web IDE</a></strong>.</p>
+<h3 id="produire-du-son">Produire du son</h3>
+<p>Prenons un programme Faust très simple qui produit <a href="TODO">une onde en dent de scie</a> :</p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+
+<pre><code>import(&quot;stdfaust.lib&quot;);
+freq = 440;
+process = os.sawtooth(freq);
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programming/exfaust0/exfaust0.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
+<p>Clique sur le bouton "Éditer/exécuter le programme" pour ouvrir le programme ci-dessus dans le Faust Web IDE. Il peut alors être exécuté directement dans le navigateur Web en suivant la procédure indiquée <a href="TODO">ici</a>. </p>
+<p>Pour charger ce programme sur le Gramophone, il suffit de cliquer dans un premier temps sur le bouton "Gramo" dans l'IDE :</p>
+<figure>
+<img src="img/ide-gramo.svg" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>Cela lance la "fabrication" du programme et après un quinzaine de seconde, il devrait être automatiquement téléchargé sur ton ordinateur sous la forme d'un fichier appelé <code>binary.zip</code>. Si le téléchargement ne se lance pas, il est possible que ce dernier soit bloqué par ton navigateur Web. </p>
+<p>Une fois que <code>binary.zip</code> est téléchargé, connecte le Gramophone à ton ordinateur puis lance <a href="../loader/">l'application GramoLoader</a>. Assure-toi que <a href="../about/#demarrage-du-gramophone">ton Gramophone est en "mode programmation"</a> (l'interrupteur de mise en route du Gramophone doit-être placé à gauche). Ensuite, sélectionne le fichier <code>binary.zip</code> sur l'ordinateur en cliquant sur le bouton "Sélectionner un fichier" :</p>
+<figure>
+<img src="img/loader.jpg" class="mx-auto d-block" width="50%">
+</figure>
+
+<p>Le programme devrait alors être envoyé sur le Gramophone. Cette opération prend généralement une quinzaine de secondes. </p>
+<h2 id="avec-le-faust-playground">Avec le Faust Playground</h2></div>
             </div>
         </div>
 

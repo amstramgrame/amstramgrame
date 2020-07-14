@@ -9,7 +9,7 @@ nav:
     - Le Gramophone:
       - ' Qu&#39;est-ce que c&#39;est ? ' : gramophone/about.md
       - ' Le GramoLoader ' : gramophone/loader.md
-      - ' Utiliser le Gramophone ' : gramophone/using.md
+      - ' Programmer le Gramophone ' : gramophone/programming.md
       - ' Fabriquer le Gramophone ' : gramophone/making.md
       - ' Programmes Faust pour Gramophone ' : gramophone/programs.md
     - Faust:

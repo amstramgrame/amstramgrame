@@ -1,6 +1,6 @@
 # L'application GramoLoader
 
-L'application GramoLoader permet de facilement installer des programmes écrits avec le [langage de programmation Faust](../faust/about.md) sur le Gramophone. Elle a été spécialement conçue pour être utilisée en tandem avec le [Faust Web IDE](../faust/ide.md) ou le [Faust Playground](../faust/playground.md) (voir le tutoriel [Utiliser le Gramophone](using.md)).
+L'application GramoLoader permet de facilement installer des programmes écrits avec le [langage de programmation Faust](../faust/about.md) sur le Gramophone. Elle a été spécialement conçue pour être utilisée en tandem avec le [Faust Web IDE](../faust/ide.md) ou le [Faust Playground](../faust/playground.md) (voir le tutoriel [Programmer le Gramophone](programming.md)).
 
 <figure>
 <img src="img/loader.jpg" class="mx-auto d-block" width="50%">
