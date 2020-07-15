@@ -3,6 +3,7 @@ site_description: Plateforme web du projet Amstramgrame.
 copyright: Copyright &copy; 2020 <a href="http://www.grame.fr">Grame-CNCM</a> & <a href="https://www.reseau-canope.fr/">Réseau Canopé</a>
 nav:
     - Parcours pédagogiques:
+      - ' Hello World : mon premier programme pour Gramophone ' : scenari/hello-world.md
       - ' Introduction ' : scenari/introduction.md
       - ' Niveau 1 ' : scenari/niveau1.md
       - ' Test ' : scenari/test.md

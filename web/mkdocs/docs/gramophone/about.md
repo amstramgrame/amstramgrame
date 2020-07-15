@@ -42,7 +42,11 @@ TODO: pic of the switch
 
 Le "mode programmation" doit être activé pour pouvoir programmer le Gramophone depuis le [Faust Web IDE](../faust/ide.md) ou le [Faust Playground](../faust/playground.md) via l'application [GramoLoader](loader.md).
 
-Le "mode jeu" doit être sélectionné pour pouvoir executer les programmes installés sur le Gramophone.  
+Le "mode jeu" doit être sélectionné pour pouvoir executer les programmes installés sur le Gramophone. **Il est nécessaire de presser/appuyer sur [la molette de changement de programme](#passer-dun-programme-a-lautre) pour acter le lancement du premier programme Faust installé sur le Gramophone :**
+
+<figure>
+<img src="img/gramo-start.svg" class="mx-auto d-block" width="80%">
+</figure>
 
 ### Tenir le Gramophone
 
@@ -102,6 +106,10 @@ Le photorésistance assignable du Gramophone se trouve juste à gauche du [poten
 
 Elle est adressable dans un programme Faust à l'aide de la métadata suivante : `TODO`.
 
+#### Les capteurs de mouvements
+
+TODO
+
 ### Charger le Gramophone
 
 Pour charger la batterie du Gramophone, il suffit de le brancher à un chargeur USB ou à un ordinateur. Pour que la charge puisse s'effectuer, il est nécessaire de mettre le Gramophone en [mode "jeu" ou "programmation"](#demarrage-du-gramophone) : le Gramophone ne se chargera pas s'il est éteint !
@@ -121,6 +129,8 @@ Plusieurs programmes Faust peuvent être installés sur un seul Gramophone. <!--
 </figure>
 
 Les programmes sont sélectionnés en boucle. Lorsque [le Gramophone est démarré en mode "jeu"](#demarrage-du-gramophone), le premier programme est toujours sélectionné. Pour passer au deuxième programme, il suffit de tourner la molette vers la droite. Pour revenir en arrière, il faut la tourner vers la gauche. Une fois arrivé au dernier programme, tourner la molette vers la droite fait automatiquement revenir au premier programme, etc.
+
+## Métadatas de programmation du Gramophone
 
 ## Aller plus loin : fabriquer son propre Gramophone !
 

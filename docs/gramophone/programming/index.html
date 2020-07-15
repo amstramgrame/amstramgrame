@@ -38,6 +38,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../scenari/hello-world/" class="dropdown-item"> Hello World : mon premier programme pour Gramophone </a>
+</li>
+                                    
+<li>
     <a href="../../scenari/introduction/" class="dropdown-item"> Introduction </a>
 </li>
                                     
@@ -130,10 +134,6 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#avec-le-faust-web-ide" class="nav-link">Avec le Faust Web IDE</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="3"><a href="#produire-du-son" class="nav-link">Produire du son</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#avec-le-faust-playground" class="nav-link">Avec le Faust Playground</a>
@@ -151,7 +151,6 @@
 <p>Dans ce court tutoriel, nous montrons comment programmer le Gramophone avec le <a href="../../faust/ide/">Faust Web IDE</a> et le <a href="../../faust/playground/">Faust Playground</a>. </p>
 <h2 id="avec-le-faust-web-ide">Avec le Faust Web IDE</h2>
 <p><strong>Avant de débuter ce tutoriel, il est recommandé de lire <a href="../../faust/ide/">la page sur le Faust Web IDE</a></strong>.</p>
-<h3 id="produire-du-son">Produire du son</h3>
 <p>Prenons un programme Faust très simple qui produit <a href="TODO">une onde en dent de scie</a> :</p>
 <!-- faust-run -->
 
@@ -182,7 +181,45 @@ process = os.sawtooth(freq);
 </figure>
 
 <p>Le programme devrait alors être envoyé sur le Gramophone. Cette opération prend généralement une quinzaine de secondes. </p>
-<h2 id="avec-le-faust-playground">Avec le Faust Playground</h2></div>
+<p>Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de <a href="../about/#demarrage-du-gramophone">mettre le Gramophone en "mode jeu"</a> en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement <a href="../about/#passer-dun-programme-a-lautre">la mollette de sélection des programmes Faust</a> une fois. Un son correspondant à l'onde en dent de scie implémenté lors de l'étape précédente devrait alors être émis. Le volume du son produit peut être contrôlé avec <a href="#controle-du-volume">le potentiomètre de contrôle du volume du Gramophone</a>.</p>
+<p>Pour modifier le programme, il suffit de changer le code dans le Faust Web IDE et de rappuyer sur le bouton "Gramo" : rien d'autre à faire, le programme GramoLoader se charge de tout !</p>
+<p>Comme le programme Faust présenté au début de cette section ne contient aucun paramètre, il n'est actuellement pas possible d’interagir avec ce dernier. Pour apprendre à contrôler un programme Faust avec le Gramophone, tu peux maintenant lire le scenario : <a href="../../scenari/hello-world/">Hello World : mon premier programme pour Gramophone</a>.</p>
+<h2 id="avec-le-faust-playground">Avec le Faust Playground</h2>
+<p><strong>Avant de débuter ce tutoriel, il est recommandé de lire <a href="../../faust/playground/">la page sur le Faust Playground</a></strong>.</p>
+<p>Construisons tout d'abord un programme très simple dans le <a href="https://faustplayground.grame.fr/">Faust Playground</a> en connectant par exemple une harpe "Kisana" (instrument) à un Echo (effet) :</p>
+<figure>
+<img src="img/playground-kis-echo.jpg" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>Du son devrait être produit en déplaçant les potentiomètres "1 (Note 48)", "2 (Note 60)" ou "3 (Note 72)" de Kisana. </p>
+<p>Pour installer ce programme sur le Gramophone, il faut dans un premier temps cliquer sur le bouton "EXPORT" dans le menu en haut de la fenêtre :</p>
+<figure>
+<img src="img/playground-export.svg" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>puis sur le bouton "+ d'options" :</p>
+<figure>
+<img src="img/playground-export-options.svg" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>Dans les menus qui s'affichent, sélectionne "esp32" dans le premier menu et "gramophoneFlash" dans le deuxième, puis clique sur le bouton "Export" :</p>
+<figure>
+<img src="img/playground-export-select.svg" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>Après un quinzaine de secondes, un bouton "Download" devrait s'afficher dans le menu de gauche, clique dessus pour télécharger le fichier <code>binzry.zip</code> contenant le programme du Gramophone sur ton ordinateur :</p>
+<figure>
+<img src="img/playground-export-download.svg" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>Une fois que <code>binary.zip</code> est téléchargé, connecte le Gramophone à ton ordinateur puis lance <a href="../loader/">l'application GramoLoader</a>. Assure-toi que <a href="../about/#demarrage-du-gramophone">ton Gramophone est en "mode programmation"</a> (l'interrupteur de mise en route du Gramophone doit-être placé à gauche). Ensuite, sélectionne le fichier <code>binary.zip</code> sur l'ordinateur en cliquant sur le bouton "Sélectionner un fichier" :</p>
+<figure>
+<img src="img/loader.jpg" class="mx-auto d-block" width="50%">
+</figure>
+
+<p>Le programme devrait alors être envoyé sur le Gramophone. Cette opération prend généralement une quinzaine de secondes. </p>
+<p>Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de <a href="../about/#demarrage-du-gramophone">mettre le Gramophone en "mode jeu"</a> en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement <a href="../about/#passer-dun-programme-a-lautre">la mollette de sélection des programmes Faust</a> une fois. Un son correspondant au programme créé dans le Faust Playground lors de l'étape précédente devrait alors être émis.</p>
+<p>Pour modifier le programme, il suffit de changer le code dans le patch dans le Faust Playground et de re-générer une fichier <code>binary.zip</code> : rien d'autre à faire, le programme GramoLoader se charge de tout !</p></div>
             </div>
         </div>
 

@@ -6,8 +6,6 @@ Dans ce court tutoriel, nous montrons comment programmer le Gramophone avec le [
 
 **Avant de débuter ce tutoriel, il est recommandé de lire [la page sur le Faust Web IDE](../faust/ide.md)**.
 
-### Produire du son
-
 Prenons un programme Faust très simple qui produit [une onde en dent de scie](TODO) :
 
 <!-- faust-run -->
@@ -41,4 +39,56 @@ Une fois que `binary.zip` est téléchargé, connecte le Gramophone à ton ordin
 
 Le programme devrait alors être envoyé sur le Gramophone. Cette opération prend généralement une quinzaine de secondes. 
 
+Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de [mettre le Gramophone en "mode jeu"](about.md#demarrage-du-gramophone) en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement [la mollette de sélection des programmes Faust](about.md#passer-dun-programme-a-lautre) une fois. Un son correspondant à l'onde en dent de scie implémenté lors de l'étape précédente devrait alors être émis. Le volume du son produit peut être contrôlé avec [le potentiomètre de contrôle du volume du Gramophone](#controle-du-volume).
+
+Pour modifier le programme, il suffit de changer le code dans le Faust Web IDE et de rappuyer sur le bouton "Gramo" : rien d'autre à faire, le programme GramoLoader se charge de tout !
+
+Comme le programme Faust présenté au début de cette section ne contient aucun paramètre, il n'est actuellement pas possible d’interagir avec ce dernier. Pour apprendre à contrôler un programme Faust avec le Gramophone, tu peux maintenant lire le scenario : [Hello World : mon premier programme pour Gramophone](../scenari/hello-world.md).
+
 ## Avec le Faust Playground
+
+**Avant de débuter ce tutoriel, il est recommandé de lire [la page sur le Faust Playground](../faust/playground.md)**.
+
+Construisons tout d'abord un programme très simple dans le [Faust Playground](https://faustplayground.grame.fr/) en connectant par exemple une harpe "Kisana" (instrument) à un Echo (effet) :
+
+<figure>
+<img src="img/playground-kis-echo.jpg" class="mx-auto d-block" width="100%">
+</figure>
+
+Du son devrait être produit en déplaçant les potentiomètres "1 (Note 48)", "2 (Note 60)" ou "3 (Note 72)" de Kisana. 
+
+Pour installer ce programme sur le Gramophone, il faut dans un premier temps cliquer sur le bouton "EXPORT" dans le menu en haut de la fenêtre :
+
+<figure>
+<img src="img/playground-export.svg" class="mx-auto d-block" width="100%">
+</figure>
+
+puis sur le bouton "+ d'options" :
+
+<figure>
+<img src="img/playground-export-options.svg" class="mx-auto d-block" width="100%">
+</figure>
+
+Dans les menus qui s'affichent, sélectionne "esp32" dans le premier menu et "gramophoneFlash" dans le deuxième, puis clique sur le bouton "Export" :
+
+<figure>
+<img src="img/playground-export-select.svg" class="mx-auto d-block" width="100%">
+</figure>
+
+Après un quinzaine de secondes, un bouton "Download" devrait s'afficher dans le menu de gauche, clique dessus pour télécharger le fichier `binzry.zip` contenant le programme du Gramophone sur ton ordinateur :
+
+<figure>
+<img src="img/playground-export-download.svg" class="mx-auto d-block" width="100%">
+</figure>
+
+Une fois que `binary.zip` est téléchargé, connecte le Gramophone à ton ordinateur puis lance [l'application GramoLoader](loader.md). Assure-toi que [ton Gramophone est en "mode programmation"](about.md#demarrage-du-gramophone) (l'interrupteur de mise en route du Gramophone doit-être placé à gauche). Ensuite, sélectionne le fichier `binary.zip` sur l'ordinateur en cliquant sur le bouton "Sélectionner un fichier" :
+
+<figure>
+<img src="img/loader.jpg" class="mx-auto d-block" width="50%">
+</figure>
+
+Le programme devrait alors être envoyé sur le Gramophone. Cette opération prend généralement une quinzaine de secondes. 
+
+Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de [mettre le Gramophone en "mode jeu"](about.md#demarrage-du-gramophone) en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement [la mollette de sélection des programmes Faust](about.md#passer-dun-programme-a-lautre) une fois. Un son correspondant au programme créé dans le Faust Playground lors de l'étape précédente devrait alors être émis.
+
+Pour modifier le programme, il suffit de changer le code dans le patch dans le Faust Playground et de re-générer une fichier `binary.zip` : rien d'autre à faire, le programme GramoLoader se charge de tout !
