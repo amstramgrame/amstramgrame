@@ -108,7 +108,82 @@ Elle est adressable dans un programme Faust à l'aide de la métadata suivante :
 
 #### Les capteurs de mouvements
 
-TODO
+Le Gramophone abrite un accéléromètre et un gyroscope qui peuvent être utilisés pour contrôler les paramètres d'un programme Faust avec le geste. 
+
+**>> Les informations données dans cette section se veulent être très techniques. Pour un tutoriel pas-à-pas sur l'utilisation des capteurs de mouvements du Gramophone, [clique sur ce lien](../scenari/gesture.md).**
+
+L'accélération (accéléromètre) et l'orientation (gyroscope) du Gramophone peuvent être mesurées sur trois axes différents (X, Y et Z) :
+
+<figure class="mx-auto d-block">
+<center>
+<img src="img/motion-x-l.jpg" width="48%">
+<img src="img/motion-x-r.jpg" width="48%">
+<figcaption>Inclinaison du Gramophone sur l'axe des X</figcaption>
+</center>
+</figure>
+
+<figure class="mx-auto d-block">
+<center>
+<img src="img/motion-y-u.jpg" width="48%">
+<img src="img/motion-y-d.jpg" width="48%">
+<figcaption>Inclinaison du Gramophone sur l'axe des Y</figcaption>
+</center>
+</figure>
+
+TODO : fig
+
+Des [métadatas Faust](TODO) peuvent être utilisées pour associer et configurer l'accéléromètre et le gyroscope du Gramophone à un paramètre d'un programme Faust :
+
+```
+[acc: a b c d e]
+``` 
+
+pour l'accéléromètre et :
+
+```
+[gyr: a b c d e]
+``` 
+
+pour le gyroscope, avec :
+
+* `a` : l'axe de l'accéléromètre (`0` : X, `1` : Y, `2` : Z)
+* `b` : la courbe de l'accéléromètre (voir la figure ci-dessous, 4 courbes sont disponibles)
+* `c` : l’accélération minimale en \(m/s^2\)
+* `d` : l’accélération centrale en \(m/s^2\) 
+* `e` : l’accélération maximale en \(m/s^2\)
+
+`c`, `d` et `e` sont directement associés à la configuration d'un paramètre d'un programme Faust :
+
+```
+parameter = nentry("ParamFaust[acc: a b c d e]",def,min,max,step);
+``` 
+
+* `c` est associé à `min`
+* `d` est associé à `def`
+* `e` est associé à `max`
+
+<figure>
+<img src="img/motion-curve.svg" class="mx-auto d-block" width="90%">
+<center><figcaption>Configuration de l'accéléromètre et du gyroscope du Gramophone</figcaption></center>
+</figure>
+
+Par exemple, le gain d'un synthétiseur peut être contrôlé avec l'axe X de l'accéléromètre de la manière suivante :
+
+```
+g = nentry("gain[acc: 0 0 -10 0 10]",0.5,0,1,0.01);
+```
+
+Avec cette configuration, `g = 0` lorsque le Gramophone est incliné à 90 degrés du côté gauche, `g = 0.5` lorsque le Gramophone est maintenue droit, haut-parleur pointant vers le bas et `g = 1` lorsque le Gramophone est incliné à 90 degrés du côté droit.
+
+TODO : fig.
+
+Autre exemple : 
+
+```
+g = nentry("gain[acc: 0 0 0 0 10]",0,0,1,0.01);
+```
+
+Avec cette configuration, `g = 0` lorsque le Gramophone est incliné à 90 degrés du côté gauche et lorsque le Gramophone est maintenue droit, haut-parleur pointant vers le bas. La valeur de `g` augmente au fur et à mesure que le Gramophone est incliné vers la droite. `g = 1` lorsque le Gramophone est incliné à 90 degrés du côté droit.
 
 ### Charger le Gramophone
 

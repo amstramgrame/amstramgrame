@@ -42,6 +42,10 @@
 </li>
                                     
 <li>
+    <a href="../../scenari/gesture/" class="dropdown-item"> Capter le geste : travailler avec l&#39;accéléromètre et le gyroscope </a>
+</li>
+                                    
+<li>
     <a href="../../scenari/introduction/" class="dropdown-item"> Introduction </a>
 </li>
                                     
@@ -278,7 +282,70 @@
 
 <p>Elle est adressable dans un programme Faust à l'aide de la métadata suivante : <code>TODO</code>.</p>
 <h4 id="les-capteurs-de-mouvements">Les capteurs de mouvements</h4>
-<p>TODO</p>
+<p>Le Gramophone abrite un accéléromètre et un gyroscope qui peuvent être utilisés pour contrôler les paramètres d'un programme Faust avec le geste. </p>
+<p><strong>&gt;&gt; Les informations données dans cette section se veulent être très techniques. Pour un tutoriel pas-à-pas sur l'utilisation des capteurs de mouvements du Gramophone, <a href="../../scenari/gesture/">clique sur ce lien</a>.</strong></p>
+<p>L'accélération (accéléromètre) et l'orientation (gyroscope) du Gramophone peuvent être mesurées sur trois axes différents (X, Y et Z) :</p>
+<figure class="mx-auto d-block">
+<center>
+<img src="img/motion-x-l.jpg" width="48%">
+<img src="img/motion-x-r.jpg" width="48%">
+<figcaption>Inclinaison du Gramophone sur l'axe des X</figcaption>
+</center>
+</figure>
+
+<figure class="mx-auto d-block">
+<center>
+<img src="img/motion-y-u.jpg" width="48%">
+<img src="img/motion-y-d.jpg" width="48%">
+<figcaption>Inclinaison du Gramophone sur l'axe des Y</figcaption>
+</center>
+</figure>
+
+<p>TODO : fig</p>
+<p>Des <a href="TODO">métadatas Faust</a> peuvent être utilisées pour associer et configurer l'accéléromètre et le gyroscope du Gramophone à un paramètre d'un programme Faust :</p>
+<pre><code>[acc: a b c d e]
+</code></pre>
+
+<p>pour l'accéléromètre et :</p>
+<pre><code>[gyr: a b c d e]
+</code></pre>
+
+<p>pour le gyroscope, avec :</p>
+<ul>
+<li><code>a</code> : l'axe de l'accéléromètre (<code>0</code> : X, <code>1</code> : Y, <code>2</code> : Z)</li>
+<li><code>b</code> : la courbe de l'accéléromètre (voir la figure ci-dessous, 4 courbes sont disponibles)</li>
+<li><code>c</code> : l’accélération minimale en <script type="math/tex">m/s^2</script>
+</li>
+<li><code>d</code> : l’accélération centrale en <script type="math/tex">m/s^2</script>
+</li>
+<li><code>e</code> : l’accélération maximale en <script type="math/tex">m/s^2</script>
+</li>
+</ul>
+<p><code>c</code>, <code>d</code> et <code>e</code> sont directement associés à la configuration d'un paramètre d'un programme Faust :</p>
+<pre><code>parameter = nentry(&quot;ParamFaust[acc: a b c d e]&quot;,def,min,max,step);
+</code></pre>
+
+<ul>
+<li><code>c</code> est associé à <code>min</code></li>
+<li><code>d</code> est associé à <code>def</code></li>
+<li><code>e</code> est associé à <code>max</code></li>
+</ul>
+<figure>
+<img src="img/motion-curve.svg" class="mx-auto d-block" width="90%">
+<center><figcaption>Configuration de l'accéléromètre et du gyroscope du Gramophone</figcaption></center>
+</figure>
+
+<p>Par exemple, le gain d'un synthétiseur peut être contrôlé avec l'axe X de l'accéléromètre de la manière suivante :</p>
+<pre><code>g = nentry(&quot;gain[acc: 0 0 -10 0 10]&quot;,0.5,0,1,0.01);
+</code></pre>
+
+<p>Avec cette configuration, <code>g = 0</code> lorsque le Gramophone est incliné à 90 degrés du côté gauche, <code>g = 0.5</code> lorsque le Gramophone est maintenue droit, haut-parleur pointant vers le bas et <code>g = 1</code> lorsque le Gramophone est incliné à 90 degrés du côté droit.</p>
+<p>TODO : fig.</p>
+<p>Autre exemple : </p>
+<pre><code>g = nentry(&quot;gain[acc: 0 0 0 0 10]&quot;,0,0,1,0.01);
+</code></pre>
+
+<p>Avec cette configuration, <code>g = 0</code> lorsque le Gramophone est incliné à 90 degrés du côté gauche et lorsque le Gramophone est maintenue droit, haut-parleur pointant vers le bas. La valeur de <code>g</code> augmente au fur et à mesure que le Gramophone est incliné vers la droite. <code>g = 1</code> lorsque le Gramophone est incliné à 90 degrés du côté droit.</p>
 <h3 id="charger-le-gramophone">Charger le Gramophone</h3>
 <p>Pour charger la batterie du Gramophone, il suffit de le brancher à un chargeur USB ou à un ordinateur. Pour que la charge puisse s'effectuer, il est nécessaire de mettre le Gramophone en <a href="#demarrage-du-gramophone">mode "jeu" ou "programmation"</a> : le Gramophone ne se chargera pas s'il est éteint !</p>
 <figure>

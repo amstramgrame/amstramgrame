@@ -32,9 +32,9 @@ Une fois que `binary.zip` est téléchargé, connecte le Gramophone à ton ordin
 
 Le programme devrait alors être envoyé sur le Gramophone. Cette opération prend généralement une quinzaine de secondes. 
 
-Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de [mettre le Gramophone en "mode jeu"](about.md#demarrage-du-gramophone) en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement [la mollette de sélection des programmes Faust](about.md#passer-dun-programme-a-lautre) une fois. Un son correspondant à l'onde en dent de scie implémenté lors de l'étape précédente devrait alors être émis. Le volume du son produit peut être contrôlé avec [le potentiomètre de contrôle du volume du Gramophone](#controle-du-volume).
+Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de [mettre le Gramophone en "mode jeu"](about.md#demarrage-du-gramophone) en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement [la mollette de sélection des programmes Faust](about.md#passer-dun-programme-a-lautre) une fois. Un son correspondant à l'onde en dent de scie implémentée lors de l'étape précédente devrait alors être émis. Le volume du son produit peut être contrôlé avec [le potentiomètre de contrôle du volume du Gramophone](#controle-du-volume).
 
-Pour modifier le programme, il suffit de changer le code dans le Faust Web IDE et de rappuyer sur le bouton "Gramo" : rien d'autre à faire, le programme GramoLoader se charge de tout !
+**Pour modifier le programme, il suffit de changer le code dans le Faust Web IDE et de rappuyer sur le bouton "Gramo" : rien d'autre à faire, le programme GramoLoader se charge de tout !**
 
 Comme le programme Faust présenté au début de cette section ne contient aucun paramètre, il n'est actuellement pas possible d’interagir avec ce dernier. Pour apprendre à contrôler un programme Faust avec le Gramophone, tu peux maintenant lire le scenario : [Hello World : mon premier programme pour Gramophone](../scenari/hello-world.md).
 
@@ -62,13 +62,13 @@ puis sur le bouton "+ d'options" :
 <img src="img/playground-export-options.svg" class="mx-auto d-block" width="100%">
 </figure>
 
-Dans les menus qui s'affichent, sélectionne "esp32" dans le premier menu et "gramophoneFlash" dans le deuxième, puis clique sur le bouton "Export" :
+Dans les menus qui s'affichent, sélectionne "esp32" dans le menu du haut et "gramophoneFlash" dans le deuxième, puis clique sur le bouton "Export" :
 
 <figure>
 <img src="img/playground-export-select.svg" class="mx-auto d-block" width="100%">
 </figure>
 
-Après un quinzaine de secondes, un bouton "Download" devrait s'afficher dans le menu de gauche, clique dessus pour télécharger le fichier `binzry.zip` contenant le programme du Gramophone sur ton ordinateur :
+Après un quinzaine de secondes, un bouton "Download" devrait s'afficher dans le menu de gauche, clique dessus pour télécharger le fichier `binary.zip` contenant le programme du Gramophone sur ton ordinateur :
 
 <figure>
 <img src="img/playground-export-download.svg" class="mx-auto d-block" width="100%">
@@ -84,4 +84,4 @@ Le programme devrait alors être envoyé sur le Gramophone. Cette opération pre
 
 Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de [mettre le Gramophone en "mode jeu"](about.md#demarrage-du-gramophone) en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement [la mollette de sélection des programmes Faust](about.md#passer-dun-programme-a-lautre) une fois. Un son correspondant au programme créé dans le Faust Playground lors de l'étape précédente devrait alors être émis.
 
-Pour modifier le programme, il suffit de changer le code dans le patch dans le Faust Playground et de re-générer une fichier `binary.zip` : rien d'autre à faire, le programme GramoLoader se charge de tout !
+Pour modifier le programme, il suffit de changer le patch dans le Faust Playground et de re-générer une fichier `binary.zip` : rien d'autre à faire, le programme GramoLoader se charge de tout !
