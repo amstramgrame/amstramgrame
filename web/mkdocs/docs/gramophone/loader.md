@@ -33,9 +33,7 @@ Sous Windows, GramoLoader se présente sous la forme d'un fichier `.exe`. Ce der
 
 ### MacOS
 
-Une versions spécifique de GramoLoader est disponible pour chaque version de MacOS :
-
-TODO: tableau des téléchargeable pour MacOS.
+[**>> Télécharger GramoLoader pour MacOS <<**](https://github.com/amstramgrame/amstramgrame/raw/master/gramophone/autoloader/bin/macos/GramoLoaderMac.zip)
 
 Sous MacOS, GramoLoader se présente sous la forme d'un fichier `.app`. Ce dernier peut être placé n'importe où sur l'ordinateur (dans le dossier "Applications", par exemple). Il suffit de le lancer pour démarrer l'application.
 

@@ -273,14 +273,14 @@
 </figure>
 
 <p>Il est "typiquement" actionné par la main gauche de l'instrumentiste.</p>
-<p>Ce potentiomètre est adressable dans un programme Faust à l'aide de la métadata suivante : <code>[knob:3]</code></p>
+<p>Ce potentiomètre est adressable dans un programme Faust à l'aide de la métadata suivante : <code>[knob:2]</code></p>
 <h4 id="la-photoresistance">La photorésistance</h4>
 <p>Le photorésistance assignable du Gramophone se trouve juste à gauche du <a href="#potentiometre-assignable">potentiomètre assignable</a> et tombe sous le pouce de l'instrumentiste :</p>
 <figure>
 <img src="img/gramo-photores.svg" class="mx-auto d-block" width="80%">
 </figure>
 
-<p>Elle est adressable dans un programme Faust à l'aide de la métadata suivante : <code>TODO</code>.</p>
+<p>Elle est adressable dans un programme Faust à l'aide de la métadata suivante : <code>[knob:2]</code>.</p>
 <h4 id="les-capteurs-de-mouvements">Les capteurs de mouvements</h4>
 <p>Le Gramophone abrite un accéléromètre et un gyroscope qui peuvent être utilisés pour contrôler les paramètres d'un programme Faust avec le geste. </p>
 <p><strong>&gt;&gt; Les informations données dans cette section se veulent être très techniques. Pour un tutoriel pas-à-pas sur l'utilisation des capteurs de mouvements du Gramophone, <a href="../../scenari/gesture/">clique sur ce lien</a>.</strong></p>
@@ -301,7 +301,11 @@
 </center>
 </figure>
 
-<p>TODO : fig</p>
+<figure>
+<img src="img/motion-z.jpg" class="mx-auto d-block" width="50%">
+<center><figcaption>L'axe des Z du Gramophone</figcaption></center>
+</figure>
+
 <p>Des <a href="TODO">métadatas Faust</a> peuvent être utilisées pour associer et configurer l'accéléromètre et le gyroscope du Gramophone à un paramètre d'un programme Faust :</p>
 <pre><code>[acc: a b c d e]
 </code></pre>
@@ -340,7 +344,10 @@
 </code></pre>
 
 <p>Avec cette configuration, <code>g = 0</code> lorsque le Gramophone est incliné à 90 degrés du côté gauche, <code>g = 0.5</code> lorsque le Gramophone est maintenue droit, haut-parleur pointant vers le bas et <code>g = 1</code> lorsque le Gramophone est incliné à 90 degrés du côté droit.</p>
-<p>TODO : fig.</p>
+<figure>
+<img src="img/motion-example.jpg" class="mx-auto d-block" width="100%">
+</figure>
+
 <p>Autre exemple : </p>
 <pre><code>g = nentry(&quot;gain[acc: 0 0 0 0 10]&quot;,0,0,1,0.01);
 </code></pre>
@@ -361,6 +368,42 @@
 
 <p>Les programmes sont sélectionnés en boucle. Lorsque <a href="#demarrage-du-gramophone">le Gramophone est démarré en mode "jeu"</a>, le premier programme est toujours sélectionné. Pour passer au deuxième programme, il suffit de tourner la molette vers la droite. Pour revenir en arrière, il faut la tourner vers la gauche. Une fois arrivé au dernier programme, tourner la molette vers la droite fait automatiquement revenir au premier programme, etc.</p>
 <h2 id="metadatas-de-programmation-du-gramophone">Métadatas de programmation du Gramophone</h2>
+<table>
+<thead>
+<tr>
+<th>Élément</th>
+<th>Métadata</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#le-bouton-assignable">Bouton</a></td>
+<td><code>[switch:1]</code></td>
+<td>Bouton en haut du Gramophone : délivre 1 lorsqu'il est pressé et 0 lorsqu'il ne l'est pas.</td>
+</tr>
+<tr>
+<td><a href="#le-potentiometre-assignable">Potentiomètre</a></td>
+<td><code>[knob:2]</code></td>
+<td>Potentiomètre entre le bouton et la photorésistance. Fourni un contrôle continu.</td>
+</tr>
+<tr>
+<td><a href="#la-photoresistance">Photorésistance</a></td>
+<td><code>[knob:3]</code></td>
+<td>Photorésistance en dessous du potentiomètre assignable. Fourni un contrôle continu.</td>
+</tr>
+<tr>
+<td><a href="#les-capteurs-de-mouvements">Accéléromètre</a></td>
+<td><code>[acc: XXX]</code></td>
+<td>Accéléromètre intégré au Gramophone. Fourni un contrôle continu. <code>XXX</code> correspond au paramètre de configuration de l'accéléromètre.</td>
+</tr>
+<tr>
+<td><a href="#les-capteurs-de-mouvements">Gyroscope</a></td>
+<td><code>[gyr: XXX]</code></td>
+<td>Gyroscope intégré au Gramophone. Fourni un contrôle continu. <code>XXX</code> correspond au paramètre de configuration de l'accéléromètre.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="aller-plus-loin-fabriquer-son-propre-gramophone">Aller plus loin : fabriquer son propre Gramophone !</h2>
 <p>Le Gramophone n'est pour l'instant pas disponible à la vente. En revanche, il est possible de fabriquer son propre Gramophone ! Pour savoir comment faire, n'hésites pas à lire le tutoriel : <a href="../making/">Fabriquer son propre Gramophone !</a></p></div>
             </div>

@@ -94,7 +94,7 @@ La potentiomètre assignable du Gramophone se trouve juste à gauche du [bouton 
 
 Il est "typiquement" actionné par la main gauche de l'instrumentiste.
 
-Ce potentiomètre est adressable dans un programme Faust à l'aide de la métadata suivante : `[knob:3]`
+Ce potentiomètre est adressable dans un programme Faust à l'aide de la métadata suivante : `[knob:2]`
 
 #### La photorésistance
 
@@ -104,7 +104,7 @@ Le photorésistance assignable du Gramophone se trouve juste à gauche du [poten
 <img src="img/gramo-photores.svg" class="mx-auto d-block" width="80%">
 </figure>
 
-Elle est adressable dans un programme Faust à l'aide de la métadata suivante : `TODO`.
+Elle est adressable dans un programme Faust à l'aide de la métadata suivante : `[knob:2]`.
 
 #### Les capteurs de mouvements
 
@@ -130,7 +130,10 @@ L'accélération (accéléromètre) et l'orientation (gyroscope) du Gramophone p
 </center>
 </figure>
 
-TODO : fig
+<figure>
+<img src="img/motion-z.jpg" class="mx-auto d-block" width="50%">
+<center><figcaption>L'axe des Z du Gramophone</figcaption></center>
+</figure>
 
 Des [métadatas Faust](TODO) peuvent être utilisées pour associer et configurer l'accéléromètre et le gyroscope du Gramophone à un paramètre d'un programme Faust :
 
@@ -175,7 +178,9 @@ g = nentry("gain[acc: 0 0 -10 0 10]",0.5,0,1,0.01);
 
 Avec cette configuration, `g = 0` lorsque le Gramophone est incliné à 90 degrés du côté gauche, `g = 0.5` lorsque le Gramophone est maintenue droit, haut-parleur pointant vers le bas et `g = 1` lorsque le Gramophone est incliné à 90 degrés du côté droit.
 
-TODO : fig.
+<figure>
+<img src="img/motion-example.jpg" class="mx-auto d-block" width="100%">
+</figure>
 
 Autre exemple : 
 
@@ -206,6 +211,14 @@ Plusieurs programmes Faust peuvent être installés sur un seul Gramophone. <!--
 Les programmes sont sélectionnés en boucle. Lorsque [le Gramophone est démarré en mode "jeu"](#demarrage-du-gramophone), le premier programme est toujours sélectionné. Pour passer au deuxième programme, il suffit de tourner la molette vers la droite. Pour revenir en arrière, il faut la tourner vers la gauche. Une fois arrivé au dernier programme, tourner la molette vers la droite fait automatiquement revenir au premier programme, etc.
 
 ## Métadatas de programmation du Gramophone
+
+Élément | Métadata | Description
+--- | --- | ---
+[Bouton](#le-bouton-assignable) | `[switch:1]` | Bouton en haut du Gramophone : délivre 1 lorsqu'il est pressé et 0 lorsqu'il ne l'est pas.
+[Potentiomètre](#le-potentiometre-assignable) | `[knob:2]` | Potentiomètre entre le bouton et la photorésistance. Fourni un contrôle continu.
+[Photorésistance](#la-photoresistance) | `[knob:3]` | Photorésistance en dessous du potentiomètre assignable. Fourni un contrôle continu.
+[Accéléromètre](#les-capteurs-de-mouvements) | `[acc: XXX]` | Accéléromètre intégré au Gramophone. Fourni un contrôle continu. `XXX` correspond au paramètre de configuration de l'accéléromètre.
+[Gyroscope](#les-capteurs-de-mouvements) | `[gyr: XXX]` | Gyroscope intégré au Gramophone. Fourni un contrôle continu. `XXX` correspond au paramètre de configuration de l'accéléromètre.
 
 ## Aller plus loin : fabriquer son propre Gramophone !
 
