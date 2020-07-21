@@ -59,15 +59,8 @@ La fenêtre qui s'ouvre et remplace le diagramme correspond à l'interface utili
 Les différents tutoriels et scénarii sur le site d'Amstramgrame contiennent des dizaines d'exemples de programmes prêts à être utilisés dans le Faust Web IDE et dans certains cas exécutés sur le Gramophone. Ils se présentent de la manière suivante :
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
-~~~
 import("stdfaust.lib");
 process = no.noise;
-~~~
-
-<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/faust/ide/exfaust0/exfaust0.dsp" target="editor">
-<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
-</div>
 <!-- /faust-run -->
 
 D'abord on peut voir le digramme correspondant au programme Faust présenté en dessous. Le bouton "Éditer/exécuter le programme" permet d'ouvrir l'exemple directement dans le Faust Web IDE. Essaye pour voir ! Une fois ouvert dans l'IDE, les programmes d'exemples peuvent être utilisés comme n'importe quel autre programme Faust.

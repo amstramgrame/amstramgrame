@@ -136,6 +136,26 @@
             
             <li class="nav-item" data-level="1"><a href="#le-faust-web-ide" class="nav-link">Le Faust Web IDE</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#lancer-le-faust-web-ide" class="nav-link">Lancer le Faust Web IDE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#produire-du-son" class="nav-link">Produire du son</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#utiliser-les-exemples-du-site-amstramgrame" class="nav-link">Utiliser les exemples du site Amstramgrame</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#exporter-un-programme-vers-le-gramophone" class="nav-link">Exporter un programme vers le Gramophone</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#autres-fonctionnalites" class="nav-link">Autres fonctionnalités</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -144,20 +164,81 @@
                     <div class="col-md-9 main-container" role="main">
 
 <h1 id="le-faust-web-ide">Le Faust Web IDE</h1>
-<p>Une fois l'IDE ouvert, clique sur le bouton "Run" pour lancer le programme dans le navigateur Web :</p>
+<p>Le <a href="https://faustide.grame.fr/?mode=amstram">Faust Web IDE</a> (accessible sur <a href="https://faustide.grame.fr">https://faustide.grame.fr</a>) est un outil en ligne permettant d'écrire des programmes Faust, de les tester directement dans le navigateur web, puis de les exporter sur le <a href="../../gramophone/about/">Gramophone</a> via l'application <a href="../../gramophone/loader/">GramoLoader</a>. Le terme IDE vient de l'anglais et est l'abréviation de "Integrated Development Environment" (soit "environnement de développement intégré" en Français). C'est un standard dans le domaine de l'informatique pour désigner un outil facilitant l'utilisation d'un langage de programmation. </p>
+<h2 id="lancer-le-faust-web-ide">Lancer le Faust Web IDE</h2>
+<p>Bien que le Faust Web IDE soit compatible avec la plupart des navigateurs web, il est fortement recommandé d'utiliser Google Chrome ou Mozilla Firefox. Dans le cas ou <a href="https://fr.wikipedia.org/wiki/Musical_Instrument_Digital_Interface">MIDI</a> serait nécessaire pour le programme Faust implémenté, seul Google Chrome fonctionnera (la norme MIDI n'est pas supportée dans Firefox).</p>
+<p>Trois versions du Faust Web IDE sont disponibles pour les utilisateurs du projet Amstramgrame :</p>
+<ul>
+<li>La version "simplifiée spéciale Amstramgrame" (pour les élèves) : <a href="https://faustide.grame.fr/?mode=amstram">https://faustide.grame.fr/?mode=amstram</a></li>
+<li>La version "avancée spéciale Amstramgrame" (pour les enseignants) : <a href="https://faustide.grame.fr/?mode=amstram-pro">https://faustide.grame.fr/?mode=amstram-pro</a></li>
+<li>La version "standard" : <a href="https://faustide.grame.fr">https://faustide.grame.fr</a></li>
+</ul>
+<p>La <a href="https://faustide.grame.fr/?mode=amstram">version simplifiée</a> satisfera les besoins de la plupart des utilisateurs du Gramophone.</p>
+<p>Lorsque le Faust Web IDE est ouvert pour la première fois, il demande d'avoir accès au micro intégré de la machine : il est important d’accepter cette demande. Une fois ouvert, un programme Faust par défaut implémentant un djembé devrait s'afficher :</p>
 <figure>
-<img src="img/ide-run.svg" class="mx-auto d-block" width="100%">
+<img src="img/ide-default.jpg" class="mx-auto d-block" width="100%">
 </figure>
 
-<p>Un son devrait être produit ! Si tu ne l'entends pas, assures-toi que que le son de ton ordinateur n'est pas coupé. </p>
-<p>Toute modification faite dans le programme Faust sera reflétée automatiquement dans le son produit. Par exemple, essaye de changer la valeur du paramètre <code>freq</code> :</p>
-<pre><code>freq = 250;
+<p>Le menu de gauche permet d'accéder aux différentes fonctions du Faust Web IDE (ex. exécuter le programme dans le navigateur, exporter le programme vers le Gramophone, etc.) :</p>
+<figure>
+<img src="img/ide-menu.jpg" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>La zone d'édition de texte permet d'écrire le programme Faust :</p>
+<figure>
+<img src="img/ide-code.jpg" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>La zone en dessous de l'éditeur de code affiche le diagramme ou l'interface utilisateur correspond au programme Faust si ce dernier est exécuter :</p>
+<figure>
+<img src="img/ide-diagram.jpg" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>Notez que le Faust Web IDE est en anglais. La programmation informatique étant généralement effectuée dans cette langue, le Faust Web IDE ne déroge pas à cette règle :). </p>
+<h2 id="produire-du-son">Produire du son</h2>
+<p>Pour exécuter le programme par défaut, il suffit de cliquer sur le bouton "run" dans le menu de gauche :</p>
+<figure>
+<img src="img/ide-run.jpg" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>La fenêtre qui s'ouvre et remplace le diagramme correspond à l'interface utilisateur du programme Faust exécuté. Fermer cette fenêtre en cliquant sur la croix à côté de DSP permet d'arrêter le programme et donc de couper le son :</p>
+<figure>
+<img src="img/ide-close.jpg" class="mx-auto d-block" width="100%">
+</figure>
+
+<h2 id="utiliser-les-exemples-du-site-amstramgrame">Utiliser les exemples du site Amstramgrame</h2>
+<p>Les différents tutoriels et scénarii sur le site d'Amstramgrame contiennent des dizaines d'exemples de programmes prêts à être utilisés dans le Faust Web IDE et dans certains cas exécutés sur le Gramophone. Ils se présentent de la manière suivante :</p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+
+<pre><code>import(&quot;stdfaust.lib&quot;);
+process = no.noise;
 </code></pre>
 
-<p>Cliquer sur le bouton "Run" a également permis d'ouvrir une fenêtre qui correspond au programme Faust exécuté. Pour le stopper (et donc arrêter le son), clique sur la croix de fermeture de la fenêtre :</p>
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/faust/ide/exfaust0/exfaust0.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
+<p>D'abord on peut voir le digramme correspondant au programme Faust présenté en dessous. Le bouton "Éditer/exécuter le programme" permet d'ouvrir l'exemple directement dans le Faust Web IDE. Essaye pour voir ! Une fois ouvert dans l'IDE, les programmes d'exemples peuvent être utilisés comme n'importe quel autre programme Faust.</p>
+<h2 id="exporter-un-programme-vers-le-gramophone">Exporter un programme vers le Gramophone</h2>
+<p>Tout programme écrit et fonctionnant dans le Faust Web IDE peut être envoyé vers le Gramophone connecté à l'ordinateur. <a href="../../gramophone/programming/"><strong>La page "programmer le Gramophone"</strong></a> donne la marche à suivre.</p>
+<h2 id="autres-fonctionnalites">Autres fonctionnalités</h2>
+<p>Plusieurs programmes peuvent être ouvert dans le Faust Web IDE en même temps. Pour créer un nouveau programme vide, il suffit de cliquer sur le bouton en haut à gauche :</p>
 <figure>
-<img src="img/ide-close.svg" class="mx-auto d-block" width="100%">
-</figure></div>
+<img src="img/ide-new-program.jpg" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>Avant de pouvoir exécuter ce nouveau programme, il est nécessaire de le sélectionner :</p>
+<figure>
+<img src="img/ide-run-new-program.jpg" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>À noter que l'onglet "Examples" au dessus de la zone d'édition du code donne accès à des dizaines d'exemples de programmes Faust. De la même manière, n'importe quel programme Faust disponible en local sur la machine peut être "glissé" dans le Faust Web IDE. </p>
+<p>D'autre fonctionnalités sont accessibles dans le menu de gauche du Faust Web IDE. N'hésitez pas à les découvrir par vous-même :). </p></div>
             </div>
         </div>
 
