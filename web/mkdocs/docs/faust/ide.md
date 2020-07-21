@@ -4,7 +4,7 @@ Le [Faust Web IDE](https://faustide.grame.fr/?mode=amstram) (accessible sur <htt
 
 ## Lancer le Faust Web IDE
 
-Bien que le Faust Web IDE soit compatible avec la plupart des navigateurs web, il est fortement recommandé d'utiliser Google Chrome ou Mozilla Firefox. Dans le cas ou [MIDI](https://fr.wikipedia.org/wiki/Musical_Instrument_Digital_Interface) serait nécessaire pour le programme Faust implémenté, seul Google Chrome fonctionnera (la norme MIDI n'est pas supportée dans Firefox).
+Bien que le Faust Web IDE soit compatible avec la plupart des navigateurs web, il est fortement recommandé d'utiliser Google Chrome ou Mozilla Firefox. Dans le cas où [MIDI](https://fr.wikipedia.org/wiki/Musical_Instrument_Digital_Interface) serait nécessaire pour le programme Faust, seul Google Chrome fonctionnera (la norme MIDI n'étant pas supportée dans Firefox).
 
 Trois versions du Faust Web IDE sont disponibles pour les utilisateurs du projet Amstramgrame :
 
@@ -78,7 +78,7 @@ Tout programme écrit et fonctionnant dans le Faust Web IDE peut être envoyé v
 
 ## Autres fonctionnalités
 
-Plusieurs programmes peuvent être ouvert dans le Faust Web IDE en même temps. Pour créer un nouveau programme vide, il suffit de cliquer sur le bouton en haut à gauche :
+Plusieurs programmes peuvent être ouverts dans le Faust Web IDE en même temps. Pour créer un nouveau programme vide, il suffit de cliquer sur le bouton en haut à gauche :
 
 <figure>
 <img src="img/ide-new-program.jpg" class="mx-auto d-block" width="100%">
