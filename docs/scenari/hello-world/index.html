@@ -136,6 +136,10 @@
             
             <li class="nav-item" data-level="1"><a href="#hello-world-mon-premier-programme-pour-gramophone" class="nav-link">Hello World : mon premier programme pour Gramophone</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#produire-du-son-avec-faust" class="nav-link">Produire du son avec Faust</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -144,7 +148,34 @@
                     <div class="col-md-9 main-container" role="main">
 
 <h1 id="hello-world-mon-premier-programme-pour-gramophone">Hello World : mon premier programme pour Gramophone</h1>
-<p>TODO </p></div>
+<p>Le but de ce scénario est d'écrire un programme Faust très simple et de le faire fonctionner sur ton Gramophone ! Tu apprendras donc à :</p>
+<ul>
+<li>produire du son avec Faust ;</li>
+<li>maîtriser la structure de base d'un programme Faust ;</li>
+<li>exporter un programme Faust vers <a href="../../gramophone/about/">le Gramophone</a> depuis de la <a href="../../faust/ide/">Faust Web IDE</a> ;</li>
+<li>assigner des boutons et des potentiomètres du Gramophone à différents paramètres du programme Faust.</li>
+</ul>
+<h2 id="produire-du-son-avec-faust">Produire du son avec Faust</h2>
+<p>Faust permet d’interagir directement avec le haut-parleur de notre ordinateur ou du Gramophone en décrivant le son produit avec du code. Dans le cas de Faust, le code peut être vue comme une succession de formules mathématiques connectées entres-elles. </p>
+<p>Pour qu'un haut-parleur produise un son, il est nécessaire de le faire vibrer c'est à dire que la position de sa membrane doit évoluer dans le temps. La manière la plus "standard" d'effectuer cette opération est d'envoyer une onde sinusoïde au haut-parleur. Le programme Faust suivant produit une onde sinusoïdale :</p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+
+<pre><code>
+import(&quot;stdfaust.lib&quot;);
+process = os.osc(440);
+
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/hello-world/exfaust0/exfaust0.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
+<p>Clique sur le bouton "Éditer/exécuter le programme" ci-dessus et ce programme Faust devrait être ouvert dans le <a href="../../faust/ide/">Faust Web IDE</a>.</p></div>
             </div>
         </div>
 
