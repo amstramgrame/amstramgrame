@@ -3,9 +3,7 @@
 Le but de ce scénario est d'écrire un programme [Faust](../faust/about.md) très simple et de le faire fonctionner sur ton [Gramophone](../gramophone/about.md) ! Tu apprendras donc à :
 
 * produire du son avec Faust ;
-* maîtriser la structure de base d'un programme Faust ;
-* exporter un programme Faust vers le Gramophone depuis de la [Faust Web IDE](../faust/ide.md) ;
-* assigner des boutons et des potentiomètres du Gramophone à différents paramètres du programme Faust.
+* maîtriser la structure de base d'un programme Faust.
 
 **Avant de commencer, assures toi que le volume de ton ordinateur n'est pas trop fort, surtout si tu travailles avec un casque !** Comme nous allons créer nos propres sons et faire quelques expériences, il est possible que le volume du son augmente brusquement : fais attention à tes oreilles.
 

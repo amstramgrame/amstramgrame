@@ -140,6 +140,10 @@
             
             <li class="nav-item" data-level="1"><a href="#hello-world-sur-le-gramophone" class="nav-link">Hello World sur le Gramophone</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#exporter-un-programme-faust-vers-le-gramophone" class="nav-link">Exporter un programme Faust vers le Gramophone</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -148,7 +152,38 @@
                     <div class="col-md-9 main-container" role="main">
 
 <h1 id="hello-world-sur-le-gramophone">Hello World sur le Gramophone</h1>
-<p>TODO</p></div>
+<p>Le but de ce scenario est de faire fonctionner le programme Faust implémenté dans <a href="../hello-world/">Hello World : mon premier programme Faust</a> sur le <a href="../../gramophone/about/">Gramophone</a>. Tu apprendras donc à :</p>
+<ul>
+<li>exporter un programme Faust vers le Gramophone depuis de la <a href="../../faust/ide/">Faust Web IDE</a> ;</li>
+<li>assigner des boutons et des potentiomètres du Gramophone à différents paramètres du programme Faust.</li>
+</ul>
+<h2 id="exporter-un-programme-faust-vers-le-gramophone">Exporter un programme Faust vers le Gramophone</h2>
+<p>Il est très simple d'exporter un programme Faust protytpé dans le <a href="../../faust/ide/">Faust Web IDE</a>. Pour cela, il suffit d'installer <a href="../../gramophone/loader/">le GramoLoader</a> sur ta machine puis de le lancer :</p>
+<figure>
+<img src="img/loader.jpg" class="mx-auto d-block" width="50%">
+</figure>
+
+<p>Reprenons le programme écrit dans <a href="../hello-world/">Hello World : mon premier programme Faust</a> implémentant une onde sinusoïdale contrôlée par un bouton et un potentiomètre :</p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+
+<pre><code>
+import(&quot;stdfaust.lib&quot;);
+on = button(&quot;on-off&quot;);
+freq = hslider(&quot;frequence&quot;,440,20,3000,1);
+process = os.osc(freq)*on;
+
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/hello-world-gramo/exfaust0/exfaust0.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
+<p>Dans le Faust Web IDE, clique sur le bouton Gramo :</p></div>
             </div>
         </div>
 
