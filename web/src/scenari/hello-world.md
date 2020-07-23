@@ -1,5 +1,7 @@
 # Hello World : mon premier programme Faust
 
+<!-- TODO : baratin sur la lutherie numérique et sur le fait que le Gramophone est un instrument de musique. Concept d'atelier établi pour le Faust Web IDE. -->
+
 Le but de ce scénario est d'écrire un programme [Faust](../faust/about.md) très simple et de le faire fonctionner sur ton [Gramophone](../gramophone/about.md) ! Tu apprendras donc à :
 
 * produire du son avec Faust ;

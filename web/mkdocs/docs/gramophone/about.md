@@ -79,7 +79,7 @@ Le son produit par le Gramophone peut-être contrôlé à l'aide de différents 
 Le bouton assignable du Gramophone se trouve à l'opposée du [potentiomètre de volume](#controle-du-volume) et tombe sous la majeur du musicien :
 
 <figure>
-<img src="img/gramo-button.svg" class="mx-auto d-block" width="80%">
+<img src="img/gramo-button.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
 Il est adressable dans un programme Faust à l'aide de la métadata suivante : `[switch:1]`
@@ -89,7 +89,7 @@ Il est adressable dans un programme Faust à l'aide de la métadata suivante : `
 La potentiomètre assignable du Gramophone se trouve juste à gauche du [bouton assignable](#bouton-assignable) :
 
 <figure>
-<img src="img/gramo-pot.svg" class="mx-auto d-block" width="80%">
+<img src="img/gramo-pot.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
 Il est "typiquement" actionné par la main gauche de l'instrumentiste.
