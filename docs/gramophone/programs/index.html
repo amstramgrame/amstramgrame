@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title> Fabriquer le Gramophone  - Amstramgrame</title>
+        <title> Programmes Faust pour Gramophone  - Amstramgrame</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -71,11 +71,11 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active"> Fabriquer le Gramophone </a>
+    <a href="../making/" class="dropdown-item"> Fabriquer le Gramophone </a>
 </li>
                                     
 <li>
-    <a href="../programs/" class="dropdown-item"> Programmes Faust pour Gramophone </a>
+    <a href="./" class="dropdown-item active"> Programmes Faust pour Gramophone </a>
 </li>
                                 </ul>
                             </li>
@@ -130,8 +130,28 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#tutoriel-fabriquer-son-propre-gramophone" class="nav-link">Tutoriel : fabriquer son propre Gramophone !</a>
+            <li class="nav-item" data-level="1"><a href="#quelques-programmes-faust-pour-gramophone" class="nav-link">Quelques programmes Faust pour Gramophone</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#tictac" class="nav-link">TicTac</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#clarinet" class="nav-link">Clarinet</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#comb" class="nav-link">Comb</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fm" class="nav-link">FM</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#brass" class="nav-link">Brass</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -139,8 +159,158 @@
 </div></div>
                     <div class="col-md-9 main-container" role="main">
 
-<h1 id="tutoriel-fabriquer-son-propre-gramophone">Tutoriel : fabriquer son propre Gramophone !</h1>
-<p>TODO</p></div>
+<h1 id="quelques-programmes-faust-pour-gramophone">Quelques programmes Faust pour Gramophone</h1>
+<h2 id="tictac">TicTac</h2>
+<p>Le programme <code>TicTac</code> produit des petits clics à interval réguliers. Ces derniers sont filtrés pour appliquer une hauteur au son produit puis envoyés dans un écho pour augmenter la densité de la texture sonore produite. Les paramètres du son sont contrôlés avec l'<a href="../about/#les-capteurs-de-mouvements">accéléromètre</a> et le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. La production de "clics" est enclenchée lorsque le <a href="../about/#le-bouton-assignable">bouton assignable</a> est pressé.  </p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+
+<pre><code>
+import(&quot;stdfaust.lib&quot;);
+
+// parameters
+impFreq = hslider(&quot;impFreq[acc: 1 0 -10 0 10]&quot;,11,2,20,0.01) : si.smoo;
+resFreq = hslider(&quot;resFreq[acc: 0 1 -10 0 10]&quot;,1650,300,3000,0.01) : si.smoo;
+distDrive = hslider(&quot;distDrive[knob:2]&quot;,0,0,1,0.01) : si.smoo;
+q = hslider(&quot;q[knob:3]&quot;,30,10,50,0.01) : si.smoo;
+del = hslider(&quot;del[acc: 0 1 -10 0 10]&quot;,0.5,0.01,1,0.01) : si.smoo;
+fb = hslider(&quot;fb[acc: 1 0 -10 0 10]&quot;,0.5,0,1,0.01) : si.smoo;
+gate = button(&quot;gate[switch:1]&quot;);
+
+// simple echo effect
+echo = +~(de.delay(20000,del*20000)*fb);
+
+// DSP
+process = os.lf_imptrain(impFreq)*gate  : fi.resonlp(resFreq,q,1) : echo : 
+ef.cubicnl(distDrive,0)*0.95;
+
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust0/exfaust0.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
+<h2 id="clarinet">Clarinet</h2>
+<p>Le programme <code>Clarinet</code> est basé sur un synthétiseur (modèle physique) de clarinette. La pression du souffle du clarinettiste, la raideur de l'anche, et le diamètre du pavillon sont contrôlés par les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone. La longueur du tube de la clarinette (qui impacte la hauteur du son) est contrôlée par le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'activer le souffle du clarinettiste. </p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust1/exfaust1.svg" class="mx-auto d-block">
+
+<pre><code>
+import(&quot;stdfaust.lib&quot;);
+
+// parameters
+gate = button(&quot;gate[switch:1]&quot;);
+pressure = hslider(&quot;pressure[acc: 0 1 -10 0 10]&quot;,0.5,0,1,0.01);
+reed = hslider(&quot;reed[knob:3]&quot;,0.5,0,1,0.01) : si.smooth(0.99);
+bell = hslider(&quot;bell[acc: 2 0 -10 0 10]&quot;,0.5,0,1,0.01) : si.smooth(0.99);
+tube = hslider(&quot;note[knob:2]&quot;,60,40,70,3) : ba.midikey2hz : pm.f2l : si.smooth(0.99);
+
+// additional mappings
+pres = gate*pressure : si.smooth(0.99);
+
+process = pm.clarinetModel(tube,pres,reed,bell); 
+
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust1/exfaust1.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
+<h2 id="comb">Comb</h2>
+<p><code>Comb</code> est un instrument pour Gramophone très simple basé sur un filtre en peigne. Les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone contrôlent le volume et la hauteur du son produit. Le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a> contrôle l'agressivité et la résonance du son. Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'activer la production du son.</p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust2/exfaust2.svg" class="mx-auto d-block">
+
+<pre><code>
+import(&quot;stdfaust.lib&quot;);
+
+// parameters
+gate = button(&quot;gate[switch:1]&quot;);
+gain = hslider(&quot;gain[acc: 0 1 -10 0 10]&quot;,0.5,0,1,0.01)^2;
+del = hslider(&quot;del[acc: 1 0 -10 0 10]&quot;,525,50,1000,1) : si.smoo;
+fb = hslider(&quot;fb[knob:2]&quot;,0.7,0.5,1,0.001);
+
+process = no.noise*gate*gain : fi.fb_fcomb(1024,del,1,fb); 
+
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust2/exfaust2.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
+<h2 id="fm">FM</h2>
+<p><code>FM</code> est un instrument pour Gramophone basé sur un synthétiseur FM (modulation de fréquence). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> peut être utilisé comme un interrupter pour activer et désactiver le son. La hauteur du son produit peut être contrôlée avec le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. Les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone permettent de contrôler le timbre du son.</p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust3/exfaust3.svg" class="mx-auto d-block">
+
+<pre><code>
+import(&quot;stdfaust.lib&quot;);
+
+// parameters
+gate = checkbox(&quot;gate[switch:1]&quot;) : si.smoo;
+freq0 = hslider(&quot;freq0[knob:2]&quot;,200,50,500,0.01) : si.smoo;
+ratio1 = hslider(&quot;ratio1[acc: 0 1 -10 0 10]&quot;,1.5,1,2,0.01) : si.smoo;
+ratio2 = hslider(&quot;ratio2[acc: 1 0 -10 0 10]&quot;,1.5,1,2,0.01) : si.smoo;
+index1 = hslider(&quot;index1[acc: 1 1 -10 0 10]&quot;,500,0,1000,0.01) : si.smoo;
+index2 = hslider(&quot;index2[knob:3]&quot;,500,0,1000,0.01) : si.smoo;
+
+// mappings
+freq1 = freq0*ratio1;
+freq2 = freq1*ratio2;
+
+process = sy.fm((freq0,freq1,freq2),(index1,index2))*gate; 
+
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust3/exfaust3.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
+<h2 id="brass">Brass</h2>
+<p><code>Brass</code> est un instrument pour Gramophone basé sur un synthétiseur de trompette (modèle physique). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'activer le souffle. Le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a> contrôle la distortion du son et peut être utilisé pour augmenter le gain de l'instrument. Les autres paramètres du modèle sont contrôlés par les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a>.</p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust4/exfaust4.svg" class="mx-auto d-block">
+
+<pre><code>
+import(&quot;stdfaust.lib&quot;);
+
+// parameters
+gate = checkbox(&quot;gate[switch:1]&quot;);
+p = hslider(&quot;p[acc: 0 1 -10 0 10]&quot;,0.5,0,1,0.01) : si.smoo;
+lips = hslider(&quot;lips[acc: 2 0 -10 0 10]&quot;,0.5,0,1,0.01) : si.smoo;
+tube = hslider(&quot;note[acc: 1 0 -10 0 10]&quot;,60,40,70,3) : ba.midikey2hz : pm.f2l;
+dist = hslider(&quot;dist[knob:2]&quot;,0,0,1,0.01) : si.smoo;
+
+// mappings
+pres = gate*p;
+
+process = pm.brassModel(tube,lips,0,pres) : ef.cubicnl(dist,0)*0.95; 
+
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust4/exfaust4.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run --></div>
             </div>
         </div>
 

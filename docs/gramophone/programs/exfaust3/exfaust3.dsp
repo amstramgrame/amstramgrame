@@ -1,3 +1,4 @@
+
 import("stdfaust.lib");
 
 // parameters
@@ -13,3 +14,4 @@ freq1 = freq0*ratio1;
 freq2 = freq1*ratio2;
 
 process = sy.fm((freq0,freq1,freq2),(index1,index2))*gate; 
+

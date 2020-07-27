@@ -1,3 +1,4 @@
+
 import("stdfaust.lib");
 
 // parameters
@@ -7,3 +8,4 @@ del = hslider("del[acc: 1 0 -10 0 10]",525,50,1000,1) : si.smoo;
 fb = hslider("fb[knob:2]",0.7,0.5,1,0.001);
 
 process = no.noise*gate*gain : fi.fb_fcomb(1024,del,1,fb); 
+

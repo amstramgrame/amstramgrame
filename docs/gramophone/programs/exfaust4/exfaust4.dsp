@@ -1,3 +1,4 @@
+
 import("stdfaust.lib");
 
 // parameters
@@ -11,3 +12,4 @@ dist = hslider("dist[knob:2]",0,0,1,0.01) : si.smoo;
 pres = gate*p;
 
 process = pm.brassModel(tube,lips,0,pres) : ef.cubicnl(dist,0)*0.95; 
+
