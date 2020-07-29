@@ -4,10 +4,10 @@ Cette page rassemble une collection de programmes Faust pour Gramophone prêts �
 
 ## TicTac
 
-Le programme `TicTac` produit des petits clics à interval réguliers. Ces derniers sont filtrés pour appliquer une hauteur au son produit puis envoyés dans un écho pour augmenter la densité de la texture sonore produite. Les paramètres du son sont contrôlés avec l'[accéléromètre](about.md#les-capteurs-de-mouvements) et le [potentiomètre assignable](about.md#le-potentiometre-assignable). La production de "clics" est enclenchée lorsque le [bouton assignable](about.md#le-bouton-assignable) est pressé.  
+Le programme `TicTac` produit des petits clics à intervals réguliers. Ces derniers sont filtrés pour appliquer une hauteur au son produit puis envoyés dans un écho pour augmenter la densité de la texture sonore produite. Les paramètres du son sont contrôlés avec l'[accéléromètre](about.md#les-capteurs-de-mouvements) et le [potentiomètre assignable](about.md#le-potentiometre-assignable). La production de "clics" est enclenchée lorsque le [bouton assignable](about.md#le-bouton-assignable) est pressé.  
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");
@@ -22,8 +22,8 @@ fb = hslider("fb[acc: 1 0 -10 0 10]",0.5,0,1,0.01) : si.smoo;
 gate = button("gate[switch:1]");
 
 // DSP
-process = os.lf_imptrain(impFreq)*gate  : fi.resonlp(resFreq,q,1) : ef.echo(0.4,del,fb) : 
-ef.cubicnl(distDrive,0)*0.95;
+process = os.lf_imptrain(impFreq)*gate  : fi.resonlp(resFreq,q,1) : 
+ef.echo(0.4,del,fb) : ef.cubicnl(distDrive,0)*0.95;
 
 ~~~
 
@@ -37,7 +37,7 @@ ef.cubicnl(distDrive,0)*0.95;
 `Pioupiou` est un programme pour Gramophone où la hauteur du son produit (une simple sinusoïde) est contrôlée par le [capteur de lumière](#la-photoresistance) du Gramophone. Le [bouton assignable](about.md#le-bouton-assignable) permet de lancer la production du son. 
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust1/exfaust1.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");
@@ -61,7 +61,7 @@ process = os.osc(freq)*gate;
 Le programme `Clarinet` est basé sur un synthétiseur (modèle physique) de clarinette. La pression du souffle du clarinettiste, la raideur de l'anche, et le diamètre du pavillon sont contrôlés par les [capteurs de mouvements](about.md#les-capteurs-de-mouvements) du Gramophone. La longueur du tube de la clarinette (qui impacte la hauteur du son) est contrôlée par le [potentiomètre assignable](about.md#le-potentiometre-assignable). Le [bouton assignable](about.md#le-bouton-assignable) permet d'activer le souffle du clarinettiste. 
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust2/exfaust2.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");
@@ -90,7 +90,7 @@ process = pm.clarinetModel(tube,pres,reed,bell);
 `Comb` est un instrument pour Gramophone très simple basé sur un filtre en peigne. Les [capteurs de mouvements](about.md#les-capteurs-de-mouvements) du Gramophone contrôlent le volume et la hauteur du son produit. Le [potentiomètre assignable](about.md#le-potentiometre-assignable) contrôle l'agressivité et la résonance du son. Le [bouton assignable](about.md#le-bouton-assignable) permet d'activer la production du son.
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust3/exfaust3.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");
@@ -115,7 +115,7 @@ process = no.noise*gate*gain : fi.fb_fcomb(1024,del,1,fb);
 `FM` est un instrument pour Gramophone basé sur un synthétiseur FM (modulation de fréquence). Le [bouton assignable](about.md#le-bouton-assignable) peut être utilisé comme un interrupter pour activer et désactiver le son. La hauteur du son produit peut être contrôlée avec le [potentiomètre assignable](about.md#le-potentiometre-assignable). Les [capteurs de mouvements](about.md#les-capteurs-de-mouvements) du Gramophone permettent de contrôler le timbre du son.
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust4/exfaust4.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");
@@ -146,7 +146,7 @@ process = sy.fm((freq0,freq1,freq2),(index1,index2))*gate;
 `Brass` est un instrument pour Gramophone basé sur un synthétiseur de trompette (modèle physique). Le [bouton assignable](about.md#le-bouton-assignable) permet d'activer le souffle. Le [potentiomètre assignable](about.md#le-potentiometre-assignable) contrôle la distortion du son et peut être utilisé pour augmenter le gain de l'instrument. Les autres paramètres du modèle sont contrôlés par les [capteurs de mouvements](about.md#les-capteurs-de-mouvements).
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust5/exfaust5.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");
@@ -175,7 +175,7 @@ process = pm.brassModel(tube,lips,0,pres) : ef.cubicnl(dist,0)*0.95;
 `Violin` est un instrument pour Gramophone basé sur un synthétiseur de violon (modèle physique). Le [bouton assignable](about.md#le-bouton-assignable) permet d'initier le mouvement de l'archet. Le [potentiomètre assignable](about.md#le-potentiometre-assignable) contrôle la longueur de la corde et donc la hauteur du son produit. Les autres paramètres du modèle sont contrôlés par les [capteurs de mouvements](about.md#les-capteurs-de-mouvements).
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust6/exfaust6.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");

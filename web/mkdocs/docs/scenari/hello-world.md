@@ -28,7 +28,7 @@ Pour qu'un haut-parleur produise un son, il est nécessaire de le faire vibrer c
 Le programme Faust suivant produit une onde sinusoïdale :
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");
@@ -79,7 +79,7 @@ Faust permet de contrôler les différents paramètres d'un programme avec des �
 Commençons par le bouton, un bouton peut être créé en Faust avec `button("nom")` où `nom` est le nom du bouton. Cet élément est égal à 1 lorsqu'il est pressé et à 0 lorsqu'il ne l'est pas. Il suffit donc de le multiplier à `os.osc` (multiplier par 0 revient à supprimer le son de `os.osc` et multiplier par 1 à le laisser inchangé) :
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust1/exfaust1.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");
@@ -97,7 +97,7 @@ Essaye ce programme dans le Faust Web IDE ! Un bouton devrait apparaître en bas
 Afin de rendre ce programme plus propre, il est possible d'assigner notre bouton à une variable :
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust2/exfaust2.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");
@@ -118,7 +118,7 @@ Ici, `on` sera égal à 1 quand le bouton est pressé et à 0 quand il ne l'est 
 Effectuons une opération similaire pour le paramètre fréquence de `os.osc` en lui assignant un potentiomètre. Cela est fait en Faust en utilisant l'objet `hslider("nom",a,b,c,d)` où `nom` est le nom du paramètre, `a` sa valeur initiale, `b` son minimum, `c` son maximum et `d` sa précision. Dans le cas du paramètre fréquence, `a` peut être égal à 440 puisqu'il s'agit de la valuer par défaut, `b` à 20 puisque c'est la fréquence la plus basse qui puisse être entendue par l'Homme, `c` à 3000 (pour ne pas trop nous casser les oreilles) et `d` à 1 pour que les valeurs changent de 1 en 1 (ce paramètre n'a pas vraiment d'importance dans le cas présent) :
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust3/exfaust3.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");
@@ -135,7 +135,7 @@ process = os.osc(hslider("frequence",440,20,3000,1))*on;
 De la même manière que pour le bouton, le potentiomètre peut être placé dans une variable :
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust4/exfaust4.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");

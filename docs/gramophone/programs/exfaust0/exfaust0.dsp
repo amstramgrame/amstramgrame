@@ -11,6 +11,6 @@ fb = hslider("fb[acc: 1 0 -10 0 10]",0.5,0,1,0.01) : si.smoo;
 gate = button("gate[switch:1]");
 
 // DSP
-process = os.lf_imptrain(impFreq)*gate  : fi.resonlp(resFreq,q,1) : ef.echo(0.4,del,fb) : 
-ef.cubicnl(distDrive,0)*0.95;
+process = os.lf_imptrain(impFreq)*gate  : fi.resonlp(resFreq,q,1) : 
+ef.echo(0.4,del,fb) : ef.cubicnl(distDrive,0)*0.95;
 

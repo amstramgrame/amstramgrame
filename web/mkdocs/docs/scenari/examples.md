@@ -7,7 +7,7 @@ Le but de ce scenario est d'expliquer le fonctionnement de certains des programm
 Pour rappel, le programme [TicTac](../gramophone/programs.md#tictac) prend la forme suivante :
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");
@@ -35,7 +35,7 @@ ef.cubicnl(distDrive,0)*0.95;
 La dernière ligne `process` assemble les différents éléments de production du son. `os.lf_imptrain` produit des clics à intervalles réguliers (à une fréquence de `impFreq`). Essaye ce programme dans le Faust Web IDE pour entendre le son produit par cette fonction :
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust1/exfaust1.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");
@@ -52,7 +52,7 @@ process = os.lf_imptrain(impFreq);
 `fi.resonlp` est un filtre qui permet d'appliquer une hauteur aux clics produits par `os.lf_imptrain`. La hauteur des sons produits est déterminée par la fréquence `resFreq` du filtre. Le paramètre `q` du filtre détermine son "agressivité". Essaye ce programme dans le Faust Web IDE pour entendre l'effet de `fi.resonlp` sur `os.lf_imptrain` :
 
 <!-- faust-run -->
-<div class="faust-run"><img src="exfaust2/exfaust2.svg" class="mx-auto d-block">
+<div class="faust-run">
 ~~~
 
 import("stdfaust.lib");

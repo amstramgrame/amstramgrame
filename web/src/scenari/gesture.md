@@ -1,8 +1,8 @@
-# Capter le geste : travailler avec l'accéléromètre et le gyroscope
+# Capter le geste : travailler avec l'accéléromètre
 
-Le Gramophone abrite deux capteurs permettant de mesurer sa position et son déplacement dans l'espace : un accéléromètre et un gyroscope. Ce type de capteur est très commun de nos jours, on les retrouve par example dans la plupart des smartphones et des ordinateurs. Dans le cas du Gramophone, ils peuvent être utilisés pour contrôler les paramètres du son produit par l'instrument. Le but de ce scénario est d'apprendre à utiliser l'accéléromètre du Gramophone pour créer des instruments de musique expressifs. L'utilisation du gyroscope sera étudiée dans un autre scénario.   
+Le Gramophone abrite deux capteurs permettant de mesurer sa position et son déplacement dans l'espace : un accéléromètre et un gyroscope. Ce type de capteur est très commun de nos jours. On les retrouve par example dans la plupart des smartphones et des ordinateurs. Dans le cas du Gramophone, ils peuvent être utilisés pour contrôler les paramètres du son produit par l'instrument. Le but de ce scénario est d'apprendre à utiliser l'accéléromètre du Gramophone pour créer des instruments de musique expressifs. L'utilisation du gyroscope sera étudiée dans un autre scénario.   
 
-Un accéléromètre mesure l'accélération, c'est-à-dire le fait de changer la vitesse d'un objet dans l'espace. Si l'objet ne bouge pas ou qu'il se déplace à une vitesse constante, aucune accélération n'est mesurée. C'est un peu comme être assis dans une voiture quand elle accélère ou qu'elle freine : dans ces deux cas, notre corps mesure une "accélération". L'accéléromètre du Gramophone est tellement sensible qu'il peut aussi être influencé par la gravité de la terre. Dans ce cas là, il peut être utilisé pour mesurer l'inclinaison du Gramophone dans l'espace. 
+Un accéléromètre mesure l'accélération, c'est-à-dire le fait de changer la vitesse d'un objet dans l'espace. Si l'objet ne bouge pas ou qu'il se déplace à une vitesse constante, aucune accélération n'est mesurée. C'est un peu comme être assis dans une voiture quand elle accélère ou qu'elle freine : dans ces deux cas, notre corps perçois une "accélération". L'accéléromètre du Gramophone est tellement sensible qu'il peut aussi être influencé par la gravité de la terre. Dans ce cas là, il peut être utilisé pour mesurer l'inclinaison du Gramophone dans l'espace. 
 
 ## Choisir un axe
 
@@ -33,7 +33,7 @@ tu devrais pouvoir contrôler précisément la hauteur du son produit.
 
 ## Exercise : changer d'axe
 
-Avant d'expliquer à quoi correspondent les autres paramètres de la métadata `[acc: a b c d e]`, essaye de modifier le code précédent utiliser l'axe des Y plutôt que l'axe des X pour contrôler la hauteur du son produit : `[acc: 1 0 -10 0 10]`. Tente de repérer l'orientation de l'axe des Y sur le Gramophone. N'hésites pas à lire [cette page](../gramophone/about.md#les-capteurs-de-mouvements) si tu as besoin d'aide.
+Avant d'expliquer à quoi correspondent les autres paramètres de la métadata `[acc: a b c d e]`, essaye de modifier le code précédent pour utiliser l'axe des Y plutôt que l'axe des X pour contrôler la hauteur du son produit : `[acc: 1 0 -10 0 10]`. Tente de repérer l'orientation de l'axe des Y sur le Gramophone. N'hésites pas à lire [cette page](../gramophone/about.md#les-capteurs-de-mouvements) si tu as besoin d'aide.
 
 ## Utiliser des courbes de contrôle
 
@@ -56,7 +56,7 @@ process = os.osc(freq)*gate;
 ```
 <!-- /faust-run -->
 
-Les courbes 2 et 3 présentent de comportement plus complexes. N'hésites pas à les essayer aussi !
+Les courbes 2 et 3 présentent des comportements plus complexes. N'hésites pas à les essayer aussi !
 
 ## Configuration avancée
 
@@ -75,7 +75,7 @@ process = os.osc(freq)*gate;
 ```
 <!-- /faust-run -->
 
-La hauteur du son évolue lentement de 100 à 200 Hz lorsque le Gramophone et placé à gauche, puis plus rapidement de 200 à 2000 Hz lorsqu'il est placé à droite.
+La hauteur du son évolue lentement de 100 à 200 Hz lorsque le Gramophone est placé à gauche, puis plus rapidement de 200 à 2000 Hz lorsqu'il est placé à droite.
 
 ## Contrôler plusieurs paramètres
 

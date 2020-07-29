@@ -54,7 +54,7 @@ La fenêtre qui s'ouvre et remplace le diagramme correspond à l'interface utili
 <img src="img/ide-close.jpg" class="mx-auto d-block" width="100%">
 </figure>
 
-## Utiliser les exemples du site Amstramgrame
+## Utiliser les exemples du site AmStramGrame
 
 Les différents tutoriels et scénarii sur le site d'Amstramgrame contiennent des dizaines d'exemples de programmes prêts à être utilisés dans le Faust Web IDE et dans certains cas exécutés sur le Gramophone. Ils se présentent de la manière suivante :
 

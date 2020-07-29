@@ -46,7 +46,7 @@
 </li>
                                     
 <li>
-    <a href="../../scenari/gesture/" class="dropdown-item"> Capter le geste : travailler avec l&#39;accéléromètre et le gyroscope </a>
+    <a href="../../scenari/gesture/" class="dropdown-item"> Capter le geste : travailler avec l&#39;accéléromètre </a>
 </li>
                                 </ul>
                             </li>
@@ -136,6 +136,18 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="3"><a href="#demarrage-du-gramophone" class="nav-link">Démarrage du Gramophone</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#mode-neutre" class="nav-link">Mode Neutre</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#mode-programmation" class="nav-link">Mode Programmation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#mode-batterie" class="nav-link">Mode Batterie</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="3"><a href="#tenir-le-gramophone" class="nav-link">Tenir le Gramophone</a>
@@ -180,10 +192,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#aller-plus-loin-fabriquer-son-propre-gramophone" class="nav-link">Aller plus loin : fabriquer son propre Gramophone !</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -203,12 +211,21 @@
 </figure>
 
 <h2 id="vue-densemble">Vue d'ensemble</h2>
-<p>Le Gramophone est composé d'une coque en plastique, d'un haut-parleur, d'un ordinateur embarqué, d'une batterie et de <a href="TODO-tutorial">capteurs (accéléromètre, gyroscope, boussole, boutons, potentiomètres et photorésistance)</a>. </p>
-<p>TODO: pics with components (bien parler de bouton assignable).</p>
+<p>Le Gramophone est composé d'une coque en plastique, d'un haut-parleur, d'un ordinateur embarqué, d'une batterie et de capteurs (<a href="#les-capteurs-de-mouvements">accéléromètre, gyroscope, boussole</a>, <a href="#le-bouton-assignable">bouton</a>, <a href="#le-potentiometre-assignable">potentiomètre</a> et <a href="#la-photoresistance">photorésistance</a>). </p>
+<figure>
+<img src="img/gramo-comp0.jpg" class="mx-auto d-block" width="100%">
+<center><figcaption>Composants du Gramophone (1)</figcaption></center>
+</figure>
+
+<figure>
+<img src="img/gramo-comp1.jpg" class="mx-auto d-block" width="100%">
+<center><figcaption>Composants du Gramophone (2)</figcaption></center>
+</figure>
+
 <h2 id="programmation-du-gramophone">Programmation du Gramophone</h2>
 <p>Le Gramophone se programme via un câble USB connecté à un ordinateur. Le <a href="../../faust/about/">langage Faust</a> peut être utilisé pour programmer le Gramophone grâce aux plateformes <a href="../../faust/playground/">Faust Playground</a> (programmation graphique pour les débutants) et <a href="../../faust/ide/">Faust Web IDE</a> (programmation écrites/scriptées). Pour que cela fonctionne, il est nécessaire d'installer l'application <a href="../loader/">GramoLoader</a> sur sa machine qui permet de faire le lien entre le navigateur Web et le gramophone.</p>
 <figure>
-<img src="img/gramo-prog.svg" class="mx-auto d-block" width="90%">
+<img src="img/gramo-prog.jpg" class="mx-auto d-block" width="90%">
 <center><figcaption>Programmation du Gramophone</figcaption></center>
 </figure>
 
@@ -217,36 +234,62 @@
 <h3 id="demarrage-du-gramophone">Démarrage du Gramophone</h3>
 <p>Le Gramophone abrite un interrupteur qui permet de le démarrer et de l'arrêter. Cet interrupteur a trois positions pour sélectionner le mode de fonctionnement :</p>
 <ul>
-<li>en position centrale, le Gramophone est à l'arrêt ;</li>
-<li>lorsqu'il est enclenché à gauche, le Gramophone est démarré en "mode programmation" ;</li>
-<li>lorsqu'il est enclenché à droite, le Gramophone est démarré en "mode jeu" : il produit du son. </li>
+<li>en position centrale, le Gramophone est en <a href="#mode-neutre">mode neutre</a> ;</li>
+<li>lorsqu'il est enclenché à gauche (dans la direction opposée du <a href="#controle-du-volume">bouton de contrôle du volume</a>), le Gramophone est démarré en <a href="#mode-programmation">mode programmation</a> ;</li>
+<li>lorsqu'il est enclenché à droite (en direction du <a href="#controle-du-volume">bouton de contrôle du volume</a>), le Gramophone est démarré en <a href="#mode-batterie">mode batterie</a>. </li>
 </ul>
-<p>TODO: pic of the switch</p>
-<p>Le "mode programmation" doit être activé pour pouvoir programmer le Gramophone depuis le <a href="../../faust/ide/">Faust Web IDE</a> ou le <a href="../../faust/playground/">Faust Playground</a> via l'application <a href="../loader/">GramoLoader</a>.</p>
-<p>Le "mode jeu" doit être sélectionné pour pouvoir executer les programmes installés sur le Gramophone. <strong>Il est nécessaire de presser/appuyer sur <a href="#passer-dun-programme-a-lautre">la molette de changement de programme</a> pour acter le lancement du premier programme Faust installé sur le Gramophone :</strong></p>
 <figure>
-<img src="img/gramo-start.svg" class="mx-auto d-block" width="80%">
+<img src="img/gramo-switch.jpg" class="mx-auto d-block" width=80%">
+<center><figcaption>L'interrupteur de démarrage du Gramophone</figcaption></center>
 </figure>
 
+<p><strong>Typiquement, le <a href="#mode-programmation">mode programmation</a> est utilisé pour programmer le Gramophone avec l'application <a href="../loader/">GramoLoader</a>, le <a href="#mode-neutre">mode neutre</a> permet de lancer le Gramophone lorsqu'il est connecté à l'ordinateur en USB, le <a href="#mode-batterie">mode batterie</a> permet de jouer le Gramophone sans le connecter à l'ordinateur et à charger la batterie.</strong></p>
+<h4 id="mode-neutre">Mode Neutre</h4>
+<p>En mode neutre (interrupteur en position centrale), le Gramophone peut : </p>
+<ul>
+<li>être alimenté en électricité avec le câble USB et donc joué ;</li>
+<li>programmé sous certaines conditions (il est possible que le Gramophone n'arrive pas à installer le programme depuis l'application <a href="../loader/">GramoLoader</a>)</li>
+</ul>
+<p>Le mode neutre est recommandé pour l'exécution d'un programme Faust lorsque le Gramophone est branché à l'ordinateur. Si le câble USB est débranché, le Gramophone s'arrête.</p>
+<p><strong>La batterie du Gramophone n'est pas sollicitée en mode neutre : le Gramophone devrait être mis en mode neutre lorsqu'il n'est pas utilisé pour ne pas vider la batterie.</strong></p>
+<h4 id="mode-programmation">Mode Programmation</h4>
+<p>Le mode programmation (interrupteur en position gauche) permet de forcer la programmation d'un Gramophone depuis le <a href="../../faust/ide/">Faust Web IDE</a> ou le <a href="../../faust/playground/">Faust Playground</a> via l'application <a href="../loader/">GramoLoader</a>. Si un programme Faust a du mal à être installé en mode neutre, le mode programmation devrait résoudre le problème. </p>
+<h4 id="mode-batterie">Mode Batterie</h4>
+<p>Le mode batterie (interrupteur en position droite) permet de :</p>
+<ul>
+<li>faire fonctionner le Gramophone sur la batterie ;</li>
+<li>charger la batterie du Gramophone si celui-ci est connecté à un port USB.</li>
+</ul>
+<p><strong>Il est nécessaire de presser/appuyer sur <a href="#passer-dun-programme-a-lautre">la molette de changement de programme</a> pour acter le lancement du premier programme Faust installé sur le Gramophone :</strong></p>
+<figure>
+<img src="img/gramo-start.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>On met donc d'abord le Gramophone en mode batterie puis on appuie plusieurs fois sur le bouton de lancement du programme.</p>
+<p><strong>Il est important de remettre l'interrupteur en mode neutre après avoir terminé de jouer si on ne veut pas vider la batterie !</strong></p>
 <h3 id="tenir-le-gramophone">Tenir le Gramophone</h3>
 <p>Le Gramophone se tient dans la paume de la main droite avec la sangle autour de la main. Cette dernière peut être ajustée afin de tenir le Gramophone fermement. </p>
 <figure>
 <img src="img/gramo-holding1.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
-<p>Il est important de noter que la sangle n'est pas placée sur le Gramophone de manière symétrique : la photorésistance doit tomber sous le pouce et le bouton assignable sous le majeur :</p>
+<p>Il est important de noter que la sangle n'est pas placée sur le Gramophone de manière symétrique : <a href="#la-photoresitance">la photorésistance</a> (capteur de lumière) doit tomber sous le pouce et <a href="#le-bouton-assignable">le bouton assignable</a> sous le majeur :</p>
 <figure>
 <img src="img/gramo-holding0.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
 <h3 id="controle-du-volume">Contrôle du volume</h3>
 <p>Le volume du son produit par le Gramophone peut être contrôlé par le potentiomètre se trouvant juste au-dessus de la prise jack (celui qui se trouve en bas de la main lorsque l'on tient le Gramophone) :</p>
-<p>TODO: pic</p>
+<figure>
+<img src="img/gramo-volume.jpg" class="mx-auto d-block" width="80%">
+<center><figcaption>Potentiomètre de contrôle du volume du Gramophone</figcaption></center>
+</figure>
+
 <blockquote>
 <p>Il est important de noter que le volume du son produit dépend aussi fortement du programme exécuté sur le Gramophone.</p>
 </blockquote>
 <h3 id="controle-des-parametres-du-son">Contrôle des paramètres du son</h3>
-<p>Le son produit par le Gramophone peut-être contrôlé à l'aide de différents éléments d'interface. Chacun d'entre-eux peut être assigné directement dans un programme Faust à un paramètre du son à l'aide de <a href="TODO">métadatas</a> (le fonctionnement des métadata dans Faust est détaillé dans TODO).</p>
+<p>Le son produit par le Gramophone peut-être contrôlé à l'aide de différents éléments d'interface. Chacun d'entre-eux peut être assigné directement dans un programme Faust à un paramètre du son à l'aide de <a href="#metadatas-de-programmation-du-gramophone">métadatas</a> (le fonctionnement des métadata dans Faust est détaillé <a href="#metadatas-de-programmation-du-gramophone">ici</a>).</p>
 <h4 id="le-bouton-assignable">Le bouton assignable</h4>
 <p>Le bouton assignable du Gramophone se trouve à l'opposée du <a href="#controle-du-volume">potentiomètre de volume</a> et tombe sous la majeur du musicien :</p>
 <figure>
@@ -263,12 +306,12 @@
 <p>Il est "typiquement" actionné par la main gauche de l'instrumentiste.</p>
 <p>Ce potentiomètre est adressable dans un programme Faust à l'aide de la métadata suivante : <code>[knob:2]</code></p>
 <h4 id="la-photoresistance">La photorésistance</h4>
-<p>Le photorésistance assignable du Gramophone se trouve juste à gauche du <a href="#potentiometre-assignable">potentiomètre assignable</a> et tombe sous le pouce de l'instrumentiste :</p>
+<p>Le photorésistance assignable du Gramophone permet de capter la lumière. Elle se trouve juste à gauche du <a href="#potentiometre-assignable">potentiomètre assignable</a> et tombe sous le pouce de l'instrumentiste :</p>
 <figure>
-<img src="img/gramo-photores.svg" class="mx-auto d-block" width="80%">
+<img src="img/gramo-photores.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
-<p>Elle est adressable dans un programme Faust à l'aide de la métadata suivante : <code>[knob:2]</code>.</p>
+<p>Elle est adressable dans un programme Faust à l'aide de la métadata suivante : <code>[knob:3]</code>.</p>
 <h4 id="les-capteurs-de-mouvements">Les capteurs de mouvements</h4>
 <p>Le Gramophone abrite un accéléromètre et un gyroscope qui peuvent être utilisés pour contrôler les paramètres d'un programme Faust avec le geste. </p>
 <p><strong>&gt;&gt; Les informations données dans cette section se veulent être très techniques. Pour un tutoriel pas-à-pas sur l'utilisation des capteurs de mouvements du Gramophone, <a href="../../scenari/gesture/">clique sur ce lien</a>.</strong></p>
@@ -294,7 +337,7 @@
 <center><figcaption>L'axe des Z du Gramophone</figcaption></center>
 </figure>
 
-<p>Des <a href="TODO">métadatas Faust</a> peuvent être utilisées pour associer et configurer l'accéléromètre et le gyroscope du Gramophone à un paramètre d'un programme Faust :</p>
+<p>Des <a href="#metadatas-de-programmation-du-gramophone">métadatas Faust</a> peuvent être utilisées pour associer et configurer l'accéléromètre et le gyroscope du Gramophone à un paramètre d'un programme Faust :</p>
 <pre><code>[acc: a b c d e]
 </code></pre>
 
@@ -342,19 +385,19 @@
 
 <p>Avec cette configuration, <code>g = 0</code> lorsque le Gramophone est incliné à 90 degrés du côté gauche et lorsque le Gramophone est maintenue droit, haut-parleur pointant vers le bas. La valeur de <code>g</code> augmente au fur et à mesure que le Gramophone est incliné vers la droite. <code>g = 1</code> lorsque le Gramophone est incliné à 90 degrés du côté droit.</p>
 <h3 id="charger-le-gramophone">Charger le Gramophone</h3>
-<p>Pour charger la batterie du Gramophone, il suffit de le brancher à un chargeur USB ou à un ordinateur. Pour que la charge puisse s'effectuer, il est nécessaire de mettre le Gramophone en <a href="#demarrage-du-gramophone">mode "jeu" ou "programmation"</a> : le Gramophone ne se chargera pas s'il est éteint !</p>
+<p>Pour charger la batterie du Gramophone, il suffit de le brancher à un chargeur USB ou à un ordinateur. Pour que la charge puisse s'effectuer, il est nécessaire de mettre le Gramophone en <a href="#mode-batterie">mode batterie</a> : le Gramophone ne se chargera pas s'il est en mode neutre ou en mode programmation !</p>
 <figure>
 <img src="img/gramo-charge.svg" class="mx-auto d-block" width="80%">
 </figure>
 
 <p>L'autonomie du Gramophone dépend de la complexité du programme exécuté, de la santé de la batterie, et du temps de charge. Il faut compter environ deux heures pour une charge complète. </p>
 <h3 id="passer-dun-programme-a-lautre">Passer d'un programme à l'autre</h3>
-<p>Plusieurs programmes Faust peuvent être installés sur un seul Gramophone. <!-- TODO: il faut expliquer comment --> Pour passer d'un programme à un autre, il suffit de tourner la molette noire placée en bas du Gramophone :</p>
+<p>Plusieurs programmes Faust peuvent être installés sur un seul Gramophone. Pour passer d'un programme à un autre, il suffit de tourner la molette noire placée en bas du Gramophone :</p>
 <figure>
 <img src="img/gramo-prog-change.svg" class="mx-auto d-block" width="80%">
 </figure>
 
-<p>Les programmes sont sélectionnés en boucle. Lorsque <a href="#demarrage-du-gramophone">le Gramophone est démarré en mode "jeu"</a>, le premier programme est toujours sélectionné. Pour passer au deuxième programme, il suffit de tourner la molette vers la droite. Pour revenir en arrière, il faut la tourner vers la gauche. Une fois arrivé au dernier programme, tourner la molette vers la droite fait automatiquement revenir au premier programme, etc.</p>
+<p>Les programmes sont sélectionnés en boucle. Lorsque le Gramophone est démarré en <a href="#mode-neutre">mode neutre</a> ou en <a href="#mode-batterie">mode batterie</a>, le premier programme est toujours sélectionné. Pour passer au deuxième programme, il suffit de tourner la molette vers la droite. Pour revenir en arrière, il faut la tourner vers la gauche. Une fois arrivé au dernier programme, tourner la molette vers la droite fait automatiquement revenir au premier programme, etc.</p>
 <h2 id="metadatas-de-programmation-du-gramophone">Métadatas de programmation du Gramophone</h2>
 <table>
 <thead>
@@ -392,8 +435,11 @@
 </tr>
 </tbody>
 </table>
-<h2 id="aller-plus-loin-fabriquer-son-propre-gramophone">Aller plus loin : fabriquer son propre Gramophone !</h2>
-<p>Le Gramophone n'est pour l'instant pas disponible à la vente. En revanche, il est possible de fabriquer son propre Gramophone ! Pour savoir comment faire, n'hésites pas à lire le tutoriel : <a href="../making/">Fabriquer son propre Gramophone !</a></p></div>
+<!-- Comme la section correspondante n'existe pas encore, on la commente cette section
+## Aller plus loin : fabriquer son propre Gramophone !
+
+Le Gramophone n'est pour l'instant pas disponible à la vente. En revanche, il est possible de fabriquer son propre Gramophone ! Pour savoir comment faire, n'hésites pas à lire le tutoriel : [Fabriquer son propre Gramophone !](making.md)
+--></div>
             </div>
         </div>
 

@@ -46,7 +46,7 @@
 </li>
                                     
 <li>
-    <a href="../../scenari/gesture/" class="dropdown-item"> Capter le geste : travailler avec l&#39;accéléromètre et le gyroscope </a>
+    <a href="../../scenari/gesture/" class="dropdown-item"> Capter le geste : travailler avec l&#39;accéléromètre </a>
 </li>
                                 </ul>
                             </li>
@@ -162,10 +162,10 @@
 <h1 id="quelques-programmes-faust-pour-gramophone">Quelques programmes Faust pour Gramophone</h1>
 <p>Cette page rassemble une collection de programmes Faust pour Gramophone prêts à l’emploi.</p>
 <h2 id="tictac">TicTac</h2>
-<p>Le programme <code>TicTac</code> produit des petits clics à interval réguliers. Ces derniers sont filtrés pour appliquer une hauteur au son produit puis envoyés dans un écho pour augmenter la densité de la texture sonore produite. Les paramètres du son sont contrôlés avec l'<a href="../about/#les-capteurs-de-mouvements">accéléromètre</a> et le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. La production de "clics" est enclenchée lorsque le <a href="../about/#le-bouton-assignable">bouton assignable</a> est pressé.  </p>
+<p>Le programme <code>TicTac</code> produit des petits clics à intervals réguliers. Ces derniers sont filtrés pour appliquer une hauteur au son produit puis envoyés dans un écho pour augmenter la densité de la texture sonore produite. Les paramètres du son sont contrôlés avec l'<a href="../about/#les-capteurs-de-mouvements">accéléromètre</a> et le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. La production de "clics" est enclenchée lorsque le <a href="../about/#le-bouton-assignable">bouton assignable</a> est pressé.  </p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+<div class="faust-run">
 
 <pre><code>
 import(&quot;stdfaust.lib&quot;);
@@ -180,8 +180,8 @@ fb = hslider(&quot;fb[acc: 1 0 -10 0 10]&quot;,0.5,0,1,0.01) : si.smoo;
 gate = button(&quot;gate[switch:1]&quot;);
 
 // DSP
-process = os.lf_imptrain(impFreq)*gate  : fi.resonlp(resFreq,q,1) : ef.echo(0.4,del,fb) : 
-ef.cubicnl(distDrive,0)*0.95;
+process = os.lf_imptrain(impFreq)*gate  : fi.resonlp(resFreq,q,1) : 
+ef.echo(0.4,del,fb) : ef.cubicnl(distDrive,0)*0.95;
 
 </code></pre>
 
@@ -196,7 +196,7 @@ ef.cubicnl(distDrive,0)*0.95;
 <p><code>Pioupiou</code> est un programme pour Gramophone où la hauteur du son produit (une simple sinusoïde) est contrôlée par le <a href="#la-photoresistance">capteur de lumière</a> du Gramophone. Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet de lancer la production du son. </p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust1/exfaust1.svg" class="mx-auto d-block">
+<div class="faust-run">
 
 <pre><code>
 import(&quot;stdfaust.lib&quot;);
@@ -221,7 +221,7 @@ process = os.osc(freq)*gate;
 <p>Le programme <code>Clarinet</code> est basé sur un synthétiseur (modèle physique) de clarinette. La pression du souffle du clarinettiste, la raideur de l'anche, et le diamètre du pavillon sont contrôlés par les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone. La longueur du tube de la clarinette (qui impacte la hauteur du son) est contrôlée par le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'activer le souffle du clarinettiste. </p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust2/exfaust2.svg" class="mx-auto d-block">
+<div class="faust-run">
 
 <pre><code>
 import(&quot;stdfaust.lib&quot;);
@@ -251,7 +251,7 @@ process = pm.clarinetModel(tube,pres,reed,bell);
 <p><code>Comb</code> est un instrument pour Gramophone très simple basé sur un filtre en peigne. Les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone contrôlent le volume et la hauteur du son produit. Le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a> contrôle l'agressivité et la résonance du son. Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'activer la production du son.</p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust3/exfaust3.svg" class="mx-auto d-block">
+<div class="faust-run">
 
 <pre><code>
 import(&quot;stdfaust.lib&quot;);
@@ -277,7 +277,7 @@ process = no.noise*gate*gain : fi.fb_fcomb(1024,del,1,fb);
 <p><code>FM</code> est un instrument pour Gramophone basé sur un synthétiseur FM (modulation de fréquence). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> peut être utilisé comme un interrupter pour activer et désactiver le son. La hauteur du son produit peut être contrôlée avec le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. Les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone permettent de contrôler le timbre du son.</p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust4/exfaust4.svg" class="mx-auto d-block">
+<div class="faust-run">
 
 <pre><code>
 import(&quot;stdfaust.lib&quot;);
@@ -309,7 +309,7 @@ process = sy.fm((freq0,freq1,freq2),(index1,index2))*gate;
 <p><code>Brass</code> est un instrument pour Gramophone basé sur un synthétiseur de trompette (modèle physique). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'activer le souffle. Le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a> contrôle la distortion du son et peut être utilisé pour augmenter le gain de l'instrument. Les autres paramètres du modèle sont contrôlés par les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a>.</p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust5/exfaust5.svg" class="mx-auto d-block">
+<div class="faust-run">
 
 <pre><code>
 import(&quot;stdfaust.lib&quot;);
@@ -339,7 +339,7 @@ process = pm.brassModel(tube,lips,0,pres) : ef.cubicnl(dist,0)*0.95;
 <p><code>Violin</code> est un instrument pour Gramophone basé sur un synthétiseur de violon (modèle physique). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'initier le mouvement de l'archet. Le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a> contrôle la longueur de la corde et donc la hauteur du son produit. Les autres paramètres du modèle sont contrôlés par les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a>.</p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust6/exfaust6.svg" class="mx-auto d-block">
+<div class="faust-run">
 
 <pre><code>
 import(&quot;stdfaust.lib&quot;);

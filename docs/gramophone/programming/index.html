@@ -46,7 +46,7 @@
 </li>
                                     
 <li>
-    <a href="../../scenari/gesture/" class="dropdown-item"> Capter le geste : travailler avec l&#39;accéléromètre et le gyroscope </a>
+    <a href="../../scenari/gesture/" class="dropdown-item"> Capter le geste : travailler avec l&#39;accéléromètre </a>
 </li>
                                 </ul>
                             </li>
@@ -143,10 +143,10 @@
 <p>Dans ce court tutoriel, nous montrons comment programmer le Gramophone avec le <a href="../../faust/ide/">Faust Web IDE</a> et le <a href="../../faust/playground/">Faust Playground</a>. </p>
 <h2 id="avec-le-faust-web-ide">Avec le Faust Web IDE</h2>
 <p><strong>Avant de débuter ce tutoriel, il est recommandé de lire <a href="../../faust/ide/">la page sur le Faust Web IDE</a></strong>.</p>
-<p>Prenons un programme Faust très simple qui produit <a href="TODO">une onde en dent de scie</a> :</p>
+<p>Prenons un programme Faust très simple qui produit une onde en dent de scie :</p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+<div class="faust-run">
 
 <pre><code>import(&quot;stdfaust.lib&quot;);
 freq = 440;
@@ -160,22 +160,23 @@ process = os.sawtooth(freq);
 
 <!-- /faust-run -->
 
-<p>Clique sur le bouton "Éditer/exécuter le programme" pour ouvrir le programme ci-dessus dans le Faust Web IDE. Il peut alors être exécuté directement dans le navigateur Web en suivant la procédure indiquée <a href="TODO">ici</a>. </p>
+<p>Clique sur le bouton "Éditer/exécuter le programme" pour ouvrir le programme ci-dessus dans le Faust Web IDE. Il peut alors être exécuté directement dans le navigateur Web en suivant la procédure indiquée <a href="../../faust/ide/">ici</a>. </p>
 <p>Pour charger ce programme sur le Gramophone, il suffit de cliquer dans un premier temps sur le bouton "Gramo" dans l'IDE :</p>
 <figure>
 <img src="img/ide-gramo.svg" class="mx-auto d-block" width="100%">
 </figure>
 
 <p>Cela lance la "fabrication" du programme et après un quinzaine de seconde, il devrait être automatiquement téléchargé sur ton ordinateur sous la forme d'un fichier appelé <code>binary.zip</code>. Si le téléchargement ne se lance pas, il est possible que ce dernier soit bloqué par ton navigateur Web. </p>
-<p>Une fois que <code>binary.zip</code> est téléchargé, connecte le Gramophone à ton ordinateur puis lance <a href="../loader/">l'application GramoLoader</a>. Assure-toi que <a href="../about/#demarrage-du-gramophone">ton Gramophone est en "mode programmation"</a> (l'interrupteur de mise en route du Gramophone doit-être placé à gauche). Ensuite, sélectionne le fichier <code>binary.zip</code> sur l'ordinateur en cliquant sur le bouton "Sélectionner un fichier" :</p>
+<p>Une fois que <code>binary.zip</code> est téléchargé, connecte le Gramophone à ton ordinateur puis lance <a href="../loader/">l'application GramoLoader</a>. Assure-toi que <a href="../about/#mode-programmation">ton Gramophone est en "mode programmation"</a> (l'interrupteur de mise en route du Gramophone doit-être placé à gauche). Ensuite, sélectionne le fichier <code>binary.zip</code> sur l'ordinateur en cliquant sur le bouton "Sélectionner un fichier" :</p>
 <figure>
 <img src="img/loader.jpg" class="mx-auto d-block" width="50%">
 </figure>
 
 <p>Le programme devrait alors être envoyé sur le Gramophone. Cette opération prend généralement une quinzaine de secondes. </p>
-<p>Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de <a href="../about/#demarrage-du-gramophone">mettre le Gramophone en "mode jeu"</a> en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement <a href="../about/#passer-dun-programme-a-lautre">la mollette de sélection des programmes Faust</a> une fois. Un son correspondant à l'onde en dent de scie implémentée lors de l'étape précédente devrait alors être émis. Le volume du son produit peut être contrôlé avec <a href="#controle-du-volume">le potentiomètre de contrôle du volume du Gramophone</a>.</p>
-<p><strong>Pour modifier le programme, il suffit de changer le code dans le Faust Web IDE et de rappuyer sur le bouton "Gramo" : rien d'autre à faire, le programme GramoLoader se charge de tout !</strong></p>
+<p>Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de <a href="../about/#mode-neutre">mettre le Gramophone en "mode neutre"</a> en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement <a href="../about/#passer-dun-programme-a-lautre">la mollette de sélection des programmes Faust</a> une fois. Un son correspondant à l'onde en dent de scie implémentée lors de l'étape précédente devrait alors être émis. Le volume du son produit peut être contrôlé avec <a href="#controle-du-volume">le potentiomètre de contrôle du volume du Gramophone</a>.</p>
+<p><strong>Pour modifier le programme, il suffit de changer le code dans le Faust Web IDE et de rappuyer sur le bouton "Gramo" : rien d'autre à faire, l'application GramoLoader se charge de tout !</strong></p>
 <p>Comme le programme Faust présenté au début de cette section ne contient aucun paramètre, il n'est actuellement pas possible d’interagir avec ce dernier. Pour apprendre à contrôler un programme Faust avec le Gramophone, tu peux maintenant lire le scenario : <a href="../../scenari/hello-world/">Hello World : mon premier programme pour Gramophone</a>.</p>
+<p>Une fois installé sur le Gramophone, le programme peut être également utilisé en <a href="../about/#mode-batterie">mode batterie</a>.</p>
 <h2 id="avec-le-faust-playground">Avec le Faust Playground</h2>
 <p><strong>Avant de débuter ce tutoriel, il est recommandé de lire <a href="../../faust/playground/">la page sur le Faust Playground</a></strong>.</p>
 <p>Construisons tout d'abord un programme très simple dans le <a href="https://faustplayground.grame.fr/">Faust Playground</a> en connectant par exemple une harpe "Kisana" (instrument) à un Echo (effet) :</p>
@@ -210,8 +211,9 @@ process = os.sawtooth(freq);
 </figure>
 
 <p>Le programme devrait alors être envoyé sur le Gramophone. Cette opération prend généralement une quinzaine de secondes. </p>
-<p>Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de <a href="../about/#demarrage-du-gramophone">mettre le Gramophone en "mode jeu"</a> en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement <a href="../about/#passer-dun-programme-a-lautre">la mollette de sélection des programmes Faust</a> une fois. Un son correspondant au programme créé dans le Faust Playground lors de l'étape précédente devrait alors être émis.</p>
-<p>Pour modifier le programme, il suffit de changer le patch dans le Faust Playground et de re-générer une fichier <code>binary.zip</code> : rien d'autre à faire, le programme GramoLoader se charge de tout !</p></div>
+<p>Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de <a href="../about/#mode-neutre">mettre le Gramophone en mode neutre</a> en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement <a href="../about/#passer-dun-programme-a-lautre">la mollette de sélection des programmes Faust</a> une fois. Un son correspondant au programme créé dans le Faust Playground lors de l'étape précédente devrait alors être émis.</p>
+<p><strong>Pour modifier le programme, il suffit de changer le patch dans le Faust Playground et de re-générer une fichier <code>binary.zip</code> : rien d'autre à faire, l'application GramoLoader se charge de tout !</strong>  </p>
+<p>Une fois installé sur le Gramophone, le programme peut être également utilisé en <a href="../about/#mode-batterie">mode batterie</a>. </p></div>
             </div>
         </div>
 

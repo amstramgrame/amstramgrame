@@ -70,7 +70,7 @@ serve:
 
 all:
 	$(MAKE) md
-	$(MAKE) svg
+#	$(MAKE) svg
 
 clean:
 	rm -f $(MD)

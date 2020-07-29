@@ -46,7 +46,7 @@
 </li>
                                     
 <li>
-    <a href="../../scenari/gesture/" class="dropdown-item"> Capter le geste : travailler avec l&#39;accéléromètre et le gyroscope </a>
+    <a href="../../scenari/gesture/" class="dropdown-item"> Capter le geste : travailler avec l&#39;accéléromètre </a>
 </li>
                                 </ul>
                             </li>
@@ -145,14 +145,14 @@
 
 <h1 id="le-langage-de-programmation-faust">Le langage de programmation Faust</h1>
 <h2 id="un-monde-de-langages-de-programmation">Un monde de langages de programmation</h2>
-<p>À l'image des langages utilisés par les humains pour communiquer entre-eux comme le Français, l'Allemand, le Chinois, etc., il existe aujourd'hui des dizaines de langages de programmation informatique. Certains, comme Python, Java ou JavaScript sont devenus des standards et sont connus d'un grand nombre de personnes, d'autres comme Assembleur ou VHDL s'adressent à un public d'utilisateur plus spécialisé. La plupart des langages de programmation grand-public sont dit à "usage général", c'est à dire qu'ils peuvent être utilisés pour construire n'importe quel type de programme pour tout types d'applications. À l'inverse, il existe des langages à usage spécifique qui ne peuvent être utilisés que pour effectuer un type de tâche donné. C'est le cas de Faust qui est placé au cœur d'AmStramGrame.</p>
+<p>À l'image des langages utilisés par les humains pour communiquer entre-eux comme le Français, l'Allemand, le Chinois, etc., il existe aujourd'hui des dizaines de langages de programmation informatique. Certains, comme Python, Java ou JavaScript sont devenus des standards et sont connus d'un grand nombre de personnes, d'autres comme Assembleur ou VHDL s'adressent à un public d'utilisateur plus spécialisé. La plupart des langages de programmation grand-public sont dit à "usage général", c'est à dire qu'ils peuvent être utilisés pour construire n'importe quel genre de programme pour tout types d'applications. À l'inverse, il existe des langages à usage spécifique qui ne peuvent être utilisés que pour effectuer un type de tâche donné. C'est le cas de Faust qui est placé au cœur d'AmStramGrame.</p>
 <p>Faust a été spécialement conçu pour programmer (synthétiser) et manipuler (traiter) des sons. En effet, bien qu'il soit possible d'écrire (implémenter) des algorithmes pour la synthèse et le traitement du son dans des langages à usage général comme Python ou Java, ces derniers sont souvent trop peu performants pour produire du son de manière instantanée (en temps réel). Or, pour faire de la musique, il est nécessaire que les sons soient produits de manière immédiate. Il existe un langage à usage général qui permet de mener à bien cette tâche : C/C++. Toutefois, l'utilisation de ce dernier est réservée à des programmeurs chevronnés et nécessite des années de pratique. À l'inverse, Faust est simple d'utilisation et s'adresse à tous les publics.</p>
 <h2 id="faust-cest-quoi">Faust, c'est quoi ?</h2>
-<p>En termes purement scientifiques, Faust est "un langage de programmation pour le traitement du signal en temps-réel". Dis autrement, c'est un langage fait pour programmer des sons et les produire de manière instantanée. Faust est issu d'une longue lignée de langage de programmation spécialement conçus pour le domaine de la musique. Il peut être utilisé directement en ligne à travers la plateforme <a href="../ide/">Faust Web IDE</a> (<a href="https://faustide.grame.fr">https://faustide.grame.fr</a>) ou en <a href="https://github.com/grame-cncm/faust">l'installant sur sa machine</a> (cette option s'adresse à des programmateurs expérimentés).</p>
+<p>En termes purement scientifiques, Faust est "un langage de programmation pour le traitement du signal en temps-réel". Dit autrement, c'est un langage fait pour programmer des sons et les produire de manière instantanée. Faust est issu d'une longue lignée de langage de programmation spécialement conçus pour le domaine de la musique. Il peut être utilisé directement en ligne à travers la plateforme <a href="../ide/">Faust Web IDE</a> (<a href="https://faustide.grame.fr">https://faustide.grame.fr</a>) ou en <a href="https://github.com/grame-cncm/faust">l'installant sur sa machine</a> (cette option s'adresse à des programmeurs expérimentés).</p>
 <p>Un programme Faust peut potentiellement être très court et ne faire que quelques lignes :</p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+<div class="faust-run">
 
 <pre><code>
 import(&quot;stdfaust.lib&quot;);

@@ -39,15 +39,15 @@ Les trois premiers potentiomètres (points verts) de Kisana permettent d'actionn
 
 Le menu LIBRARY donne accès à deux types d'éléments : des "instruments" qui produisent du son et des "effets" qui traitent du son. À la différence des instruments, les effets ont une entrée audio matérialisée par un point vert à leur gauche. 
 
-Dans le menu LIBRARY sélectionné l'effet "Echo" et connecté le à Kisana puis au haut-parleur : 
+Dans le menu LIBRARY sélectionne l'effet "Echo" et connecte le à Kisana puis au haut-parleur : 
 
 <figure>
 <img src="img/playground-kis-echo.jpg" class="mx-auto d-block" width="100%">
 </figure>
 
-Changez ensuite la valeur du paramètre "echo intensity" et vous devriez entendre un écho appliqué au son de Kisana. 
+Change ensuite la valeur du paramètre "echo intensity" et tu devrais entendre un écho appliqué au son de Kisana. 
 
-En pratique n'importe quel instrument peut être connecté à n'importe quel effet. De la même manière, plusieurs effets peuvent être connecté entre-eux :
+En pratique n'importe quel instrument peut être connecté à n'importe quel effet. De la même manière, plusieurs effets peuvent être connectés entre-eux :
 
 <figure>
 <img src="img/playground-multi.jpg" class="mx-auto d-block" width="100%">

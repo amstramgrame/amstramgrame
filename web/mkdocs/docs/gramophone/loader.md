@@ -15,7 +15,7 @@ Le [Faust Web IDE](../faust/ide.md) et le [Faust Playground](../faust/playground
 <center><figcaption>Programmation du Gramophone</figcaption></center>
 </figure>
 
-Pour que cela fonctionne, il est nécessaire que le Gramophone soit connecté à l'ordinateur avec un câble USB et [qu'il soit mis en mode programmation](about.md#demarrage-du-gramophone).
+Pour que cela fonctionne, il est nécessaire que le Gramophone soit connecté à l'ordinateur avec un câble USB et [qu'il soit mis en mode programmation](about.md#mode-programmation).
 
 Une fois sélectionné, toute nouvelle version de `binary.zip` étant téléchargée sur l'ordinateur sera automatiquement envoyée au Gramophone. **L'application GramoLoader doit évidemment rester ouverte pour que cela fonctionne.**
 

@@ -51,7 +51,7 @@ Branche le Gramophone avec son câble USB à l'ordinateur :
 <img src="img/gramo-usb.jpg" class="mx-auto d-block" width="70%">
 </figure>
 
-puis mets le [en mode programmation](../gramophone/about.md#demarrage-du-gramophone) en plaçant l'interrupteur de démarrage à gauche :
+puis mets le [en mode programmation](../gramophone/about.md#mode-programmation) en plaçant l'interrupteur de démarrage à gauche :
 
 <figure>
 <img src="img/gramo-prog.jpg" class="mx-auto d-block" width="70%">
@@ -61,7 +61,7 @@ Dans l'application GramoLoader, clique sur le bouton "Sélectionner un fichier".
 
 Si tout se passe bien, l'application GramoLoader devrait afficher le message : "Programmation terminée, en attente d'un nouveau fichier" au bout d'une quinzaine de secondes. 
 
-Pour lancer le programme Faust sur le Gramophone, mets le [en mode neutre](../gramophone/about.md#demarrage-du-gramophone) en plaçant le bouton de démarrage au centre :
+Pour lancer le programme Faust sur le Gramophone, mets le [en mode neutre](../gramophone/about.md#mode-neutre) en plaçant le bouton de démarrage au centre :
 
 <figure>
 <img src="img/gramo-lauch.jpg" class="mx-auto d-block" width="70%">
@@ -125,21 +125,21 @@ process = os.osc(freq)*on;
 
 Assure-toi que ton Gramophone est en mode programmation puis installe cette nouvelle version du programme Faust sur ton Gramophone simplement en appuyant sur le bouton "Gramo" dans le Faust Web IDE. **Rien à faire du côté de l'application GramoLoader cette fois-ci à condition que tu enregistres le fichier `binary.zip` au même endroit que la dernière fois**. Au bout d'une trentaine de secondes (et oui, lorsque l'on programme il faut être patient :) ), l'application GramoLoader devrait afficher "Programmation terminée". 
 
-Mets maintenant ton Gramophone en mode neutre pour lancer le programme. Appuie sur le bouton en haut du Gramophone et essaye de tourner le potentiomètre assignable en même temps. Si aucun son n'est produit, assure-toi que le potentiomètre de contrôle du volume du son n'est pas à 0.
+Mets maintenant ton Gramophone en [mode neutre](../gramophone/about.md#mode-neutre) pour lancer le programme. Appuie sur le bouton en haut du Gramophone et essaye de tourner le potentiomètre assignable en même temps. Si aucun son n'est produit, assure-toi que le potentiomètre de contrôle du volume du son n'est pas à 0.
 
 Maintenant amuse-toi bien et casse les oreilles à ton prof ;).  
 
 ## Faire fonctionner le Gramophone en mode batterie
 
-Le Gramophone n'a pas été conçu pour être tout le temps connecté à un ordinateur mais bien pour être utilisé comme un instrument de musique en concert. Pour utiliser le Gramophone en mode batterie, il suffit de déconnecter le câble USB et de pousser l'interrupteur de démarrage vers la droite. Pour lancer le programme, il faut alors appuyer sur le gros bouton noir à côté de l’interrupteur de démarrage une ou deux fois :
+Le Gramophone n'a pas été conçu pour être tout le temps connecté à un ordinateur mais bien pour être utilisé comme un instrument de musique en concert. Pour utiliser le Gramophone en [mode batterie](../gramophone/about.md#mode-neutre), il suffit de déconnecter le câble USB et de pousser l'interrupteur de démarrage vers la droite. Pour lancer le programme, il faut alors appuyer sur le gros bouton noir à côté de l’interrupteur de démarrage une ou deux fois :
 
 <figure>
 <img src="img/gramo-battery.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
-Le Gramophone est prêt à être utilisé en mode batterie !
+Le Gramophone est prêt à être utilisé en [mode batterie](../gramophone/about.md#mode-batterie) !
 
-N'oublie pas de remettre le Gramophone en mode neutre une fois que tu as terminé de t'en servir pour ne pas que la batterie se décharge ! 
+N'oublie pas de remettre le Gramophone en [mode neutre](../gramophone/about.md#mode-neutre) une fois que tu as terminé de t'en servir pour ne pas que la batterie se décharge ! 
 
 Pour en savoir plus sur les différents modes de fonctionnement du Gramophone, n'hésites pas à lire [cette section](../gramophone/about.md#demarrage-du-gramophone)  
 

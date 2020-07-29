@@ -8,7 +8,7 @@ function makeFaust(code, i) {
 	cmd = "[ -d " DOCROOT"/"folder " ] || mkdir -p " DOCROOT"/"folder;
 	system (cmd);
 	print code > DOCROOT"/"dsp;
-	print "<div class=\"faust-run\"><img src=\""svg"\" class=\"mx-auto d-block\">"
+	print "<div class=\"faust-run\">"
 	print "~~~";
 	print code;
 	print "~~~\n";
