@@ -351,7 +351,8 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 }
 
 .main-container{
-  background-color: #F8F9F9;
+  background-color: white;
+  /*background-color: #FBFBFFFB*/
 }
 
 .home-container{
