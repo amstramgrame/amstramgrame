@@ -235,7 +235,7 @@ Avec cette configuration, `g = 0` lorsque le Gramophone est incliné à 90 degr�
 Pour charger la batterie du Gramophone, il suffit de le brancher à un chargeur USB ou à un ordinateur. Pour que la charge puisse s'effectuer, il est nécessaire de mettre le Gramophone en [mode batterie](#mode-batterie) : le Gramophone ne se chargera pas s'il est en mode neutre ou en mode programmation !
 
 <figure>
-<img src="img/gramo-charge.svg" class="mx-auto d-block" width="80%">
+<img src="img/gramo-charge.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
 L'autonomie du Gramophone dépend de la complexité du programme exécuté, de la santé de la batterie, et du temps de charge. Il faut compter environ deux heures pour une charge complète. 
@@ -245,7 +245,7 @@ L'autonomie du Gramophone dépend de la complexité du programme exécuté, de l
 Plusieurs programmes Faust peuvent être installés sur un seul Gramophone. Pour passer d'un programme à un autre, il suffit de tourner la molette noire placée en bas du Gramophone :
 
 <figure>
-<img src="img/gramo-prog-change.svg" class="mx-auto d-block" width="80%">
+<img src="img/gramo-prog-change.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
 Les programmes sont sélectionnés en boucle. Lorsque le Gramophone est démarré en [mode neutre](#mode-neutre) ou en [mode batterie](#mode-batterie), le premier programme est toujours sélectionné. Pour passer au deuxième programme, il suffit de tourner la molette vers la droite. Pour revenir en arrière, il faut la tourner vers la gauche. Une fois arrivé au dernier programme, tourner la molette vers la droite fait automatiquement revenir au premier programme, etc.
