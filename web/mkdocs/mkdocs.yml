@@ -5,13 +5,13 @@ nav:
     - Parcours pédagogiques:
       - ' Hello World : mon premier programme Faust ' : scenari/hello-world.md
       - ' Faire fonctionner Hello World sur le Gramophone ' : scenari/hello-world-gramo.md
-      - ' Visite guidée des exemples de programme de Gramophone ' : scenari/examples.md
+      #- ' Visite guidée des exemples de programme de Gramophone ' : scenari/examples.md
       - ' Capter le geste : travailler avec l&#39;accéléromètre et le gyroscope ' : scenari/gesture.md
     - Le Gramophone:
       - ' Qu&#39;est-ce que c&#39;est ? ' : gramophone/about.md
       - ' Le GramoLoader ' : gramophone/loader.md
       - ' Programmer le Gramophone ' : gramophone/programming.md
-      - ' Fabriquer le Gramophone ' : gramophone/making.md
+      #- ' Fabriquer le Gramophone ' : gramophone/making.md
       - ' Programmes Faust pour Gramophone ' : gramophone/programs.md
     - Faust:
       - ' Qu&#39;est-ce que c&#39;est ? ' : faust/about.md

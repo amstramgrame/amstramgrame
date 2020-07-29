@@ -6,7 +6,7 @@ hide_toc: true
 <source src="img/animationBoule.mp4" type="video/mp4" >
 </video>
 
-## Amstramgrame qu'est-ce que c'est ?
+## AmStramGrame qu'est-ce que c'est ?
 
 <hr width="60%">
 
@@ -32,7 +32,7 @@ Un projet pédagogique arts &amp; sciences, réunissant  services et ressources 
 <img src="img/students.png" width=50%>
 </div>
 <div class="col-md-6 home-right">
-Un projet destiné aux élèves de cycle primaire et secondaire, ainsi que leurs enseignants. Il place les sciences et l’ingénierie au cœur de la démarche pédagogique en les inscrivant dans le domaine de la création musicale et sonore.
+Un projet destiné aux élèves de cycle primaire et secondaire, ainsi qu'à leurs enseignants. Il place les sciences et l’ingénierie au cœur de la démarche pédagogique en les inscrivant dans le domaine de la création musicale et sonore.
 </div>
 </div>
 
@@ -45,7 +45,7 @@ Un projet destiné aux élèves de cycle primaire et secondaire, ainsi que leurs
 <div class="row">
 <div class="col-md-6 home-left">
 
-<a href="https://faust.grame.fr">FAUST (Functional AUdio STream)</a> est un langage de programmation, créé et développé à <a href="http://www.grame.fr">Grame</a>. Il permet de concevoir de manière simple des synthétiseurs (instrument de musique électronique) et des effets sonores pour un grand nombre de plateformes. Il peut être notamment utilisé pour créer des application web et mobile pour la musique.
+<a href="faust/about">Faust (Functional AUdio STream)</a> est un langage de programmation, créé et développé à <a href="http://www.grame.fr">Grame</a>. Il permet de concevoir de manière simple des synthétiseurs (instrument de musique électronique) et des effets sonores pour un grand nombre de plateformes. Il peut être notamment utilisé pour créer des application web et mobile pour la musique.
 
 </div>
 <div class="col-md-6 home-right">
@@ -64,6 +64,29 @@ Un projet destiné aux élèves de cycle primaire et secondaire, ainsi que leurs
 </div>
 </div>
 
+### LE FAUST WEB IDE
+
+<div class="row">
+<div class="col-md-6 home-left">
+<a href="faust/ide">Le Faust Web IDE</a> est un outil en ligne permettant d'écrire des programmes Faust, de les tester directement dans le navigateur web, puis de les exporter sur le Gramophone via l'application <a href="gramophone/loader">GramoLoader</a>. Une version simplifiée du Faust Web IDE a été créée dans le cadre d'AmStramGrame pour faciliter son utilisation par un public de novices en programmation. 
+</div>
+<div class="col-md-6 home-right">
+<img src="img/ide.png" width="50%">
+</div>
+</div>
+
+### LE FAUST PLAYGROUND
+
+<div class="row">
+<div class="col-md-6 home-left">
+<img src="img/playground.png" width=50%>
+</div>
+<div class="col-md-6 home-right">
+<a href="faust/playground">Le Faust Playground</a> est un outil en ligne permettant d'assembler des programmes écrits en Faust de manière simple avec une interface graphique. Il peut notamment être utilisé pour programmer le Gramophone, des smartphones, etc.   
+</div>
+</div>
+
+<!--
 ### SMARTFAUST
 
 <div class="row">
@@ -74,19 +97,20 @@ SmartFaust est un concept d’applications musicales pour smartphones développ�
 <img src="img/smartFaust.png" width="50%">
 </div>
 </div>
+-->
 
 ### GAMELAN
 
 <div class="row">
 <div class="col-md-6 home-left">
-<img src="img/gamelan.png" width=50%>
+Ensemble d’applications musicales pour smartphone s’inspirant de la tradition musicale javanaise à laquelle s’ajoute des univers sonores électroniques. Les 7 applications, (Attackey, Baliphone, DroneLAN, Sequenceur, ShakerXY, Sinusoïde, Atomicro) de la famille GameLan peuvent être jouées en solo ou en orchestre utilisant les mouvements du smartphone. Pas de prérequis musical, seul les gestes feront de l’utilisateur un musicien.
 </div>
 <div class="col-md-6 home-right">
-Ensemble d’applications musicales pour smartphone s’inspirant de la tradition musicale javanaise à laquelle s’ajoute des univers sonores électroniques. Les 7 applications, (Attackey, Baliphone, DroneLAN, Sequenceur, ShakerXY, Sinusoïde, Atomicro) de la famille GameLan peuvent être jouées en solo ou en orchestre utilisant les mouvements du smartphone. Pas de prérequis musical, seul les gestes feront de l’utilisateur un musicien.
+<img src="img/gamelan.png" width=50%>
 </div>
 </div>
 
-## Les partenaires
+## Un collaboration entre GRAME-CNCM et Canopé
 
 <hr width="60%">
 
@@ -111,3 +135,13 @@ Grame est un centre national de création musicale. Sa mission principale est de
 Réseau Canopé est le réseau de création et d’accompagnement pédagogiques placé sous la tutelle du ministère de l’Éducation nationale. Il édite et diffuse des ressources pédagogiques multi-formats répondant aux besoins de la communauté éducative.
 </div>
 </div>
+
+### MÉCÈNES ET PARTENAIRES PUBLICS
+
+<a href="https://www.grandlyon.com/"><img src="img/logoMetro.png" width=25%></a>
+<a href="https://www.culture.gouv.fr/Regions/Drac-Auvergne-Rhone-Alpes"><img src="img/logoMinis.png" width=15%></a>
+<a href="https://www.fondation-blaise-pascal.org/"><img src="img/logoBlaise.png" width=25%></a>
+<a href="https://www.sncf.com/fr/engagements/fondation-sncf"><img src="img/logoSNCF.png" width=25%></a>
+
+<br>
+

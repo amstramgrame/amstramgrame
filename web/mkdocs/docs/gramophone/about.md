@@ -166,7 +166,7 @@ parameter = nentry("ParamFaust[acc: a b c d e]",def,min,max,step);
 * `e` est associé à `max`
 
 <figure>
-<img src="img/motion-curve.svg" class="mx-auto d-block" width="90%">
+<img src="img/motion-curve.jpg" class="mx-auto d-block" width="90%">
 <center><figcaption>Configuration de l'accéléromètre et du gyroscope du Gramophone</figcaption></center>
 </figure>
 

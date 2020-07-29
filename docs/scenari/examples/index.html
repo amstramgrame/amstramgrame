@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title> Visite guidée des exemples de programme de Gramophone  - Amstramgrame</title>
+        <title>Visite guidée des exemples de programme de Gramophone - Amstramgrame</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -33,7 +33,7 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Parcours pédagogiques <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -43,10 +43,6 @@
                                     
 <li>
     <a href="../hello-world-gramo/" class="dropdown-item"> Faire fonctionner Hello World sur le Gramophone </a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active"> Visite guidée des exemples de programme de Gramophone </a>
 </li>
                                     
 <li>
@@ -68,10 +64,6 @@
                                     
 <li>
     <a href="../../gramophone/programming/" class="dropdown-item"> Programmer le Gramophone </a>
-</li>
-                                    
-<li>
-    <a href="../../gramophone/making/" class="dropdown-item"> Fabriquer le Gramophone </a>
 </li>
                                     
 <li>
@@ -132,6 +124,10 @@
             
             <li class="nav-item" data-level="1"><a href="#visite-guidee-des-exemples-de-programme-de-gramophone" class="nav-link">Visite guidée des exemples de programme de Gramophone</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#tictac" class="nav-link">TicTac</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -140,13 +136,84 @@
                     <div class="col-md-9 main-container" role="main">
 
 <h1 id="visite-guidee-des-exemples-de-programme-de-gramophone">Visite guidée des exemples de programme de Gramophone</h1>
-<p>TODO </p></div>
+<p>Le but de ce scenario est d'expliquer le fonctionnement de certains des programmes pour Gramophones disponibles sur ce site dans <a href="../../gramophone/programs/">Le Gramophone/Programmes Faust pour Gramophone</a>. </p>
+<h2 id="tictac">TicTac</h2>
+<p>Pour rappel, le programme <a href="../../gramophone/programs/#tictac">TicTac</a> prend la forme suivante :</p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust0/exfaust0.svg" class="mx-auto d-block">
+
+<pre><code>
+import(&quot;stdfaust.lib&quot;);
+
+// parameters
+impFreq = hslider(&quot;impFreq[acc: 1 0 -10 0 10]&quot;,11,2,20,0.01) : si.smoo;
+resFreq = hslider(&quot;resFreq[acc: 0 1 -10 0 10]&quot;,1650,300,3000,0.01) : si.smoo;
+distDrive = hslider(&quot;distDrive[knob:2]&quot;,0,0,1,0.01) : si.smoo;
+q = hslider(&quot;q[knob:3]&quot;,30,10,50,0.01) : si.smoo;
+del = hslider(&quot;del[acc: 0 1 -10 0 10]&quot;,0.2,0,0.4,0.01) : si.smoo;
+fb = hslider(&quot;fb[acc: 1 0 -10 0 10]&quot;,0.5,0,1,0.01) : si.smoo;
+gate = button(&quot;gate[switch:1]&quot;);
+
+// DSP
+process = os.lf_imptrain(impFreq)*gate  : fi.resonlp(resFreq,q,1) : ef.echo(0.4,del,fb) : 
+ef.cubicnl(distDrive,0)*0.95;
+
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/examples/exfaust0/exfaust0.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
+<p>La dernière ligne <code>process</code> assemble les différents éléments de production du son. <code>os.lf_imptrain</code> produit des clics à intervalles réguliers (à une fréquence de <code>impFreq</code>). Essaye ce programme dans le Faust Web IDE pour entendre le son produit par cette fonction :</p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust1/exfaust1.svg" class="mx-auto d-block">
+
+<pre><code>
+import(&quot;stdfaust.lib&quot;);
+impFreq = hslider(&quot;impFreq&quot;,11,2,20,0.01) : si.smoo;
+process = os.lf_imptrain(impFreq);
+
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/examples/exfaust1/exfaust1.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
+<p><code>fi.resonlp</code> est un filtre qui permet d'appliquer une hauteur aux clics produits par <code>os.lf_imptrain</code>. La hauteur des sons produits est déterminée par la fréquence <code>resFreq</code> du filtre. Le paramètre <code>q</code> du filtre détermine son "agressivité". Essaye ce programme dans le Faust Web IDE pour entendre l'effet de <code>fi.resonlp</code> sur <code>os.lf_imptrain</code> :</p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust2/exfaust2.svg" class="mx-auto d-block">
+
+<pre><code>
+import(&quot;stdfaust.lib&quot;);
+impFreq = hslider(&quot;impFreq&quot;,11,2,20,0.01) : si.smoo;
+resFreq = hslider(&quot;resFreq&quot;,1650,300,3000,0.01) : si.smoo;
+q = hslider(&quot;q[knob:3]&quot;,30,10,50,0.01) : si.smoo;
+process = os.lf_imptrain(impFreq) : fi.resonlp(resFreq,q,1);
+
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/examples/exfaust2/exfaust2.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
+<p><code>ef.echo</code> est un écho  </p></div>
             </div>
         </div>
 
         <footer class="col-md-12">
                 <p>Copyright &copy; 2020 <a href="http://www.grame.fr">Grame-CNCM</a> & <a href="https://www.reseau-canope.fr/">Réseau Canopé</a></p>
-            <p>Website built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
             var base_url = "../..",

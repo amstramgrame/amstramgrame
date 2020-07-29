@@ -46,10 +46,6 @@
 </li>
                                     
 <li>
-    <a href="../../scenari/examples/" class="dropdown-item"> Visite guidée des exemples de programme de Gramophone </a>
-</li>
-                                    
-<li>
     <a href="../../scenari/gesture/" class="dropdown-item"> Capter le geste : travailler avec l&#39;accéléromètre et le gyroscope </a>
 </li>
                                 </ul>
@@ -68,10 +64,6 @@
                                     
 <li>
     <a href="../programming/" class="dropdown-item"> Programmer le Gramophone </a>
-</li>
-                                    
-<li>
-    <a href="../making/" class="dropdown-item"> Fabriquer le Gramophone </a>
 </li>
                                     
 <li>
@@ -136,6 +128,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#pioupiou" class="nav-link">Pioupiou</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#clarinet" class="nav-link">Clarinet</a>
               <ul class="nav flex-column">
               </ul>
@@ -152,6 +148,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#violin" class="nav-link">Violin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -160,6 +160,7 @@
                     <div class="col-md-9 main-container" role="main">
 
 <h1 id="quelques-programmes-faust-pour-gramophone">Quelques programmes Faust pour Gramophone</h1>
+<p>Cette page rassemble une collection de programmes Faust pour Gramophone prêts à l’emploi.</p>
 <h2 id="tictac">TicTac</h2>
 <p>Le programme <code>TicTac</code> produit des petits clics à interval réguliers. Ces derniers sont filtrés pour appliquer une hauteur au son produit puis envoyés dans un écho pour augmenter la densité de la texture sonore produite. Les paramètres du son sont contrôlés avec l'<a href="../about/#les-capteurs-de-mouvements">accéléromètre</a> et le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. La production de "clics" est enclenchée lorsque le <a href="../about/#le-bouton-assignable">bouton assignable</a> est pressé.  </p>
 <!-- faust-run -->
@@ -174,15 +175,12 @@ impFreq = hslider(&quot;impFreq[acc: 1 0 -10 0 10]&quot;,11,2,20,0.01) : si.smoo
 resFreq = hslider(&quot;resFreq[acc: 0 1 -10 0 10]&quot;,1650,300,3000,0.01) : si.smoo;
 distDrive = hslider(&quot;distDrive[knob:2]&quot;,0,0,1,0.01) : si.smoo;
 q = hslider(&quot;q[knob:3]&quot;,30,10,50,0.01) : si.smoo;
-del = hslider(&quot;del[acc: 0 1 -10 0 10]&quot;,0.5,0.01,1,0.01) : si.smoo;
+del = hslider(&quot;del[acc: 0 1 -10 0 10]&quot;,0.2,0,0.4,0.01) : si.smoo;
 fb = hslider(&quot;fb[acc: 1 0 -10 0 10]&quot;,0.5,0,1,0.01) : si.smoo;
 gate = button(&quot;gate[switch:1]&quot;);
 
-// simple echo effect
-echo = +~(de.delay(20000,del*20000)*fb);
-
 // DSP
-process = os.lf_imptrain(impFreq)*gate  : fi.resonlp(resFreq,q,1) : echo : 
+process = os.lf_imptrain(impFreq)*gate  : fi.resonlp(resFreq,q,1) : ef.echo(0.4,del,fb) : 
 ef.cubicnl(distDrive,0)*0.95;
 
 </code></pre>
@@ -194,11 +192,36 @@ ef.cubicnl(distDrive,0)*0.95;
 
 <!-- /faust-run -->
 
+<h2 id="pioupiou">Pioupiou</h2>
+<p><code>Pioupiou</code> est un programme pour Gramophone où la hauteur du son produit (une simple sinusoïde) est contrôlée par le <a href="#la-photoresistance">capteur de lumière</a> du Gramophone. Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet de lancer la production du son. </p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust1/exfaust1.svg" class="mx-auto d-block">
+
+<pre><code>
+import(&quot;stdfaust.lib&quot;);
+
+// parameters
+freq = hslider(&quot;freq[knob:3]&quot;,300,100,4000,0.01) : si.smoo;
+gate = button(&quot;gate[switch:1]&quot;) : si.smoo;
+
+// DSP
+process = os.osc(freq)*gate;
+
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust1/exfaust1.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
 <h2 id="clarinet">Clarinet</h2>
 <p>Le programme <code>Clarinet</code> est basé sur un synthétiseur (modèle physique) de clarinette. La pression du souffle du clarinettiste, la raideur de l'anche, et le diamètre du pavillon sont contrôlés par les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone. La longueur du tube de la clarinette (qui impacte la hauteur du son) est contrôlée par le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'activer le souffle du clarinettiste. </p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust1/exfaust1.svg" class="mx-auto d-block">
+<div class="faust-run"><img src="exfaust2/exfaust2.svg" class="mx-auto d-block">
 
 <pre><code>
 import(&quot;stdfaust.lib&quot;);
@@ -218,7 +241,7 @@ process = pm.clarinetModel(tube,pres,reed,bell);
 </code></pre>
 
 
-<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust1/exfaust1.dsp" target="editor">
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust2/exfaust2.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
 
@@ -228,7 +251,7 @@ process = pm.clarinetModel(tube,pres,reed,bell);
 <p><code>Comb</code> est un instrument pour Gramophone très simple basé sur un filtre en peigne. Les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone contrôlent le volume et la hauteur du son produit. Le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a> contrôle l'agressivité et la résonance du son. Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'activer la production du son.</p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust2/exfaust2.svg" class="mx-auto d-block">
+<div class="faust-run"><img src="exfaust3/exfaust3.svg" class="mx-auto d-block">
 
 <pre><code>
 import(&quot;stdfaust.lib&quot;);
@@ -244,7 +267,7 @@ process = no.noise*gate*gain : fi.fb_fcomb(1024,del,1,fb);
 </code></pre>
 
 
-<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust2/exfaust2.dsp" target="editor">
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust3/exfaust3.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
 
@@ -254,7 +277,7 @@ process = no.noise*gate*gain : fi.fb_fcomb(1024,del,1,fb);
 <p><code>FM</code> est un instrument pour Gramophone basé sur un synthétiseur FM (modulation de fréquence). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> peut être utilisé comme un interrupter pour activer et désactiver le son. La hauteur du son produit peut être contrôlée avec le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. Les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone permettent de contrôler le timbre du son.</p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust3/exfaust3.svg" class="mx-auto d-block">
+<div class="faust-run"><img src="exfaust4/exfaust4.svg" class="mx-auto d-block">
 
 <pre><code>
 import(&quot;stdfaust.lib&quot;);
@@ -276,7 +299,7 @@ process = sy.fm((freq0,freq1,freq2),(index1,index2))*gate;
 </code></pre>
 
 
-<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust3/exfaust3.dsp" target="editor">
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust4/exfaust4.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
 
@@ -286,7 +309,7 @@ process = sy.fm((freq0,freq1,freq2),(index1,index2))*gate;
 <p><code>Brass</code> est un instrument pour Gramophone basé sur un synthétiseur de trompette (modèle physique). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'activer le souffle. Le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a> contrôle la distortion du son et peut être utilisé pour augmenter le gain de l'instrument. Les autres paramètres du modèle sont contrôlés par les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a>.</p>
 <!-- faust-run -->
 
-<div class="faust-run"><img src="exfaust4/exfaust4.svg" class="mx-auto d-block">
+<div class="faust-run"><img src="exfaust5/exfaust5.svg" class="mx-auto d-block">
 
 <pre><code>
 import(&quot;stdfaust.lib&quot;);
@@ -306,7 +329,34 @@ process = pm.brassModel(tube,lips,0,pres) : ef.cubicnl(dist,0)*0.95;
 </code></pre>
 
 
-<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust4/exfaust4.dsp" target="editor">
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust5/exfaust5.dsp" target="editor">
+<button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
+</div>
+
+<!-- /faust-run -->
+
+<h2 id="violin">Violin</h2>
+<p><code>Violin</code> est un instrument pour Gramophone basé sur un synthétiseur de violon (modèle physique). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'initier le mouvement de l'archet. Le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a> contrôle la longueur de la corde et donc la hauteur du son produit. Les autres paramètres du modèle sont contrôlés par les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a>.</p>
+<!-- faust-run -->
+
+<div class="faust-run"><img src="exfaust6/exfaust6.svg" class="mx-auto d-block">
+
+<pre><code>
+import(&quot;stdfaust.lib&quot;);
+
+// parameters
+gate = checkbox(&quot;gate[switch:1]&quot;);
+stringLength = hslider(&quot;stringLength[knob:2]&quot;,1.5,0.5,3,0.01);
+bowVelocity = hslider(&quot;p[acc: 0 1 -10 0 10]&quot;,0.1,0,1,0.01)*gate;
+bowPressure = hslider(&quot;lips[gyr: 0 0 -10 0 10]&quot;,0.5,0,1,0.01) : si.smoo;
+bowPosition = hslider(&quot;dist[acc: 1 0 -10 0 10]&quot;,0.5,0,1,0.01) : si.smoo;
+
+process = pm.violinModel(stringLength,bowPressure,bowVelocity,bowPosition); 
+
+</code></pre>
+
+
+<a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust6/exfaust6.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
 
@@ -316,7 +366,6 @@ process = pm.brassModel(tube,lips,0,pres) : ef.cubicnl(dist,0)*0.95;
 
         <footer class="col-md-12">
                 <p>Copyright &copy; 2020 <a href="http://www.grame.fr">Grame-CNCM</a> & <a href="https://www.reseau-canope.fr/">Réseau Canopé</a></p>
-            <p>Website built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
             var base_url = "../..",

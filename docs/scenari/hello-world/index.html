@@ -46,10 +46,6 @@
 </li>
                                     
 <li>
-    <a href="../examples/" class="dropdown-item"> Visite guidée des exemples de programme de Gramophone </a>
-</li>
-                                    
-<li>
     <a href="../gesture/" class="dropdown-item"> Capter le geste : travailler avec l&#39;accéléromètre et le gyroscope </a>
 </li>
                                 </ul>
@@ -68,10 +64,6 @@
                                     
 <li>
     <a href="../../gramophone/programming/" class="dropdown-item"> Programmer le Gramophone </a>
-</li>
-                                    
-<li>
-    <a href="../../gramophone/making/" class="dropdown-item"> Fabriquer le Gramophone </a>
 </li>
                                     
 <li>
@@ -172,16 +164,15 @@
                     <div class="col-md-9 main-container" role="main">
 
 <h1 id="hello-world-mon-premier-programme-faust">Hello World : mon premier programme Faust</h1>
-<!-- TODO : baratin sur la lutherie numérique et sur le fait que le Gramophone est un instrument de musique. Concept d'atelier établi pour le Faust Web IDE. -->
-
-<p>Le but de ce scénario est d'écrire un programme <a href="../../faust/about/">Faust</a> très simple et de le faire fonctionner sur ton <a href="../../gramophone/about/">Gramophone</a> ! Tu apprendras donc à :</p>
+<p>Le but de ce scénario est d'écrire un programme <a href="../../faust/about/">Faust</a> très simple dans l'optique de le faire fonctionner sur ton <a href="../../gramophone/about/">Gramophone</a> dans le scénario suivant (<a href="../hello-world-gramo/">Faire fonctionner Hello World sur le Gramophone</a>) ! Tu apprendras donc à :</p>
 <ul>
 <li>produire du son avec Faust ;</li>
 <li>maîtriser la structure de base d'un programme Faust.</li>
 </ul>
-<p><strong>Avant de commencer, assures toi que le volume de ton ordinateur n'est pas trop fort, surtout si tu travailles avec un casque !</strong> Comme nous allons créer nos propres sons et faire quelques expériences, il est possible que le volume du son augmente brusquement : fais attention à tes oreilles.</p>
+<p>L'idée est vraiment de te mettre dans la peau d'un "luthier numérique" ! </p>
+<p><strong>Avant de commencer, assures toi que le volume de ton ordinateur n'est pas trop fort, surtout si tu travailles avec un casque !</strong> Comme nous allons créer nos propres sons et faire "quelques expériences", il est possible que le volume augmente brusquement et de manière impromptue : fais attention à tes oreilles.</p>
 <h2 id="pourquoi-hello-world">Pourquoi "Hello World" ?</h2>
-<p>En programmation informatique, le premier programme que l'on apprend à écrire dans la plupart des langages consiste à afficher "Hello World", d'où son nom. Comme Faust est spécialement conçu pour "programmer des sons", il n'est pas vraiment capable d'afficher du texte sur l'écran comme d'autres langages ou en tout cas, lui demander de faire ça n'aurait pas de sens. En revanche, synthétiser un son pur avec une sinusoïde peut être vu comme une des manières les plus simple de produire du son avec Faust. C'est pourquoi notre "Hello World" en Faust consistera à produire un son pur et à le contrôler. </p>
+<p>En programmation informatique, le premier programme que l'on apprend à écrire dans la plupart des langages consiste à afficher "Hello World" sur l'écran, d'où son nom. Comme Faust est spécialement conçu pour "programmer des sons", il n'est pas vraiment capable d'afficher du texte sur l'écran comme d'autres langages ou en tout cas, lui demander de faire ça n'aurait pas de sens. En revanche, synthétiser un son pur avec une sinusoïde peut être vu comme une des manières les plus simple de produire du son avec Faust. C'est pourquoi notre "Hello World" en Faust consistera à produire un son pur et à le contrôler. </p>
 <h2 id="produire-du-son-avec-faust">Produire du son avec Faust</h2>
 <h3 id="une-sinusoide-en-faust">Une sinusoïde en Faust</h3>
 <p>Faust permet d’interagir directement avec le haut-parleur de notre ordinateur ou du Gramophone en décrivant le son produit avec du code. Dans le cas de Faust, le code peut être vu comme une succession de formules mathématiques connectées entres-elles. </p>
@@ -208,7 +199,7 @@ process = os.osc(440);
 
 <!-- /faust-run -->
 
-<p>Clique sur le bouton "Éditer/exécuter le programme" ci-dessus et ce programme Faust devrait être ouvert dans le <a href="../../faust/ide/">Faust Web IDE</a>. Cet outil permet d'écrire du code Faust directement dans un navigateur web, d'entendre le son qu'il produit, puis de l'envoyer vers un Gramophone. </p>
+<p>Clique sur le bouton "Éditer/exécuter le programme" ci-dessus et ce programme Faust devrait être ouvert dans le <a href="../../faust/ide/">Faust Web IDE</a>. Cet outil permet d'écrire du code Faust directement dans un navigateur web, d'entendre le son qu'il produit, puis de l'envoyer vers un Gramophone. D'une certaine manière, c'est une sorte "d'établi" pour luthier numérique. Ici pas de marteau ni de scie : la fabrication d'instruments de musique passe par le code. </p>
 <p><strong>Le Faust Web IDE fonctionne mieux dans Mozilla Firefox ou dans Google Chrome que dans les autres navigateurs. Plus d'informations sur cet outil sont disponibles <a href="../../faust/ide/">ici</a>.</strong></p>
 <p>Pour entendre le son produit par ce programme Faust, il est nécessaire de l'exécuter. Pour cela, il suffit de cliquer sur le bouton "Run" dans le Faust Web IDE :</p>
 <figure>
@@ -222,9 +213,9 @@ process = os.osc(440);
 </figure>
 
 <p>Analysons rapidement les différents élément constituants ce programme. La dernière (la deuxième) ligne est la plus importante : c'est elle qui permet de produire le son. <code>process</code> correspond au programme et dans une certaine mesure au haut-parleur. On dit donc ici que le haut-parleur est égal à <code>os.osc(440)</code>. <code>os.osc</code> implémente un oscillateur sinusoïdal, c'est que l'on appelle une <strong>fonction</strong>. La fonction <code>os.osc</code> a un seul paramètre : sa fréquence qui est ici configurée à 440 Hz (ce qui correspond à un La en musique). La fréquence de la sinusoïde permet donc de contrôler la hauteur du son.  </p>
-<p>La première ligne (<code>import("stdfaust.lib");</code>) importe les bibliothèques standard de Faust et permet donc d'avoir accès à la fonction <code>os.osc</code>. Note que toutes les déclarations en Faust se termine par un point-virgule : cela est très important et c'est une source d'erreur assez commune.  </p>
+<p>La première ligne (<code>import("stdfaust.lib");</code>) importe les bibliothèques standard de Faust et permet donc d'avoir accès à la fonction <code>os.osc</code>. Note que toutes les déclarations en Faust se terminent par un point-virgule : cela est très important et c'est une source d'erreur assez commune.  </p>
 <h3 id="exercice-changer-la-hauteur-du-son">Exercice : changer la hauteur du son</h3>
-<p>Comme il l'a été dit juste avant, la hauteur du son produit par la sinusoïde est déterminée par sa fréquence (ici 440 Hz). L'être humain peut normalement entendre toutes les fréquences entre 20 et 20000 Hz. Toutefois, plus on vieilli, moins on entend les fréquences élevées. Ainsi, tes "vieux profs" n'entendent certainement plus aucune fréquence au dessus de 16000 Hz. Les sons au dessus de 3000 Hz peuvent être très désagréables à entendre. Essaye de changer la valeur de la fréquence de <code>os.osc</code> pour observer l'effet sur le son produit en veillant à ne pas dépasser 3000. Si tu n'entends pas de son, assure-toi que le programme Faust est bien exécuté. </p>
+<p>Comme il l'a été dit juste avant, la hauteur du son produit par la sinusoïde est déterminée par sa fréquence (ici 440 Hz). L'être humain peut normalement entendre toutes les fréquences entre 20 et 20000 Hz. Toutefois, plus on vieilli, moins l'on entend les fréquences élevées. Ainsi, tes "vieux profs" n'entendent certainement plus aucune fréquence au dessus de 16000 Hz. Les sons au dessus de 3000 Hz peuvent être très désagréables à entendre. Essaye de changer la valeur de la fréquence de <code>os.osc</code> pour observer l'effet sur le son produit en veillant à ne pas dépasser 3000. Si tu n'entends pas de son, assure-toi que le programme Faust est bien exécuté. </p>
 <h2 id="ajouter-des-parametres-a-un-programme-faust">Ajouter des paramètres à un programme Faust</h2>
 <p>Faust permet de contrôler les différents paramètres d'un programme avec des éléments d'interface utilisateur (ex. boutons, potentiomètres, etc.). Le but de cette section est :</p>
 <ul>
@@ -323,7 +314,6 @@ process = os.osc(freq)*on;
 
         <footer class="col-md-12">
                 <p>Copyright &copy; 2020 <a href="http://www.grame.fr">Grame-CNCM</a> & <a href="https://www.reseau-canope.fr/">Réseau Canopé</a></p>
-            <p>Website built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
             var base_url = "../..",

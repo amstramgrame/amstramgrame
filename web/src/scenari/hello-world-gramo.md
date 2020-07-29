@@ -43,15 +43,19 @@ Dans le Faust Web IDE, clique sur le bouton Gramo :
 
 Une roue devrait se mettre à tourner à gauche du bouton. Cette opération prend généralement une quinzaine de secondes (pas besoin de rappuyer sur le bouton, ça n'ira pas plus vite, il faut être patient ;) ). 
 
-Une fois terminé, le téléchargement d'un fichier appelé `binary.zip` devrait être lancé, rappelles toi de l'emplacement dans lequel tu décides de l'enregistrer. 
+Une fois terminé, le téléchargement d'un fichier appelé `binary.zip` devrait être lancé, rappelle toi de l'emplacement dans lequel tu décides de l'enregistrer. 
 
 Branche le Gramophone avec son câble USB à l'ordinateur :
 
-<!-- TODO : pic -->
+<figure>
+<img src="img/gramo-usb.jpg" class="mx-auto d-block" width="70%">
+</figure>
 
 puis mets le [en mode programmation](../gramophone/about.md#demarrage-du-gramophone) en plaçant l'interrupteur de démarrage à gauche :
 
-<!-- TODO : pic -->
+<figure>
+<img src="img/gramo-prog.jpg" class="mx-auto d-block" width="70%">
+</figure>
 
 Dans l'application GramoLoader, clique sur le bouton "Sélectionner un fichier". Sélectionne le fichier `binary.zip` téléchargé lors de l'opération précédente, la programmation du Gramophone devrait être lancée et le message suivant devrait s'afficher : "Programmation du Gramophone en cours". 
 
@@ -59,17 +63,21 @@ Si tout se passe bien, l'application GramoLoader devrait afficher le message : "
 
 Pour lancer le programme Faust sur le Gramophone, mets le [en mode neutre](../gramophone/about.md#demarrage-du-gramophone) en plaçant le bouton de démarrage au centre :
 
-<!-- TODO : pic -->
+<figure>
+<img src="img/gramo-lauch.jpg" class="mx-auto d-block" width="70%">
+</figure>
 
-Le Gramophone devrait se mettre à produire une sinusoïde (le même son que dans le Faust Web IDE) ! Si aucun son n'est produit, vérifie que le volume du Gramophone n'est pas à 0 en bougeant le potentiomètre à côté du bouton de démarrage :
+Le Gramophone devrait se mettre à produire une sinusoïde (le même son que dans le Faust Web IDE) ! Si aucun son n'est produit, vérifie que le volume du Gramophone n'est pas à 0 en bougeant [le potentiomètre à côté du bouton de démarrage](../gramophone/about.md#controle-du-volume) :
 
-TODO : pic
+<figure>
+<img src="img/gramo-volume.jpg" class="mx-auto d-block" width="70%">
+</figure>
 
 Le son produit peut vite devenir ennuyeux puisqu'il n'est pas contrôlable pour le moment. Pour ne plus l'entendre, n'hésites pas à baisser le volume du son au minimum.  
 
 ## Contrôler le son avec le Gramophone
 
-Le Gramophone produit donc maintenant un son. Toutefois, pour qu'il devienne un vrai instrument de musique, il est nécessaire de pouvoir contrôler ce son. Pour mener à bien cette tâche, le Gramophone donne accès à toute une panoplie de capteurs : 
+Le Gramophone produit donc maintenant un son. Toutefois, pour qu'il devienne un "vrai" instrument de musique, il est nécessaire de pouvoir contrôler ce son. Pour mener à bien cette tâche, le Gramophone donne accès à toute une panoplie de capteurs : 
 
 * un [bouton](../gramophone/about.md#le-bouton-assignable)
 * un [potentiomètre](../gramophone/about.md#le-potentiometre-assignable)
@@ -84,13 +92,13 @@ Le paramètre le plus fondamental d'un instrument de musique est de pouvoir cont
 <img src="img/gramo-button.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
-pour activer le son lorsque l'on appuie dessus. Pour cela, il est nécessaire d'utiliser un "[métadata](../gramophone/about.md#metadatas-de-programmation-du-gramophone)" dans le nom du paramètre du programme Faust permettant d'activer et de déactiver le son. La métadata correspondant au bouton assignable du Gramophone est : `[switch:1]`. Il suffit de placer cette dernière dans le nom du paramètre du programme Faust à contrôler :
+pour activer le son lorsque l'on appuie dessus. Pour cela, il est nécessaire d'utiliser une "[métadata](../gramophone/about.md#metadatas-de-programmation-du-gramophone)" dans le nom du paramètre du programme Faust permettant d'activer et de déactiver le son. La métadata correspondant au bouton assignable du Gramophone est : `[switch:1]`. Il suffit de placer cette dernière dans le nom du paramètre du programme Faust à contrôler :
 
 ```
 on = button("on-off[switch:1]");
 ``` 
 
-Ainsi, lorsque le bouton sur le Gramophone sera pressé `on` sera égal à 1 et lorsqu'il ne sera pas pressé il sera égal à 0 !
+Ainsi, lorsque le bouton sur le Gramophone sera pressé, `on` sera égal à 1 et lorsqu'il ne sera pas pressé il sera égal à 0 !
 
 De la même manière, il est possible d'assigner le paramètre fréquence de notre programme Hello Word [au potentiomètre à côté du bouton](../gramophone/about.md#le-potentiometre-assignable) :
 
@@ -115,7 +123,7 @@ process = os.osc(freq)*on;
 ``` 
 <!-- /faust-run -->
 
-Assure-toi que ton Gramophone est en mode programmation puis installe cette nouvelle version du programme Faust sur ton Gramophone simplement en appuyant sur le bouton "Gramo" dans le Faust Web IDE. **Rien à faire du côté de l'application GramoLoader cette fois-ci à condition que tu enregistre le fichier `binary.zip` au même endroit que la dernière fois**. Au bout d'une trentaine de secondes (et oui, lorsque l'on programme il faut être patient :) ), l'application GramoLoader devrait afficher "Programmation terminée". 
+Assure-toi que ton Gramophone est en mode programmation puis installe cette nouvelle version du programme Faust sur ton Gramophone simplement en appuyant sur le bouton "Gramo" dans le Faust Web IDE. **Rien à faire du côté de l'application GramoLoader cette fois-ci à condition que tu enregistres le fichier `binary.zip` au même endroit que la dernière fois**. Au bout d'une trentaine de secondes (et oui, lorsque l'on programme il faut être patient :) ), l'application GramoLoader devrait afficher "Programmation terminée". 
 
 Mets maintenant ton Gramophone en mode neutre pour lancer le programme. Appuie sur le bouton en haut du Gramophone et essaye de tourner le potentiomètre assignable en même temps. Si aucun son n'est produit, assure-toi que le potentiomètre de contrôle du volume du son n'est pas à 0.
 
@@ -123,13 +131,11 @@ Maintenant amuse-toi bien et casse les oreilles à ton prof ;).
 
 ## Faire fonctionner le Gramophone en mode batterie
 
-Le Gramophone n'a pas été conçu pour être tout le temps connecté à un ordinateur mais bien pour être utilisé comme un instrument de musique en concert. Pour utiliser le Gramophone en mode batterie, il suffit de déconnecter le câble USB et de pousser l'interrupteur de démarrage vers la droite :
+Le Gramophone n'a pas été conçu pour être tout le temps connecté à un ordinateur mais bien pour être utilisé comme un instrument de musique en concert. Pour utiliser le Gramophone en mode batterie, il suffit de déconnecter le câble USB et de pousser l'interrupteur de démarrage vers la droite. Pour lancer le programme, il faut alors appuyer sur le gros bouton noir à côté de l’interrupteur de démarrage une ou deux fois :
 
-<!-- TODO : pic -->
-
-Pour lancer le programme, il faut alors appuyer sur le gros bouton noir à côté de l’interrupteur de démarrage une ou deux fois :
-
-<!-- TODO : pic -->
+<figure>
+<img src="img/gramo-battery.jpg" class="mx-auto d-block" width="80%">
+</figure>
 
 Le Gramophone est prêt à être utilisé en mode batterie !
 

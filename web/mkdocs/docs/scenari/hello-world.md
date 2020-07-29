@@ -1,17 +1,17 @@
 # Hello World : mon premier programme Faust
 
-<!-- TODO : baratin sur la lutherie numérique et sur le fait que le Gramophone est un instrument de musique. Concept d'atelier établi pour le Faust Web IDE. -->
-
-Le but de ce scénario est d'écrire un programme [Faust](../faust/about.md) très simple et de le faire fonctionner sur ton [Gramophone](../gramophone/about.md) ! Tu apprendras donc à :
+Le but de ce scénario est d'écrire un programme [Faust](../faust/about.md) très simple dans l'optique de le faire fonctionner sur ton [Gramophone](../gramophone/about.md) dans le scénario suivant ([Faire fonctionner Hello World sur le Gramophone](hello-world-gramo.md)) ! Tu apprendras donc à :
 
 * produire du son avec Faust ;
 * maîtriser la structure de base d'un programme Faust.
 
-**Avant de commencer, assures toi que le volume de ton ordinateur n'est pas trop fort, surtout si tu travailles avec un casque !** Comme nous allons créer nos propres sons et faire quelques expériences, il est possible que le volume du son augmente brusquement : fais attention à tes oreilles.
+L'idée est vraiment de te mettre dans la peau d'un "luthier numérique" ! 
+
+**Avant de commencer, assures toi que le volume de ton ordinateur n'est pas trop fort, surtout si tu travailles avec un casque !** Comme nous allons créer nos propres sons et faire "quelques expériences", il est possible que le volume augmente brusquement et de manière impromptue : fais attention à tes oreilles.
 
 ## Pourquoi "Hello World" ?
 
-En programmation informatique, le premier programme que l'on apprend à écrire dans la plupart des langages consiste à afficher "Hello World", d'où son nom. Comme Faust est spécialement conçu pour "programmer des sons", il n'est pas vraiment capable d'afficher du texte sur l'écran comme d'autres langages ou en tout cas, lui demander de faire ça n'aurait pas de sens. En revanche, synthétiser un son pur avec une sinusoïde peut être vu comme une des manières les plus simple de produire du son avec Faust. C'est pourquoi notre "Hello World" en Faust consistera à produire un son pur et à le contrôler. 
+En programmation informatique, le premier programme que l'on apprend à écrire dans la plupart des langages consiste à afficher "Hello World" sur l'écran, d'où son nom. Comme Faust est spécialement conçu pour "programmer des sons", il n'est pas vraiment capable d'afficher du texte sur l'écran comme d'autres langages ou en tout cas, lui demander de faire ça n'aurait pas de sens. En revanche, synthétiser un son pur avec une sinusoïde peut être vu comme une des manières les plus simple de produire du son avec Faust. C'est pourquoi notre "Hello World" en Faust consistera à produire un son pur et à le contrôler. 
 
 ## Produire du son avec Faust
 
@@ -41,7 +41,7 @@ process = os.osc(440);
 </div>
 <!-- /faust-run -->
 
-Clique sur le bouton "Éditer/exécuter le programme" ci-dessus et ce programme Faust devrait être ouvert dans le [Faust Web IDE](../faust/ide.md). Cet outil permet d'écrire du code Faust directement dans un navigateur web, d'entendre le son qu'il produit, puis de l'envoyer vers un Gramophone. 
+Clique sur le bouton "Éditer/exécuter le programme" ci-dessus et ce programme Faust devrait être ouvert dans le [Faust Web IDE](../faust/ide.md). Cet outil permet d'écrire du code Faust directement dans un navigateur web, d'entendre le son qu'il produit, puis de l'envoyer vers un Gramophone. D'une certaine manière, c'est une sorte "d'établi" pour luthier numérique. Ici pas de marteau ni de scie : la fabrication d'instruments de musique passe par le code. 
 
 **Le Faust Web IDE fonctionne mieux dans Mozilla Firefox ou dans Google Chrome que dans les autres navigateurs. Plus d'informations sur cet outil sont disponibles [ici](../faust/ide.md).**
 
@@ -61,11 +61,11 @@ Pour arrêter le son, il est nécessaire de stopper l'exécution du programme ce
 
 Analysons rapidement les différents élément constituants ce programme. La dernière (la deuxième) ligne est la plus importante : c'est elle qui permet de produire le son. `process` correspond au programme et dans une certaine mesure au haut-parleur. On dit donc ici que le haut-parleur est égal à `os.osc(440)`. `os.osc` implémente un oscillateur sinusoïdal, c'est que l'on appelle une **fonction**. La fonction `os.osc` a un seul paramètre : sa fréquence qui est ici configurée à 440 Hz (ce qui correspond à un La en musique). La fréquence de la sinusoïde permet donc de contrôler la hauteur du son.  
 
-La première ligne (`import("stdfaust.lib");`) importe les bibliothèques standard de Faust et permet donc d'avoir accès à la fonction `os.osc`. Note que toutes les déclarations en Faust se termine par un point-virgule : cela est très important et c'est une source d'erreur assez commune.  
+La première ligne (`import("stdfaust.lib");`) importe les bibliothèques standard de Faust et permet donc d'avoir accès à la fonction `os.osc`. Note que toutes les déclarations en Faust se terminent par un point-virgule : cela est très important et c'est une source d'erreur assez commune.  
 
 ### Exercice : changer la hauteur du son
 
-Comme il l'a été dit juste avant, la hauteur du son produit par la sinusoïde est déterminée par sa fréquence (ici 440 Hz). L'être humain peut normalement entendre toutes les fréquences entre 20 et 20000 Hz. Toutefois, plus on vieilli, moins on entend les fréquences élevées. Ainsi, tes "vieux profs" n'entendent certainement plus aucune fréquence au dessus de 16000 Hz. Les sons au dessus de 3000 Hz peuvent être très désagréables à entendre. Essaye de changer la valeur de la fréquence de `os.osc` pour observer l'effet sur le son produit en veillant à ne pas dépasser 3000. Si tu n'entends pas de son, assure-toi que le programme Faust est bien exécuté. 
+Comme il l'a été dit juste avant, la hauteur du son produit par la sinusoïde est déterminée par sa fréquence (ici 440 Hz). L'être humain peut normalement entendre toutes les fréquences entre 20 et 20000 Hz. Toutefois, plus on vieilli, moins l'on entend les fréquences élevées. Ainsi, tes "vieux profs" n'entendent certainement plus aucune fréquence au dessus de 16000 Hz. Les sons au dessus de 3000 Hz peuvent être très désagréables à entendre. Essaye de changer la valeur de la fréquence de `os.osc` pour observer l'effet sur le son produit en veillant à ne pas dépasser 3000. Si tu n'entends pas de son, assure-toi que le programme Faust est bien exécuté. 
 
 ## Ajouter des paramètres à un programme Faust
 

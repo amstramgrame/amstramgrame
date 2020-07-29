@@ -2,14 +2,16 @@
 import("stdfaust.lib");
 
 // parameters
-gate = checkbox("gate[switch:1]");
-p = hslider("p[acc: 0 1 -10 0 10]",0.5,0,1,0.01) : si.smoo;
-lips = hslider("lips[acc: 2 0 -10 0 10]",0.5,0,1,0.01) : si.smoo;
-tube = hslider("note[acc: 1 0 -10 0 10]",60,40,70,3) : ba.midikey2hz : pm.f2l;
-dist = hslider("dist[knob:2]",0,0,1,0.01) : si.smoo;
+gate = checkbox("gate[switch:1]") : si.smoo;
+freq0 = hslider("freq0[knob:2]",200,50,500,0.01) : si.smoo;
+ratio1 = hslider("ratio1[acc: 0 1 -10 0 10]",1.5,1,2,0.01) : si.smoo;
+ratio2 = hslider("ratio2[acc: 1 0 -10 0 10]",1.5,1,2,0.01) : si.smoo;
+index1 = hslider("index1[acc: 1 1 -10 0 10]",500,0,1000,0.01) : si.smoo;
+index2 = hslider("index2[knob:3]",500,0,1000,0.01) : si.smoo;
 
 // mappings
-pres = gate*p;
+freq1 = freq0*ratio1;
+freq2 = freq1*ratio2;
 
-process = pm.brassModel(tube,lips,0,pres) : ef.cubicnl(dist,0)*0.95; 
+process = sy.fm((freq0,freq1,freq2),(index1,index2))*gate; 
 
