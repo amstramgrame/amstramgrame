@@ -110,6 +110,24 @@ Ensemble d’applications musicales pour smartphone s’inspirant de la traditio
 </div>
 </div>
 
+## Commencer à coder !
+
+<hr width="60%">
+
+Pour s'approprier l'environnement AmStramGrame, nous conseillons de lire ces différentes sections du site dans l'ordre suivant :
+
+[1- Présentation du Gramophone](gramophone/about.md)
+
+[2- Installer l'application GramoLoader](gramophone/loader.md)
+
+[3- Découverte du Faust Web IDE](faust/ide.md)
+
+[4- Programmer le Gramophone](gramophone/programming.md)
+
+[5- Hello World : mon premier programme Faust](scenari/hello-world.md)
+
+[6- Hello World sur le Gramophone](scenari/hello-world-gramo.md)
+
 ## Un collaboration entre GRAME-CNCM et Canopé
 
 <hr width="60%">
