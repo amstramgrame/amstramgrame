@@ -60,7 +60,7 @@ Un projet destiné aux élèves de cycle primaire et secondaire, ainsi qu'à leu
 <img src="img/gramophone.png" width=50%>
 </div>
 <div class="col-md-6 home-right">
-<a href="tools/gramophone">Le Gramophone</a> est un dispositif audio spécialement conçu pour le projet Amstramgrame. Ses différents capteurs et contrôleurs (ex. accéléromètre, gyroscope, capteur de lumière, etc.) le font réagir aux gestes de l’utilisateur. Sa batterie offrant environ cinq heures d’autonomie et son haut-parleur puissant le rendent indépendant de tout ordinateur, le rapprochant ainsi des instruments de musique acoustiques traditionnels.
+<a href="tools/gramophone">Le Gramophone</a> est un dispositif audio/instrument de musique spécialement conçu pour le projet Amstramgrame. Ses différents capteurs et contrôleurs (ex. accéléromètre, gyroscope, capteur de lumière, etc.) le font réagir aux gestes de l’utilisateur. Sa batterie offrant environ cinq heures d’autonomie et son haut-parleur puissant le rendent indépendant de tout ordinateur, le rapprochant ainsi des instruments de musique acoustiques traditionnels.
 </div>
 </div>
 
