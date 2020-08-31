@@ -39,7 +39,7 @@ Sous MacOS, GramoLoader se présente sous la forme d'un fichier `.app`. Ce derni
 
 ### Linux (Sources)
 
-Il n'existe pas de version pré-compilée de GramoLoader pour Linux. À l'inverse, les sources de l'application peuvent être trouvées directement sur le Git d'AmStramGrame : <https://github.com/amstramgrame/amstramgrame/tree/master/gramophone/autoloader> puis lancées en ligne de commande avec :
+Il n'existe pas de version pré-compilée de GramoLoader pour Linux. À l'inverse, [les sources de l'application](https://github.com/amstramgrame/amstramgrame/raw/master/gramophone/autoloader/bin/linux/GramoLoader.zip) peuvent être utilisées puis lancées en ligne de commande avec :
 
 ```
 python3 src/FlashAppAsync.py
