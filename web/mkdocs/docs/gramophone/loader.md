@@ -39,6 +39,8 @@ Sous Windows, GramoLoader se présente sous la forme d'un fichier `.exe`. Ce der
 
 Sous MacOS, GramoLoader se présente sous la forme d'un fichier `.app`. Ce dernier peut être placé n'importe où sur l'ordinateur (dans le dossier "Applications", par exemple). Il suffit de le lancer pour démarrer l'application.
 
+**En cas de problème :** Il peut arriver sur certains Mac que le Gramophone ne soit pas reconnu (ex. le GramoLoader affiche un message indiquant qu'il est impossible de se connecter au Gramophone). Cela est probablement dû au fait que le driver USB correspondant n'est pas installé. Dans ce cas, installez [le driver](https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip) devrait résoudre le problème. 
+
 ### Linux (Sources)
 
 Il n'existe pas de version pré-compilée de GramoLoader pour Linux. À l'inverse, [les sources de l'application](https://github.com/amstramgrame/amstramgrame/raw/master/gramophone/autoloader/bin/linux/GramoLoader.zip) peuvent être utilisées puis lancées en ligne de commande avec :
