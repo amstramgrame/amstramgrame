@@ -43,8 +43,8 @@ Le tutoriel [Programmer le Gramophone](programming.md) donne plus détails sur l
 Le Gramophone abrite un interrupteur qui permet de le démarrer et de l'arrêter. Cet interrupteur a trois positions pour sélectionner le mode de fonctionnement :
 
 * en position centrale, le Gramophone est en [mode neutre](#mode-neutre) ;
-* lorsqu'il est enclenché à gauche (dans la direction opposée du [bouton de contrôle du volume](#controle-du-volume)), le Gramophone est démarré en [mode programmation](#mode-programmation) ;
-* lorsqu'il est enclenché à droite (en direction du [bouton de contrôle du volume](#controle-du-volume)), le Gramophone est démarré en [mode batterie](#mode-batterie). 
+* lorsqu'il est enclenché à gauche (en direction du [bouton de contrôle du volume](#controle-du-volume)), le Gramophone est démarré en [mode programmation](#mode-programmation) ;
+* lorsqu'il est enclenché à droite (dans la direction opposée du [bouton de contrôle du volume](#controle-du-volume)), le Gramophone est démarré en [mode batterie](#mode-batterie). 
 
 <figure>
 <img src="img/gramo-switch.jpg" class="mx-auto d-block" width=80%">
