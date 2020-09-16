@@ -1,3 +1,5 @@
+# To build for Mac: pyinstaller -F -w --add-data 'Backround.jpg:.' GramoLoader.py
+
 from tkinter import *
 from tkinter.filedialog import askdirectory, askopenfilename
 from tkinter import messagebox
@@ -45,7 +47,7 @@ initialZipMessage = 'Veuillez sélectionner le binaire\nFaust que vous avez tél
 waitingMessage =  "En attente de la sélection d'un fichier."
 
 ########LABELS##########
-windowTitle = "ESP32 outil USB de programmation automatique"
+windowTitle = "GramoLoader"
 selectLabel = "Sélectionner un fichier"
 statusMessage = 'Statut :'
 quitLabel = 'QUITTER'
@@ -201,6 +203,7 @@ window.geometry('500x500')
 window.resizable(False, False)
 try:
     bundle_dir = getattr(sys, '_MEIPASS', path.abspath(path.dirname(__file__)))
+    print(bundle_dir)
     background_image = Image.open(path.join(bundle_dir, 'Backround.jpg'))
     background_image = background_image.resize((500,500), Image.ANTIALIAS)
     background_photo =  ImageTk.PhotoImage(background_image)
