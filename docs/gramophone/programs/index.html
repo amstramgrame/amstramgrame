@@ -168,7 +168,7 @@
 <h1 id="quelques-programmes-faust-pour-gramophone">Quelques programmes Faust pour Gramophone</h1>
 <p>Cette page rassemble une collection de programmes Faust pour Gramophone prêts à l’emploi.</p>
 <h2 id="tictac">TicTac</h2>
-<p>Le programme <code>TicTac</code> produit des petits clics à intervals réguliers. Ces derniers sont filtrés pour appliquer une hauteur au son produit puis envoyés dans un écho pour augmenter la densité de la texture sonore produite. Les paramètres du son sont contrôlés avec l'<a href="../about/#les-capteurs-de-mouvements">accéléromètre</a> et le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. La production de "clics" est enclenchée lorsque le <a href="../about/#le-bouton-assignable">bouton assignable</a> est pressé.  </p>
+<p>Le programme <code>TicTac</code> produit des petits clics à intervalles réguliers. Ces derniers sont filtrés pour appliquer une hauteur au son produit puis envoyés dans un écho pour augmenter la densité de la texture sonore produite. Les paramètres du son sont contrôlés avec l'<a href="../about/#les-capteurs-de-mouvements">accéléromètre</a> et le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. La production de "clics" est enclenchée lorsque le <a href="../about/#le-bouton-assignable">bouton assignable</a> est pressé.  </p>
 <!-- faust-run -->
 
 <div class="faust-run">
@@ -280,7 +280,7 @@ process = no.noise*gate*gain : fi.fb_fcomb(1024,del,1,fb);
 <!-- /faust-run -->
 
 <h2 id="fm">FM</h2>
-<p><code>FM</code> est un instrument pour Gramophone basé sur un synthétiseur FM (modulation de fréquence). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> peut être utilisé comme un interrupter pour activer et désactiver le son. La hauteur du son produit peut être contrôlée avec le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. Les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone permettent de contrôler le timbre du son.</p>
+<p><code>FM</code> est un instrument pour Gramophone basé sur un synthétiseur FM (modulation de fréquence). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> peut être utilisé comme un interrupteur pour activer et désactiver le son. La hauteur du son produit peut être contrôlée avec le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. Les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone permettent de contrôler le timbre du son.</p>
 <!-- faust-run -->
 
 <div class="faust-run">

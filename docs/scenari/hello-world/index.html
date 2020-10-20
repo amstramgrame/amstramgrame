@@ -176,13 +176,13 @@
 <li>maîtriser la structure de base d'un programme Faust.</li>
 </ul>
 <p>L'idée est vraiment de te mettre dans la peau d'un "luthier numérique" ! </p>
-<p><strong>Avant de commencer, assures toi que le volume de ton ordinateur n'est pas trop fort, surtout si tu travailles avec un casque !</strong> Comme nous allons créer nos propres sons et faire "quelques expériences", il est possible que le volume augmente brusquement et de manière impromptue : fais attention à tes oreilles.</p>
+<p><strong>Avant de commencer, assures-toi que le volume de ton ordinateur n'est pas trop fort, surtout si tu travailles avec un casque !</strong> Comme nous allons créer nos propres sons et faire "quelques expériences", il est possible que le volume augmente brusquement et de manière impromptue : fais attention à tes oreilles.</p>
 <h2 id="pourquoi-hello-world">Pourquoi "Hello World" ?</h2>
-<p>En programmation informatique, le premier programme que l'on apprend à écrire dans la plupart des langages consiste à afficher "Hello World" sur l'écran, d'où son nom. Comme Faust est spécialement conçu pour "programmer des sons", il n'est pas vraiment capable d'afficher du texte sur l'écran comme d'autres langages ou en tout cas, lui demander de faire ça n'aurait pas de sens. En revanche, synthétiser un son pur avec une sinusoïde peut être vu comme une des manières les plus simple de produire du son avec Faust. C'est pourquoi notre "Hello World" en Faust consistera à produire un son pur et à le contrôler. </p>
+<p>En programmation informatique, le premier programme que l'on apprend à écrire dans la plupart des langages consiste à afficher "Hello World" sur l'écran, d'où son nom. Comme Faust est spécialement conçu pour "programmer des sons", il n'est pas vraiment capable d'afficher du texte sur l'écran comme d'autres langages ou en tout cas, lui demander de le faire n'aurait pas de sens. En revanche, synthétiser un son pur avec une sinusoïde peut être vu comme une des manières les plus simple de produire du son avec Faust. C'est pourquoi notre "Hello World" en Faust consistera à produire un son pur et à le contrôler. </p>
 <h2 id="produire-du-son-avec-faust">Produire du son avec Faust</h2>
 <h3 id="une-sinusoide-en-faust">Une sinusoïde en Faust</h3>
 <p>Faust permet d’interagir directement avec le haut-parleur de notre ordinateur ou du Gramophone en décrivant le son produit avec du code. Dans le cas de Faust, le code peut être vu comme une succession de formules mathématiques connectées entres-elles. </p>
-<p>Pour qu'un haut-parleur produise un son, il est nécessaire de le faire vibrer c'est à dire que la position de sa membrane doit évoluer dans le temps. Cette opération peut être effectuée en envoyant une onde sinusoïde au haut-parleur : </p>
+<p>Pour qu'un haut-parleur produise un son, il est nécessaire de le faire vibrer c'est-à-dire que la position de sa membrane doit évoluer dans le temps. Cette opération peut être effectuée en envoyant une onde sinusoïde au haut-parleur : </p>
 <figure>
 <img src="img/sine-speaker.jpg" class="mx-auto d-block" width="100%">
 </figure>
@@ -218,18 +218,18 @@ process = os.osc(440);
 <img src="img/ide-sine-close.jpg" class="mx-auto d-block" width="100%">
 </figure>
 
-<p>Analysons rapidement les différents élément constituants ce programme. La dernière (la deuxième) ligne est la plus importante : c'est elle qui permet de produire le son. <code>process</code> correspond au programme et dans une certaine mesure au haut-parleur. On dit donc ici que le haut-parleur est égal à <code>os.osc(440)</code>. <code>os.osc</code> implémente un oscillateur sinusoïdal, c'est que l'on appelle une <strong>fonction</strong>. La fonction <code>os.osc</code> a un seul paramètre : sa fréquence qui est ici configurée à 440 Hz (ce qui correspond à un La en musique). La fréquence de la sinusoïde permet donc de contrôler la hauteur du son.  </p>
+<p>Analysons rapidement les différents élément constituants ce programme. La dernière (la deuxième) ligne est la plus importante : c'est elle qui permet de produire le son. <code>process</code> correspond au programme et dans une certaine mesure au haut-parleur. On dit donc ici que le haut-parleur est égal à <code>os.osc(440)</code>. <code>os.osc</code> implémente un oscillateur sinusoïdal, c'est que l'on appelle une <strong>fonction</strong>. La fonction <code>os.osc</code> a un seul paramètre : sa fréquence qui est ici configurée à 440 Hz (ce qui correspond à un la en musique). La fréquence de la sinusoïde permet donc de contrôler la hauteur du son.  </p>
 <p>La première ligne (<code>import("stdfaust.lib");</code>) importe les bibliothèques standard de Faust et permet donc d'avoir accès à la fonction <code>os.osc</code>. Note que toutes les déclarations en Faust se terminent par un point-virgule : cela est très important et c'est une source d'erreur assez commune.  </p>
 <h3 id="exercice-changer-la-hauteur-du-son">Exercice : changer la hauteur du son</h3>
-<p>Comme il l'a été dit juste avant, la hauteur du son produit par la sinusoïde est déterminée par sa fréquence (ici 440 Hz). L'être humain peut normalement entendre toutes les fréquences entre 20 et 20000 Hz. Toutefois, plus on vieilli, moins l'on entend les fréquences élevées. Ainsi, tes "vieux profs" n'entendent certainement plus aucune fréquence au dessus de 16000 Hz. Les sons au dessus de 3000 Hz peuvent être très désagréables à entendre. Essaye de changer la valeur de la fréquence de <code>os.osc</code> pour observer l'effet sur le son produit en veillant à ne pas dépasser 3000. Si tu n'entends pas de son, assure-toi que le programme Faust est bien exécuté. </p>
+<p>Comme il a été dit juste avant, la hauteur du son produit par la sinusoïde est déterminée par sa fréquence (ici 440 Hz). L'être humain peut normalement entendre toutes les fréquences entre 20 et 20 000 Hz. Toutefois, plus on vieillit, moins l'on entend les fréquences élevées. Ainsi, tes "vieux profs" n'entendent certainement plus aucune fréquence au-dessus de 16 000 Hz. Les sons au-dessus de 3 000 Hz peuvent être très désagréables à entendre. Essaye de changer la valeur de la fréquence de <code>os.osc</code> pour observer l'effet sur le son produit en veillant à ne pas dépasser 3 000. Si tu n'entends pas de son, assure-toi que le programme Faust est bien exécuté. </p>
 <h2 id="ajouter-des-parametres-a-un-programme-faust">Ajouter des paramètres à un programme Faust</h2>
 <p>Faust permet de contrôler les différents paramètres d'un programme avec des éléments d'interface utilisateur (ex. boutons, potentiomètres, etc.). Le but de cette section est :</p>
 <ul>
-<li>d'ajouter un bouton au programme Faust pour activer et déactive la production du son ;</li>
+<li>d'ajouter un bouton au programme Faust pour activer et désactiver la production du son ;</li>
 <li>d'ajouter un potentiomètre pour contrôler la hauteur du son.</li>
 </ul>
 <h3 id="ajouter-un-bouton-pour-activer-le-son">Ajouter un bouton pour activer le son</h3>
-<p>Commençons par le bouton, un bouton peut être créé en Faust avec <code>button("nom")</code> où <code>nom</code> est le nom du bouton. Cet élément est égal à 1 lorsqu'il est pressé et à 0 lorsqu'il ne l'est pas. Il suffit donc de le multiplier à <code>os.osc</code> (multiplier par 0 revient à supprimer le son de <code>os.osc</code> et multiplier par 1 à le laisser inchangé) :</p>
+<p>Commençons par le bouton : un bouton peut être créé en Faust avec <code>button("nom")</code> où <code>nom</code> est le nom du bouton. Cet élément est égal à 1 lorsqu'il est pressé et à 0 lorsqu'il ne l'est pas. Il suffit donc de le multiplier à <code>os.osc</code> (multiplier par 0 revient à supprimer le son de <code>os.osc</code> et multiplier par 1 à le laisser inchangé) :</p>
 <!-- faust-run -->
 
 <div class="faust-run">
@@ -269,7 +269,7 @@ process = os.osc(440)*on;
 
 <p>Ici, <code>on</code> sera égal à 1 quand le bouton est pressé et à 0 quand il ne l'est pas. </p>
 <h3 id="ajouter-un-potentiometre-pour-controler-la-hauteur-du-son">Ajouter un potentiomètre pour contrôler la hauteur du son</h3>
-<p>Effectuons une opération similaire pour le paramètre fréquence de <code>os.osc</code> en lui assignant un potentiomètre. Cela est fait en Faust en utilisant l'objet <code>hslider("nom",a,b,c,d)</code> où <code>nom</code> est le nom du paramètre, <code>a</code> sa valeur initiale, <code>b</code> son minimum, <code>c</code> son maximum et <code>d</code> sa précision. Dans le cas du paramètre fréquence, <code>a</code> peut être égal à 440 puisqu'il s'agit de la valuer par défaut, <code>b</code> à 20 puisque c'est la fréquence la plus basse qui puisse être entendue par l'Homme, <code>c</code> à 3000 (pour ne pas trop nous casser les oreilles) et <code>d</code> à 1 pour que les valeurs changent de 1 en 1 (ce paramètre n'a pas vraiment d'importance dans le cas présent) :</p>
+<p>Effectuons une opération similaire pour le paramètre fréquence de <code>os.osc</code> en lui assignant un potentiomètre. Cela est fait en Faust en utilisant l'objet <code>hslider("nom",a,b,c,d)</code> où <code>nom</code> est le nom du paramètre, <code>a</code> sa valeur initiale, <code>b</code> son minimum, <code>c</code> son maximum et <code>d</code> sa précision. Dans le cas du paramètre fréquence, <code>a</code> peut être égal à 440 puisqu'il s'agit de la valeur par défaut, <code>b</code> à 20 puisque c'est la fréquence la plus basse qui puisse être entendue par l'homme, <code>c</code> à 3 000 (pour ne pas trop nous casser les oreilles) et <code>d</code> à 1 pour que les valeurs changent de 1 en 1 (ce paramètre n'a pas vraiment d'importance dans le cas présent) :</p>
 <!-- faust-run -->
 
 <div class="faust-run">
@@ -309,7 +309,7 @@ process = os.osc(freq)*on;
 <!-- /faust-run -->
 
 <h2 id="quelques-points-importants-a-savoir">Quelques points importants à savoir</h2>
-<p>Apprendre à maîtriser un langage de programmation peut prendre des mois voir des années, il est donc assez difficile de tout savoir sur Faust à ce stade :). En revanche, voici quelques conseils pour éviter les erreurs :</p>
+<p>Apprendre à maîtriser un langage de programmation peut prendre des mois voire des années, il est donc assez difficile de tout savoir sur Faust à ce stade :). En revanche, voici quelques conseils pour éviter les erreurs :</p>
 <ul>
 <li>ne pas oublier les points virgules ;</li>
 <li>ne pas utiliser de caractères spéciaux dont les accents en Français (ex. ç, ê, é, œ, etc.) ;</li>

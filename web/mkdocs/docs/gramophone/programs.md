@@ -4,7 +4,7 @@ Cette page rassemble une collection de programmes Faust pour Gramophone prêts �
 
 ## TicTac
 
-Le programme `TicTac` produit des petits clics à intervals réguliers. Ces derniers sont filtrés pour appliquer une hauteur au son produit puis envoyés dans un écho pour augmenter la densité de la texture sonore produite. Les paramètres du son sont contrôlés avec l'[accéléromètre](about.md#les-capteurs-de-mouvements) et le [potentiomètre assignable](about.md#le-potentiometre-assignable). La production de "clics" est enclenchée lorsque le [bouton assignable](about.md#le-bouton-assignable) est pressé.  
+Le programme `TicTac` produit des petits clics à intervalles réguliers. Ces derniers sont filtrés pour appliquer une hauteur au son produit puis envoyés dans un écho pour augmenter la densité de la texture sonore produite. Les paramètres du son sont contrôlés avec l'[accéléromètre](about.md#les-capteurs-de-mouvements) et le [potentiomètre assignable](about.md#le-potentiometre-assignable). La production de "clics" est enclenchée lorsque le [bouton assignable](about.md#le-bouton-assignable) est pressé.  
 
 <!-- faust-run -->
 <div class="faust-run">
@@ -112,7 +112,7 @@ process = no.noise*gate*gain : fi.fb_fcomb(1024,del,1,fb);
 
 ## FM
 
-`FM` est un instrument pour Gramophone basé sur un synthétiseur FM (modulation de fréquence). Le [bouton assignable](about.md#le-bouton-assignable) peut être utilisé comme un interrupter pour activer et désactiver le son. La hauteur du son produit peut être contrôlée avec le [potentiomètre assignable](about.md#le-potentiometre-assignable). Les [capteurs de mouvements](about.md#les-capteurs-de-mouvements) du Gramophone permettent de contrôler le timbre du son.
+`FM` est un instrument pour Gramophone basé sur un synthétiseur FM (modulation de fréquence). Le [bouton assignable](about.md#le-bouton-assignable) peut être utilisé comme un interrupteur pour activer et désactiver le son. La hauteur du son produit peut être contrôlée avec le [potentiomètre assignable](about.md#le-potentiometre-assignable). Les [capteurs de mouvements](about.md#les-capteurs-de-mouvements) du Gramophone permettent de contrôler le timbre du son.
 
 <!-- faust-run -->
 <div class="faust-run">

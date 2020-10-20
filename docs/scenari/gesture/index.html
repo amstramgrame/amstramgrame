@@ -134,7 +134,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#exercise-changer-daxe" class="nav-link">Exercise : changer d'axe</a>
+            <li class="nav-item" data-level="2"><a href="#exercice-changer-daxe" class="nav-link">Exercice : changer d'axe</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -158,11 +158,11 @@
                     <div class="col-md-9 main-container" role="main">
 
 <h1 id="capter-le-geste-travailler-avec-laccelerometre">Capter le geste : travailler avec l'accéléromètre</h1>
-<p>Le Gramophone abrite deux capteurs permettant de mesurer sa position et son déplacement dans l'espace : un accéléromètre et un gyroscope. Ce type de capteur est très commun de nos jours. On les retrouve par example dans la plupart des smartphones et des ordinateurs. Dans le cas du Gramophone, ils peuvent être utilisés pour contrôler les paramètres du son produit par l'instrument. Le but de ce scénario est d'apprendre à utiliser l'accéléromètre du Gramophone pour créer des instruments de musique expressifs. L'utilisation du gyroscope sera étudiée dans un autre scénario.   </p>
-<p>Un accéléromètre mesure l'accélération, c'est-à-dire le fait de changer la vitesse d'un objet dans l'espace. Si l'objet ne bouge pas ou qu'il se déplace à une vitesse constante, aucune accélération n'est mesurée. C'est un peu comme être assis dans une voiture quand elle accélère ou qu'elle freine : dans ces deux cas, notre corps perçois une "accélération". L'accéléromètre du Gramophone est tellement sensible qu'il peut aussi être influencé par la gravité de la terre. Dans ce cas là, il peut être utilisé pour mesurer l'inclinaison du Gramophone dans l'espace. </p>
+<p>Le Gramophone abrite deux capteurs permettant de mesurer sa position et son déplacement dans l'espace : un accéléromètre et un gyroscope. Ce type de capteur est très commun de nos jours. On les retrouve par exemple dans la plupart des smartphones et des ordinateurs. Dans le cas du Gramophone, ils peuvent être utilisés pour contrôler les paramètres du son produit par l'instrument. Le but de ce scénario est d'apprendre à utiliser l'accéléromètre du Gramophone pour créer des instruments de musique expressifs. L'utilisation du gyroscope sera étudiée dans un autre scénario.   </p>
+<p>Un accéléromètre mesure l'accélération, c'est-à-dire le fait de changer la vitesse d'un objet dans l'espace. Si l'objet ne bouge pas ou qu'il se déplace à une vitesse constante, aucune accélération n'est mesurée. C'est un peu comme être assis dans une voiture quand elle accélère ou qu'elle freine : dans ces deux cas, notre corps perçoit une "accélération". L'accéléromètre du Gramophone est tellement sensible qu'il peut aussi être influencé par la gravité de la terre. Dans ce cas-là, il peut être utilisé pour mesurer l'inclinaison du Gramophone dans l'espace. </p>
 <h2 id="choisir-un-axe">Choisir un axe</h2>
 <p>L'accéléromètre du Gramophone est capable de mesurer l'accélération dans plusieurs directions : X, Y et Z. Les différents axes de l'accéléromètre du Gramophone sont présentés <a href="../../gramophone/about/#les-capteurs-de-mouvements">ici</a>. </p>
-<p>Pour contrôler un paramètre d'un programme Faust avec un des axes de l'accéléromètre, il suffit d'utiliser la métadata <code>[acc: a b c d e]</code> dans la déclaration du nom du paramètre. <code>a</code> permet de choisir l'axe de accéléromètre (0 pour X, 1 pour Y et 2 pour Z). Par exemple, dans le programme pour Gramophone suivant :</p>
+<p>Pour contrôler un paramètre d'un programme Faust avec un des axes de l'accéléromètre, il suffit d'utiliser la métadata <code>[acc: a b c d e]</code> dans la déclaration du nom du paramètre. <code>a</code> permet de choisir l'axe de l'accéléromètre (0 pour X, 1 pour Y et 2 pour Z). Par exemple, dans le programme pour Gramophone suivant :</p>
 <!-- faust-run -->
 
 <div class="faust-run">
@@ -191,8 +191,8 @@ process = os.osc(freq)*gate;
 </figure>
 
 <p>tu devrais pouvoir contrôler précisément la hauteur du son produit.</p>
-<h2 id="exercise-changer-daxe">Exercise : changer d'axe</h2>
-<p>Avant d'expliquer à quoi correspondent les autres paramètres de la métadata <code>[acc: a b c d e]</code>, essaye de modifier le code précédent pour utiliser l'axe des Y plutôt que l'axe des X pour contrôler la hauteur du son produit : <code>[acc: 1 0 -10 0 10]</code>. Tente de repérer l'orientation de l'axe des Y sur le Gramophone. N'hésites pas à lire <a href="../../gramophone/about/#les-capteurs-de-mouvements">cette page</a> si tu as besoin d'aide.</p>
+<h2 id="exercice-changer-daxe">Exercice : changer d'axe</h2>
+<p>Avant d'expliquer à quoi correspondent les autres paramètres de la métadata <code>[acc: a b c d e]</code>, essaye de modifier le code précédent pour utiliser l'axe des Y plutôt que l'axe des X pour contrôler la hauteur du son produit : <code>[acc: 1 0 -10 0 10]</code>. Tente de repérer l'orientation de l'axe des Y sur le Gramophone. N'hésite pas à lire <a href="../../gramophone/about/#les-capteurs-de-mouvements">cette page</a> si tu as besoin d'aide.</p>
 <h2 id="utiliser-des-courbes-de-controle">Utiliser des courbes de contrôle</h2>
 <p>Quatre courbes peuvent être utilisées pour configurer la manière dont l'accéléromètre contrôle un paramètre d'un programme Faust :</p>
 <figure>
@@ -224,7 +224,7 @@ process = os.osc(freq)*gate;
 <p>Les courbes 2 et 3 présentent des comportements plus complexes. N'hésites pas à les essayer aussi !</p>
 <h2 id="configuration-avancee">Configuration avancée</h2>
 <p>Les paramètres <code>c</code>, <code>d</code> et <code>e</code> permettent de configurer l'accélération de référence du Gramophone pour différents points dans l'espace. Comme il s'agit de paramètres plus avancés, nous n'allons pas les détailler ici. </p>
-<p>Les paramètres d'un <code>hslider</code> jouent aussi un rôle important dans le comportement des accéléromètres. Dans les exemples précédents, la valeur initiale (1050) du slider était toujours placée précisément entre la valeur minimale (100) et la valeur maximale (2000) : <code>hslider("freq[acc: 0 1 -10 0 10]",1050,100,2000,0.01)</code>. La valeur initiale de <code>hslider</code> correspond toujours à la position centrale du Gramophone. Ainsi, si on la déplace plus ou moins près de la valeur maximale ou de la valeur minimale, on changera la comportement de l'accéléromètre. Par exemple, essaye de configurer la valeur initiale à 200 :</p>
+<p>Les paramètres d'un <code>hslider</code> jouent aussi un rôle important dans le comportement des accéléromètres. Dans les exemples précédents, la valeur initiale (1 050) du slider était toujours placée précisément entre la valeur minimale (100) et la valeur maximale (2 000) : <code>hslider("freq[acc: 0 1 -10 0 10]",1050,100,2000,0.01)</code>. La valeur initiale de <code>hslider</code> correspond toujours à la position centrale du Gramophone. Ainsi, si on la déplace plus ou moins près de la valeur maximale ou de la valeur minimale, on changera la comportement de l'accéléromètre. Par exemple, essaye de configurer la valeur initiale à 200 :</p>
 <!-- faust-run -->
 
 <div class="faust-run">
@@ -246,7 +246,7 @@ process = os.osc(freq)*gate;
 
 <!-- /faust-run -->
 
-<p>La hauteur du son évolue lentement de 100 à 200 Hz lorsque le Gramophone est placé à gauche, puis plus rapidement de 200 à 2000 Hz lorsqu'il est placé à droite.</p>
+<p>La hauteur du son évolue lentement de 100 à 200 Hz lorsque le Gramophone est placé à gauche, puis plus rapidement de 200 à 2 000 Hz lorsqu'il est placé à droite.</p>
 <h2 id="controler-plusieurs-parametres">Contrôler plusieurs paramètres</h2>
 <p>Plusieurs métadatas d'accéléromètre peuvent être déclarées en parallèle pour contrôler différents paramètres. Par exemple, il est possible d'ajouter un paramètre de contrôle du gain à notre synthétiseur précédent et de le contrôler avec l'axe des Y de l'accéléromètre :</p>
 <!-- faust-run -->

@@ -57,7 +57,7 @@ Dans le Faust Web IDE, clique sur le bouton Gramo :
 
 Une roue devrait se mettre à tourner à gauche du bouton. Cette opération prend généralement une quinzaine de secondes (pas besoin de rappuyer sur le bouton, ça n'ira pas plus vite, il faut être patient ;) ). 
 
-Une fois terminé, le téléchargement d'un fichier appelé `binary.zip` devrait être lancé, rappelle toi de l'emplacement dans lequel tu décides de l'enregistrer. 
+Une fois terminé, le téléchargement d'un fichier appelé `binary.zip` devrait être lancé, rappelle-toi de l'emplacement dans lequel tu décides de l'enregistrer. 
 
 Branche le Gramophone avec son câble USB à l'ordinateur :
 
@@ -93,14 +93,14 @@ Le son produit peut vite devenir ennuyeux puisqu'il n'est pas contrôlable pour 
 
 Le Gramophone produit donc maintenant un son. Toutefois, pour qu'il devienne un "vrai" instrument de musique, il est nécessaire de pouvoir contrôler ce son. Pour mener à bien cette tâche, le Gramophone donne accès à toute une panoplie de capteurs : 
 
-* un [bouton](../gramophone/about.md#le-bouton-assignable)
-* un [potentiomètre](../gramophone/about.md#le-potentiometre-assignable)
-* un [capteur de lumière](../gramophone/about.md#la-photoresistance)
-* des [capteurs de mouvements](../gramophone/about.md#les-capteurs-de-mouvements) (accéléromètre et gyroscope)
+* un [bouton](../gramophone/about.md#le-bouton-assignable) ;
+* un [potentiomètre](../gramophone/about.md#le-potentiometre-assignable) ;
+* un [capteur de lumière](../gramophone/about.md#la-photoresistance) ;
+* des [capteurs de mouvements](../gramophone/about.md#les-capteurs-de-mouvements) (accéléromètre et gyroscope).
 
 qui peuvent être liés à des paramètres d'un programme Faust depuis le code.  
 
-Le paramètre le plus fondamental d'un instrument de musique est de pouvoir contrôler le fait qu'un son est produit ou non (ex. quand on souffle dans une flute, quand on appuie sur la touche d'un clavier, etc.). Actuellement, le programme Faust installé sur le Gramophone produit du son de manière continue. Essayons d'utiliser [le bouton placé dans la partie supérieure du Gramophone](../gramophone/about.md#le-bouton-assignable) :
+Le paramètre le plus fondamental d'un instrument de musique est de pouvoir contrôler le fait qu'un son est produit ou non (ex. quand on souffle dans une flûte, quand on appuie sur la touche d'un clavier, etc.). Actuellement, le programme Faust installé sur le Gramophone produit du son de manière continue. Essayons d'utiliser [le bouton placé dans la partie supérieure du Gramophone](../gramophone/about.md#le-bouton-assignable) :
  
 <figure>
 <img src="img/gramo-button.jpg" class="mx-auto d-block" width="80%">
@@ -148,7 +148,7 @@ Assure-toi que ton Gramophone est en mode programmation puis installe cette nouv
 
 Mets maintenant ton Gramophone en [mode neutre](../gramophone/about.md#mode-neutre) pour lancer le programme. Appuie sur le bouton en haut du Gramophone et essaye de tourner le potentiomètre assignable en même temps. Si aucun son n'est produit, assure-toi que le potentiomètre de contrôle du volume du son n'est pas à 0.
 
-Maintenant amuse-toi bien et casse les oreilles à ton prof ;).  
+Maintenant amuse-toi bien et casse les oreilles de ton prof ;).  
 
 ## Faire fonctionner le Gramophone en mode batterie
 
@@ -162,13 +162,13 @@ Le Gramophone est prêt à être utilisé en [mode batterie](../gramophone/about
 
 N'oublie pas de remettre le Gramophone en [mode neutre](../gramophone/about.md#mode-neutre) une fois que tu as terminé de t'en servir pour ne pas que la batterie se décharge ! 
 
-Pour en savoir plus sur les différents modes de fonctionnement du Gramophone, n'hésites pas à lire [cette section](../gramophone/about.md#demarrage-du-gramophone)  
+Pour en savoir plus sur les différents modes de fonctionnement du Gramophone, n'hésites pas à lire [cette section](../gramophone/about.md#demarrage-du-gramophone).  
 
 ## Tenir le Gramophone
 
 Comme tout instrument de musique, le Gramophone ne se tient pas n'importe comment ;). Pour apprendre à tenir le Gramophone correctement, lis [cette section](../gramophone/about.md#tenir-le-gramophone).
 
-## Exercise : contrôler la hauteur du son avec le capteur de lumière
+## Exercice : contrôler la hauteur du son avec le capteur de lumière
 
 Tous les capteurs du Gramophone peuvent être utilisés pour contrôler n'importe quel paramètre d'un programme Faust. Dans cet exercice, essaye de contrôler la hauteur (fréquence) du son produit avec le capteur de lumière du Gramophone plutôt que le potentiomètre. La métadata correspondant au capteur de lumière est : `[knob:3]`.
 

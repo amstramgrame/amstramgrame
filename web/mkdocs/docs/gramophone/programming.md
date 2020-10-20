@@ -21,7 +21,7 @@ process = os.sawtooth(freq);
 </div>
 <!-- /faust-run -->
 
-Clique sur le bouton "Éditer/exécuter le programme" pour ouvrir le programme ci-dessus dans le Faust Web IDE. Il peut alors être exécuté directement dans le navigateur Web en suivant la procédure indiquée [ici](../faust/ide.md). 
+Clique sur le bouton "Éditer/exécuter le programme" pour ouvrir le programme ci-dessus dans le Faust Web IDE. Il peut alors être exécuté directement dans le navigateur web en suivant la procédure indiquée [ici](../faust/ide.md). 
 
 Pour charger ce programme sur le Gramophone, il suffit de cliquer dans un premier temps sur le bouton "Gramo" dans l'IDE :
 
@@ -29,7 +29,7 @@ Pour charger ce programme sur le Gramophone, il suffit de cliquer dans un premie
 <img src="img/ide-gramo.svg" class="mx-auto d-block" width="100%">
 </figure>
 
-Cela lance la "fabrication" du programme et après un quinzaine de seconde, il devrait être automatiquement téléchargé sur ton ordinateur sous la forme d'un fichier appelé `binary.zip`. Si le téléchargement ne se lance pas, il est possible que ce dernier soit bloqué par ton navigateur Web. 
+Cela lance la "fabrication" du programme et après une quinzaine de secondes, il devrait être automatiquement téléchargé sur ton ordinateur sous la forme d'un fichier appelé `binary.zip`. Si le téléchargement ne se lance pas, il est possible que ce dernier soit bloqué par ton navigateur web. 
 
 Une fois que `binary.zip` est téléchargé, connecte le Gramophone à ton ordinateur puis lance [l'application GramoLoader](loader.md). Assure-toi que [ton Gramophone est en "mode programmation"](about.md#mode-programmation) (l'interrupteur de mise en route du Gramophone doit-être placé à gauche). Ensuite, sélectionne le fichier `binary.zip` sur l'ordinateur en cliquant sur le bouton "Sélectionner un fichier" :
 
@@ -77,13 +77,13 @@ Dans les menus qui s'affichent, sélectionne "esp32" dans le menu du haut et "gr
 <img src="img/playground-export-select.svg" class="mx-auto d-block" width="100%">
 </figure>
 
-Après un quinzaine de secondes, un bouton "Download" devrait s'afficher dans le menu de gauche, clique dessus pour télécharger le fichier `binary.zip` contenant le programme du Gramophone sur ton ordinateur :
+Après une quinzaine de secondes, un bouton "Download" devrait s'afficher dans le menu de gauche, clique dessus pour télécharger le fichier `binary.zip` contenant le programme du Gramophone sur ton ordinateur :
 
 <figure>
 <img src="img/playground-export-download.svg" class="mx-auto d-block" width="100%">
 </figure>
 
-Une fois que `binary.zip` est téléchargé, connecte le Gramophone à ton ordinateur puis lance [l'application GramoLoader](loader.md). Assure-toi que [ton Gramophone est en "mode programmation"](about.md#demarrage-du-gramophone) (l'interrupteur de mise en route du Gramophone doit-être placé à gauche). Ensuite, sélectionne le fichier `binary.zip` sur l'ordinateur en cliquant sur le bouton "Sélectionner un fichier" :
+Une fois que `binary.zip` est téléchargé, connecte le Gramophone à ton ordinateur puis lance [l'application GramoLoader](loader.md). Assure-toi que [ton Gramophone est en "mode programmation"](about.md#demarrage-du-gramophone) (l'interrupteur de mise en route du Gramophone doit être placé à gauche). Ensuite, sélectionne le fichier `binary.zip` sur l'ordinateur en cliquant sur le bouton "Sélectionner un fichier" :
 
 <figure>
 <img src="img/loader.jpg" class="mx-auto d-block" width="50%">
@@ -93,6 +93,6 @@ Le programme devrait alors être envoyé sur le Gramophone. Cette opération pre
 
 Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de [mettre le Gramophone en mode neutre](about.md#mode-neutre) en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement [la mollette de sélection des programmes Faust](about.md#passer-dun-programme-a-lautre) une fois. Un son correspondant au programme créé dans le Faust Playground lors de l'étape précédente devrait alors être émis.
 
-**Pour modifier le programme, il suffit de changer le patch dans le Faust Playground et de re-générer une fichier `binary.zip` : rien d'autre à faire, l'application GramoLoader se charge de tout !**  
+**Pour modifier le programme, il suffit de changer le patch dans le Faust Playground et de re-générer un fichier `binary.zip` : rien d'autre à faire, l'application GramoLoader se charge de tout !**  
 
 Une fois installé sur le Gramophone, le programme peut être également utilisé en [mode batterie](about.md#mode-batterie). 

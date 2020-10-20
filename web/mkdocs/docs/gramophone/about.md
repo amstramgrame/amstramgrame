@@ -4,7 +4,7 @@
 <img src="img/gramo.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
-Le Gramophone est un instrument de musique programmable développé à [Grame](http://www.grame.fr) dans le cadre du projet AmStramGrame. À l'instar des instruments de musique acoustiques "traditionnels" comme la trompette, le tabla ou le violon, il permet de produire du son, d'être contrôlé par un musicien et est complètement indépendant (il n'a pas besoin d'être branché avec un câble pour fonctionner). À l'inverse des instruments acoustiques, le son qu'il produit et son comportement sont complètement malléables et peuvent être décrits par la programmation informatique grâce au [langage Faust](../faust/about.md).  
+Le Gramophone est un instrument de musique programmable développé à [Grame](http://www.grame.fr) dans le cadre du projet Amstramgrame. À l'instar des instruments de musique acoustiques "traditionnels" comme la trompette, le tabla ou le violon, il permet de produire du son, d'être contrôlé par un musicien et est complètement indépendant (il n'a pas besoin d'être branché avec un câble pour fonctionner). À l'inverse des instruments acoustiques, le son qu'il produit et son comportement sont complètement malléables et peuvent être décrits par la programmation informatique grâce au [langage Faust](../faust/about.md).  
 
 <figure>
 <img src="img/gramo-overview.svg" class="mx-auto d-block" width="60%">
@@ -27,14 +27,14 @@ Le Gramophone est composé d'une coque en plastique, d'un haut-parleur, d'un ord
 
 ## Programmation du Gramophone
 
-Le Gramophone se programme via un câble USB connecté à un ordinateur. Le [langage Faust](../faust/about.md) peut être utilisé pour programmer le Gramophone grâce aux plateformes [Faust Playground](../faust/playground.md) (programmation graphique pour les débutants) et [Faust Web IDE](../faust/ide.md) (programmation écrites/scriptées). Pour que cela fonctionne, il est nécessaire d'installer l'application [GramoLoader](loader.md) sur sa machine qui permet de faire le lien entre le navigateur Web et le gramophone.
+Le Gramophone se programme via un câble USB connecté à un ordinateur. Le [langage Faust](../faust/about.md) peut être utilisé pour programmer le Gramophone grâce aux plateformes [Faust Playground](../faust/playground.md) (programmation graphique pour les débutants) et [Faust Web IDE](../faust/ide.md) (programmation écrite/scriptée). Pour que cela fonctionne, il est nécessaire d'installer l'application [GramoLoader](loader.md) sur sa machine qui permet de faire le lien entre le navigateur web et le gramophone.
 
 <figure>
 <img src="img/gramo-prog.jpg" class="mx-auto d-block" width="90%">
 <center><figcaption>Programmation du Gramophone</figcaption></center>
 </figure>
 
-Le tutoriel [Programmer le Gramophone](programming.md) donne plus détails sur la programmation du Gramophone.
+Le tutoriel [Programmer le Gramophone](programming.md) donne plus de détails sur la programmation du Gramophone.
 
 ## Fonctionnement du Gramophone
 
@@ -51,26 +51,26 @@ Le Gramophone abrite un interrupteur qui permet de le démarrer et de l'arrêter
 <center><figcaption>L'interrupteur de démarrage du Gramophone</figcaption></center>
 </figure>
 
-**Typiquement, le [mode programmation](#mode-programmation) est utilisé pour programmer le Gramophone avec l'application [GramoLoader](loader.md), le [mode neutre](#mode-neutre) permet de lancer le Gramophone lorsqu'il est connecté à l'ordinateur en USB, le [mode batterie](#mode-batterie) permet de jouer le Gramophone sans le connecter à l'ordinateur et à charger la batterie.**
+**Typiquement, le [mode programmation](#mode-programmation) est utilisé pour programmer le Gramophone avec l'application [GramoLoader](loader.md), le [mode neutre](#mode-neutre) permet de lancer le Gramophone lorsqu'il est connecté à l'ordinateur en USB, le [mode batterie](#mode-batterie) permet de jouer du Gramophone sans le connecter à l'ordinateur et de charger la batterie.**
 
 #### Mode Neutre
 
-En mode neutre (interrupteur en position centrale), le Gramophone peut : 
+En mode Neutre (interrupteur en position centrale), le Gramophone peut : 
 
-* être alimenté en électricité avec le câble USB et donc joué ;
-* programmé sous certaines conditions (il est possible que le Gramophone n'arrive pas à installer le programme depuis l'application [GramoLoader](loader.md))
+* être alimenté en électricité avec le câble USB et donc jouer ;
+* être programmé sous certaines conditions (il est possible que le Gramophone n'arrive pas à installer le programme depuis l'application [GramoLoader](loader.md))
 
-Le mode neutre est recommandé pour l'exécution d'un programme Faust lorsque le Gramophone est branché à l'ordinateur. Si le câble USB est débranché, le Gramophone s'arrête.
+Le mode Neutre est recommandé pour l'exécution d'un programme Faust lorsque le Gramophone est branché à l'ordinateur. Si le câble USB est débranché, le Gramophone s'arrête.
 
-**La batterie du Gramophone n'est pas sollicitée en mode neutre : le Gramophone devrait être mis en mode neutre lorsqu'il n'est pas utilisé pour ne pas vider la batterie.**
+**La batterie du Gramophone n'est pas sollicitée en mode Neutre : le Gramophone devrait être mis en mode Neutre lorsqu'il n'est pas utilisé pour ne pas vider la batterie.**
 
 #### Mode Programmation
 
-Le mode programmation (interrupteur en position gauche) permet de forcer la programmation d'un Gramophone depuis le [Faust Web IDE](../faust/ide.md) ou le [Faust Playground](../faust/playground.md) via l'application [GramoLoader](loader.md). Si un programme Faust a du mal à être installé en mode neutre, le mode programmation devrait résoudre le problème. 
+Le mode Programmation (interrupteur en position gauche) permet de forcer la programmation d'un Gramophone depuis le [Faust Web IDE](../faust/ide.md) ou le [Faust Playground](../faust/playground.md) via l'application [GramoLoader](loader.md). Si un programme Faust a du mal à être installé en mode Neutre, le mode Programmation devrait résoudre le problème. 
 
 #### Mode Batterie
 
-Le mode batterie (interrupteur en position droite) permet de :
+Le mode Batterie (interrupteur en position droite) permet de :
 
 * faire fonctionner le Gramophone sur la batterie ;
 * charger la batterie du Gramophone si celui-ci est connecté à un port USB.
@@ -81,9 +81,9 @@ Le mode batterie (interrupteur en position droite) permet de :
 <img src="img/gramo-start.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
-On met donc d'abord le Gramophone en mode batterie puis on appuie plusieurs fois sur le bouton de lancement du programme.
+On met donc d'abord le Gramophone en mode Batterie puis on appuie plusieurs fois sur le bouton de lancement du programme.
 
-**Il est important de remettre l'interrupteur en mode neutre après avoir terminé de jouer si on ne veut pas vider la batterie !**
+**Il est important de remettre l'interrupteur en mode Neutre après avoir terminé de jouer si on ne veut pas vider la batterie !**
 
 ### Tenir le Gramophone
 
@@ -112,11 +112,11 @@ Le volume du son produit par le Gramophone peut être contrôlé par le potentio
 
 ### Contrôle des paramètres du son
 
-Le son produit par le Gramophone peut-être contrôlé à l'aide de différents éléments d'interface. Chacun d'entre-eux peut être assigné directement dans un programme Faust à un paramètre du son à l'aide de [métadatas](#metadatas-de-programmation-du-gramophone) (le fonctionnement des métadata dans Faust est détaillé [ici](#metadatas-de-programmation-du-gramophone)).
+Le son produit par le Gramophone peut être contrôlé à l'aide de différents éléments d'interface. Chacun d'entre eux peut être assigné directement dans un programme Faust à un paramètre du son à l'aide de [métadatas](#metadatas-de-programmation-du-gramophone) (le fonctionnement des métadatas dans Faust est détaillé [ici](#metadatas-de-programmation-du-gramophone)).
 
 #### Le bouton assignable
 
-Le bouton assignable du Gramophone se trouve à l'opposée du [potentiomètre de volume](#controle-du-volume) et tombe sous la majeur du musicien :
+Le bouton assignable du Gramophone se trouve à l'opposé du [potentiomètre de volume](#controle-du-volume) et tombe sous le majeur du musicien :
 
 <figure>
 <img src="img/gramo-button.jpg" class="mx-auto d-block" width="80%">
@@ -216,7 +216,7 @@ Par exemple, le gain d'un synthétiseur peut être contrôlé avec l'axe X de l'
 g = nentry("gain[acc: 0 0 -10 0 10]",0.5,0,1,0.01);
 ```
 
-Avec cette configuration, `g = 0` lorsque le Gramophone est incliné à 90 degrés du côté gauche, `g = 0.5` lorsque le Gramophone est maintenue droit, haut-parleur pointant vers le bas et `g = 1` lorsque le Gramophone est incliné à 90 degrés du côté droit.
+Avec cette configuration, `g = 0` lorsque le Gramophone est incliné à 90 degrés du côté gauche, `g = 0.5` lorsque le Gramophone est maintenu droit, haut-parleur pointant vers le bas et `g = 1` lorsque le Gramophone est incliné à 90 degrés du côté droit.
 
 <figure>
 <img src="img/motion-example.jpg" class="mx-auto d-block" width="100%">
@@ -228,11 +228,11 @@ Autre exemple :
 g = nentry("gain[acc: 0 0 0 0 10]",0,0,1,0.01);
 ```
 
-Avec cette configuration, `g = 0` lorsque le Gramophone est incliné à 90 degrés du côté gauche et lorsque le Gramophone est maintenue droit, haut-parleur pointant vers le bas. La valeur de `g` augmente au fur et à mesure que le Gramophone est incliné vers la droite. `g = 1` lorsque le Gramophone est incliné à 90 degrés du côté droit.
+Avec cette configuration, `g = 0` lorsque le Gramophone est incliné à 90 degrés du côté gauche et lorsque le Gramophone est maintenu droit, haut-parleur pointant vers le bas. La valeur de `g` augmente au fur et à mesure que le Gramophone est incliné vers la droite. `g = 1` lorsque le Gramophone est incliné à 90 degrés du côté droit.
 
 ### Charger le Gramophone
 
-Pour charger la batterie du Gramophone, il suffit de le brancher à un chargeur USB ou à un ordinateur. Pour que la charge puisse s'effectuer, il est nécessaire de mettre le Gramophone en [mode batterie](#mode-batterie) : le Gramophone ne se chargera pas s'il est en mode neutre ou en mode programmation !
+Pour charger la batterie du Gramophone, il suffit de le brancher à un chargeur USB ou à un ordinateur. Pour que la charge puisse s'effectuer, il est nécessaire de mettre le Gramophone en [mode batterie](#mode-batterie) : le Gramophone ne se chargera pas s'il est en mode neutre ou en mode Programmation !
 
 <figure>
 <img src="img/gramo-charge.jpg" class="mx-auto d-block" width="80%">
@@ -248,7 +248,7 @@ Plusieurs programmes Faust peuvent être installés sur un seul Gramophone. Pour
 <img src="img/gramo-prog-change.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
-Les programmes sont sélectionnés en boucle. Lorsque le Gramophone est démarré en [mode neutre](#mode-neutre) ou en [mode batterie](#mode-batterie), le premier programme est toujours sélectionné. Pour passer au deuxième programme, il suffit de tourner la molette vers la droite. Pour revenir en arrière, il faut la tourner vers la gauche. Une fois arrivé au dernier programme, tourner la molette vers la droite fait automatiquement revenir au premier programme, etc.
+Les programmes sont sélectionnés en boucle. Lorsque le Gramophone est démarré en [mode Neutre](#mode-neutre) ou en [mode Batterie](#mode-batterie), le premier programme est toujours sélectionné. Pour passer au deuxième programme, il suffit de tourner la molette vers la droite. Pour revenir en arrière, il faut la tourner vers la gauche. Une fois arrivé au dernier programme, tourner la molette vers la droite fait automatiquement revenir au premier programme, etc.
 
 ## Métadatas de programmation du Gramophone
 
