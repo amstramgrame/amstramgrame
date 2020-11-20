@@ -35,7 +35,7 @@ extra:
         - type: home
           link: https://www.amstramgrame.fr
         - type: envelope
-          link: mailto:michony@grame.fr
+          link: mailto:michon@grame.fr
 
 plugins:
   - search

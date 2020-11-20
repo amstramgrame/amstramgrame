@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title> Making the Gramophone  - Amstramgrame</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../.."><img src="../../img/logoAmstram.png" width=180></a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The Gramophone <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active"> Making the Gramophone </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://faust.grame.fr" class="nav-link">Faust</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                      
+                      <li class="nav-item">
+                          <a href="https://faustide.grame.fr/?mode=amstram" class="nav-link">
+                            Code!
+                          </a>
+                      </li>
+                      
+                      <li class="nav-item">
+                          <a href="https://www.amstramgrame.fr" class="nav-link">
+                            <img src="../../img/fr.png" width="30rem">
+                          </a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row"><div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#protocole-dassemblage-et-de-test-du-gramophone" class="nav-link">Protocole d'assemblage et de test du Gramophone</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#assemblage-du-gramophone" class="nav-link">Assemblage du Gramophone</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#coque-du-gramophone" class="nav-link">Coque du Gramophone</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#composants-et-outils-necessaire" class="nav-link">Composants et outils nécessaire</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#preparation-de-la-nappe" class="nav-link">Préparation de la nappe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#preparation-des-potentiometres" class="nav-link">Préparation des potentiomètres</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#preparation-de-lencodeur" class="nav-link">Préparation de l'encodeur</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#preparation-de-la-photoresistance" class="nav-link">Préparation de la photorésistance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#preparation-du-bouton-poussoir-assignable" class="nav-link">Préparation du bouton poussoir assignable</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#preparation-du-haut-parleur" class="nav-link">Préparation du haut-parleur</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#preparation-de-la-carte-ttgo-t-audio" class="nav-link">Préparation de la carte TTGO T-Audio</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#preparation-de-la-batterie" class="nav-link">Préparation de la batterie</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#preparation-de-la-coque" class="nav-link">Préparation de la coque</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#cablage-de-lalimentation" class="nav-link">Câblage de l'alimentation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#cablage-de-la-nappe" class="nav-link">Câblage de la nappe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#assemblage-final" class="nav-link">Assemblage final</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#procedure-de-test-du-gramophone" class="nav-link">Procédure de test du Gramophone</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9 main-container" role="main">
+
+<h1 id="protocole-dassemblage-et-de-test-du-gramophone">Protocole d'assemblage et de test du Gramophone</h1>
+<p>Ce document contient les éléments permettant d'assembler et de tester un Gramophone. Il sert de plateforme d'échange entre le département de la recherche de GRAME et la personne en charge de l'assemble des Gramophones. <a href="#assemblage-du-gramophone">La première section</a> de ce document concerne l'assemblage du Gramophone. <a href="#procédure-de-test-du-gramophone">La seconde</a> présente la procédure de test du Gramophone après assemblage.</p>
+<h2 id="assemblage-du-gramophone">Assemblage du Gramophone</h2>
+<p>Le Gramophone est constitué de composants électroniques, d'une carte <a href="https://github.com/LilyGO/TTGO-TAudio">TTGO T-Audio</a> et d'une coque en plastique.</p>
+<h3 id="coque-du-gramophone">Coque du Gramophone</h3>
+<p>Le code source de la coque du Gramophone peut être trouvé à l'adresse suivante : <a href="https://github.com/grame-cncm/gramophone">https://github.com/grame-cncm/gramophone</a>). La coque du Gramophone est composée de trois éléments :</p>
+<figure>
+<img src="img/0.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>En haut à gauche sur la figure ci-dessus, on trouve le cache de protection du haut-parleur, à droite l'élément principal et en bas à gauche l'arrière du Gramophone qui permet d'accéder au circuit après assemblage.</p>
+<h3 id="composants-et-outils-necessaire">Composants et outils nécessaire</h3>
+<p>En plus de sa coque, le Gramophone est composé des éléments suivants :</p>
+<ul>
+<li>8 vis YLX TF 2x10 PZ1 AB SPAX</li>
+<li>4 vis YLX TF 2.5x10 PZ1 AB SPAX</li>
+<li>6 rondelles plates étroites ø3</li>
+<li>2 <a href="https://www.amazon.fr/gp/product/B07QL1BC23/ref=ppx_yo_dt_b_asin_title_o09_s01?ie=UTF8&amp;psc=1">boutons poussoirs encastrables</a></li>
+<li>1 <a href="https://fr.farnell.com/bak/103456a-1s-3m/batterie-lithium-ion-3-7v-2050/dp/2401856?CMP=i-ddd7-00001003">batterie rechargeable 3.7V Lithium-ion, 2.05 Ah</a></li>
+<li>Scotch électrique</li>
+<li>2 connecteurs Dupont mâles</li>
+<li>2 connecteurs Dupont femelles</li>
+<li>2 boîtiers à 2 emplacements pour connecteur Dupont</li>
+<li>1 carte <a href="https://fr.aliexpress.com/item/32846510254.html?spm=a2g0s.9042311.0.0.941c6c37Yz8qsL">TTGO T-Audio</a></li>
+<li>1 câble de connection de batterie à souder (livré avec la carte TTGO T-Audio)</li>
+<li>1 <a href="https://fr.aliexpress.com/item/32593991938.html?spm=a2g0s.9042311.0.0.941c6c37Yz8qsL">haut-parleur AIYIMA 4Ohms 3W</a></li>
+<li>1 <a href="https://www.amazon.fr/gp/product/B07DM2GN2Z/ref=ppx_yo_dt_b_asin_title_o04_s01?ie=UTF8&amp;psc=1">encodeur encastrable avec bouton poussoir intégré</a></li>
+<li>1 <a href="https://www.amazon.fr/gp/product/B074QLFCF6/ref=ppx_yo_dt_b_asin_title_o02_s02?ie=UTF8&amp;psc=1">photorésistance</a></li>
+<li>2 <a href="https://www.amazon.fr/gp/product/B07L8TL39B/ref=ppx_yo_dt_b_asin_title_o09_s01?ie=UTF8&amp;psc=1">potentiomètres rotatif linéaires de 10k</a></li>
+<li>6 résistances de 10k</li>
+<li>1 broche femelle IDC 20 pour câble plat/nappe</li>
+<li>1 <a href="https://www.amazon.fr/gp/product/B07K2DSFY7/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&amp;psc=1">sangle en nylon/polypropylène 250x25x1.4mm</a></li>
+<li>1 <a href="https://www.amazon.fr/gp/product/B07426PJ4V/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&amp;psc=1">boucle de sangle 25mm</a></li>
+<li>2 <a href="https://www.amazon.fr/gp/product/B076CLC779/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&amp;psc=1">câbles plats/nappes arc-en-ciel 10 fils de 100mm</a></li>
+<li>1 câble USB/micro USB</li>
+<li>1 chargeur USB 2A</li>
+<li>Fil noir 22 AWG</li>
+<li>Fil blanc 22 AWG</li>
+<li>Gaînes thermorétractables de différents diamètres </li>
+<li>Étain</li>
+</ul>
+<p>L'assemblage du Gramophone requiert les outils suivants :</p>
+<ul>
+<li>1 fer à souder</li>
+<li>1 petite pince plate</li>
+<li>1 petite pince coupante</li>
+<li>1 grosse pince coupante</li>
+<li>1 petit tournevis cruciforme</li>
+<li>1 petit tournevis plat</li>
+<li>1 pince à épiler</li>
+<li>1 pince à sertir pour connecteur Dupont</li>
+<li>1 clé plate de 10mm</li>
+<li>1 aspirateur à étain</li>
+<li>1 multimètre</li>
+<li>1 pince à dénuder</li>
+<li>1 pistolet à colle</li>
+<li>1 pistolet à chaleur </li>
+</ul>
+<figure>
+<img src="img/1.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<h3 id="preparation-de-la-nappe">Préparation de la nappe</h3>
+<p>Prendre les deux câbles plats arc-en-ciel et les placer dans le connecteur correspondant de la manière suivante (respecter l'ordre des couleurs) :</p>
+<figure>
+<img src="img/2.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>A défaut d'avoir une pince spécialisée, serrer le connecteur à l'aide d'un serre-joint ou d'un étau :</p>
+<figure>
+<img src="img/3.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Cette opération doit être effectuée lentement et avec précautions afin de ne pas casser le connecteur.</p>
+<p>Préparer les fils des deux nappes de la manière suivante (isolation, dénudage et coupage) :</p>
+<figure>
+<img src="img/26.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<figure>
+<img src="img/27.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Noter sur la figure ci-dessus que les fils blancs, noirs et bleus de la nappe de gauche ainsi que le fil jaune de la nappe de droite ont été réservés <strong>sans les connecter</strong> et en les isolants à l'aide de scotch électrique. </p>
+<h3 id="preparation-des-potentiometres">Préparation des potentiomètres</h3>
+<p>Tordre les pates (bornes) des potentiomètres afin de faciliter les opérations de soudure sur ces derniers :</p>
+<figure>
+<img src="img/4.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>À l'aide d'une pince, casser la barre de blocage des potentiomètres :</p>
+<figure>
+<img src="img/5.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Souder une résistance de 10k de la manière suivante sur les potentiomètres :</p>
+<figure>
+<img src="img/6.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Les résistances n'ayant pas de polarité, leur orientation n'a pas d'importance.</p>
+<p>Placer une gaine thermorétractable sur la resistance afin de l'isoler :</p>
+<figure>
+<img src="img/7.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<h3 id="preparation-de-lencodeur">Préparation de l'encodeur</h3>
+<p>Souder 2 résistances sur le côté de l'encodeur sur lequel apparaît 3 pattes de la manière suivante :</p>
+<figure>
+<img src="img/8.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Tresser les deux fils non-soudés des deux résistances afin qu'elles soient connectées entre-elles :</p>
+<figure>
+<img src="img/9.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Souder les deux résistances entre-elles au niveau du pli :</p>
+<figure>
+<img src="img/10.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter la patte centrale du côté de l'encodeur avec 3 pattes à la patte de gauche du côté de l'encodeur avec 2 pattes en soudant un câble ou simplement un fil entre les deux :</p>
+<figure>
+<img src="img/11.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<h3 id="preparation-de-la-photoresistance">Préparation de la photorésistance</h3>
+<p>Souder une des pattes de la photorésistance (pas de polarité) à une des pattes d'une résistance de 10k:</p>
+<figure>
+<img src="img/12.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Isoler les deux pattes de la photorésistance à l'aide de gaines thermorétractable :</p>
+<figure>
+<img src="img/13.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<h3 id="preparation-du-bouton-poussoir-assignable">Préparation du bouton poussoir assignable</h3>
+<p>Souder une résistance à une des deux pattes d'un des deux boutons :</p>
+<figure>
+<img src="img/14.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Raccourcir les pattes de la résistance comme montré sur la figure ci-dessus. </p>
+<h3 id="preparation-du-haut-parleur">Préparation du haut-parleur</h3>
+<p>Couper un câble blanc et un câble noir d'environ 8cm et les dénuder à leurs deux extrémités : </p>
+<figure>
+<img src="img/15.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Souder le câble noir sur la borne négative du haut-parleur et le câble blanc sur la borne positive :</p>
+<figure>
+<img src="img/16.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Sertir les deux autres extrémités des câbles soudés au haut-parleur avec des connecteurs Dupont mâles :</p>
+<figure>
+<img src="img/17.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<figure>
+<img src="img/18.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<figure>
+<img src="img/19.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>et placer les connecteurs dans un boîtiers de taille correspondante.</p>
+<h3 id="preparation-de-la-carte-ttgo-t-audio">Préparation de la carte TTGO T-Audio</h3>
+<p>Couper un câble blanc et un câble noir d'environ 5cm, les dénuder des deux côtés, les sertir d'un côté avec des connecteurs Dupont femelles placés par la suite dans un boîtier de taille correspondante :</p>
+<figure>
+<img src="img/20.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Souder les deux autres extrémités à l'arrière de la carte TTGO de la manière suivante :</p>
+<figure>
+<img src="img/21.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Veiller à ce que les câbles ne se touchent pas entre-eux. Utiliser le multimètre si nécessaire en cas de doute.</p>
+<p>Sur le connecteur à 24 pattes de l'autre côté de la carte, couper les deux pattes inférieures et les deux pates supérieures à l'aide de la pince coupante. Après cette opération, le connecteur ne devrait plus avoir que 20 pattes :</p>
+<figure>
+<img src="img/25.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Enfin, vérifier que l'interrupteur on/off affleurant au bord de la carte soit sur la position off.</p>
+<h3 id="preparation-de-la-batterie">Préparation de la batterie</h3>
+<p>Souder le connecteur de batterie fourni avec la carte TTGO à la batterie (fil rouge avec fil rouge, fil noir avec fil noir). Utiliser des gaines thermorétractables pour isoler les soudures. Isoler le fil jaune avec une gaine. Veiller à ne pas connecter le câble noir et le câble rouge lors de cette opération (<strong>danger !!!</strong>).</p>
+<figure>
+<img src="img/22.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Sur la photo ci-dessus, deux soudures ont été effectuées pour allonger le câble, en pratique, une seule soudure est nécessaire pour chaque câble dans la mesure où le connecteur de batterie fourni avec les cartes TTGO est assez long.</p>
+<h3 id="preparation-de-la-coque">Préparation de la coque</h3>
+<p>Monter les deux potentiomètres, les deux boutons et l'encodeur sur la coque comme suit :</p>
+<figure>
+<img src="img/23.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Noter que le bouton placé en bas sur la figure ci-dessus est celui n'ayant pas de résistance.</p>
+<p>Placer la photorésistance dans son emplacement et la seller avec de la colle chaude (pistolet à colle) :</p>
+<figure>
+<img src="img/24.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<h3 id="cablage-de-lalimentation">Câblage de l'alimentation</h3>
+<p>Connecter (souder) avec un câble noir la borne de droite du bouton sans résistance à la borne de gauche du potentiomètre voisin :</p>
+<figure>
+<img src="img/28.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter avec un câble noir cette même borne du potentiomètre à la borne centrale de l'encodeur :</p>
+<figure>
+<img src="img/29.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter avec un câble noir à nouveau la borne centrale de l'encodeur à la résistance de la photorésistance voisine :</p>
+<figure>
+<img src="img/30.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter avec un câble noir à nouveau la résistance de la photorésistance à la borne de gauche du potentiomètre se trouvant à sa droite : </p>
+<figure>
+<img src="img/31.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter avec un câble noir cette même borne à la résistance du bouton se trouvant à sa gauche :</p>
+<figure>
+<img src="img/32.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Avec un câble blanc, connecter la borne de droite du potentiomètre se trouvant à droite du bouton sans résistance au deux résistances connectées aux bornes de gauche et de droite de l'encodeur voisin :</p>
+<figure>
+<img src="img/33.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter avec un câble blanc à nouveau les deux résistances de l'encodeur à la borne de droite de la photorésistance voisine :</p>
+<figure>
+<img src="img/34.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter avec un câble blanc cette même borne à la borne de droite du potentiomètre se trouvant à sa droite :</p>
+<figure>
+<img src="img/35.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter avec un câble cette même borne à la borne sans résistance du bouton voisin :</p>
+<figure>
+<img src="img/36.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<h3 id="cablage-de-la-nappe">Câblage de la nappe</h3>
+<p>Connecter le fil jaune de la première nappe à la borne de gauche du potentiomètre se trouvant à droite du bouton sans résistance, le fil vert à la borne centrale et le fil orange à la borne de droite :</p>
+<figure>
+<img src="img/37.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter le fil violet de la première nappe à la borne de gauche de la résistance et le fil marron de la deuxième nappe à la borne non connectée du côté à deux bornes de l'encodeur :</p>
+<figure>
+<img src="img/38.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter le fil blanc de la première nappe à la borne de gauche du côté à trois borne de l'encodeur et le fil orange de la deuxième nape à la borne de droite. Connecter également le fil gris de la deuxième nappe à la borne non-connectée du bouton sans résistance :</p>
+<figure>
+<img src="img/39.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter le fil rouge de la deuxième nappe à la borne centrale du potentiomètre se trouvant à gauche du bouton sur lequel se trouve une résistance. Enfin, connecter le fil noir de la deuxième nappe à la borne de ce bouton sur laquelle se trouve la résistance :</p>
+<figure>
+<img src="img/40.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<h3 id="assemblage-final">Assemblage final</h3>
+<p>Installer le haut parleur sur la coque avec les vis de 2.5mm en veillant à placer une rondelle entre chaque vis et le haut parleur :</p>
+<figure>
+<img src="img/41.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Faire ressortir le câble du haut-parleur de l'autre côté de la coque :</p>
+<figure>
+<img src="img/42.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter la carte TTGO à la nappe de la manière suivante :</p>
+<figure>
+<img src="img/43.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Connecter la batterie à la carte TTGO :</p>
+<figure>
+<img src="img/44.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Placer la carte TTGO dans la coque, faire passer le fil de la batterie et du haut parleur sur le côté et connecter le fil du haut-parleur aux câbles noirs et blancs soudés précédemment à la carte TTGO. Mettre du scotch électrique pour tenir les deux fiches entre-elles :</p>
+<figure>
+<img src="img/45.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Visser la carte à la coque en utilisant deux vis de 2mm séparées de la carte par des rondelles :</p>
+<figure>
+<img src="img/46.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Visser le cache de protection du haut-parleur à la coque avec des vis de 2mm. Installer la lanière au cache arrière puis le visser avec des vis de 2mm (attention au détrompeur). Mettre les embouts sur les potentiomètres et l'encodeur :</p>
+<figure>
+<img src="img/47.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Le Gramophone est prêt !!!</p>
+<h2 id="procedure-de-test-du-gramophone">Procédure de test du Gramophone</h2>
+<p>Un numéro de série doit être donné à chaque Gramophone. Ce dernier est indiqué au marqueur indélébile sur la partie intérieure du cache de fermeture du Gramophone. </p>
+<p>Le tableau suivant : <a href="https://docs.google.com/spreadsheets/d/1jJQEU7fEROIA5SLjROb9GM47MD2NmdBlPG9Wnibf0kc/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1jJQEU7fEROIA5SLjROb9GM47MD2NmdBlPG9Wnibf0kc/edit?usp=sharing</a> est utilisé pour répertorier les résultats des tests.</p>
+<p>La procédure de test pour chaque Gramophone doit se dérouler de la manière suivante :</p>
+<ul>
+<li>Connecter le Gramophone à l'ordinateur avec le câble USB</li>
+<li>Ouvrir le terminal</li>
+<li>Taper <code>cd</code> suivi d'un espace et glisser-déplacer le dossier de test de Gramophone sur le bureau dans le terminal</li>
+<li>Presser la touche "entrée"</li>
+<li>Tapper <code>make flash</code> puis presser "entrée"</li>
+<li>Verifier qu'aucun message d'erreur ne soit affiché à la fin de cette étape (<em>test a</em>)</li>
+<li>Tourner le bouton de volume du Gramophone à fond puis presser le bouton contrôlé par l'index. Un son doit être entendu (<em>test b</em>).</li>
+<li>Vérifier que le potentiomètre de contrôle du volume fonctionne en maintenant le bouton appuyé et en bougeant le potentiomètre en même temps (<em>test c</em>).</li>
+<li>Vérifier que le potentiomètre de contrôle de la hauteur du son fonctionne en maintenant le bouton appuyé et en bougeant le potentiomètre en même temps (<em>test d</em>).</li>
+<li>Mettre le potentiomètre de contrôle de la hauteur du son au maximum et vérifier que cela active le contrôle de la hauteur du son par la photorésistance en la couvrant (<em>test e</em>).</li>
+<li>Vérifier que l'encodeur fonctionne en maintenant le bouton d'activation du son appuyé et en tournant l'encodeur en même temps à droite et à gauche (<em>test f</em>).</li>
+<li>Vérifier que l'encodeur fonctionne en maintenant le bouton d'activation du son appuyé et en tournant l'encodeur en même temps à droite et à gauche tout en pressant l'encodeur (<em>test g</em>).</li>
+<li>Débrancher le Gramophone de l'ordinateur et vérifier que le bouton de marche et d'arrêt fonctionne (<em>test h</em>).</li>
+<li>Charger la batterie pendant 4h puis allumer le Gramophone. Démarrer un chronomètre au moment ou le Gramophone est allumé. Vérifier toutes les 5 minutes que le Gramophone produit du son en appuyant sur le bouton. Lorsque le Gramophone s'arrête de fonctionner (quand la batterie est vide), noter la valeur du chronomètre dans le tableau (<em>test i</em>).</li>
+<li>Si le Gramophone passe tous les tests, recharger sa batterie.  </li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+                <p>Copyright &copy; 2020 <a href="http://www.grame.fr">Grame-CNCM</a> & <a href="https://www.reseau-canope.fr/">Réseau Canopé</a></p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search Tool</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    What are you looking for on the Amstramgrame website?
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
