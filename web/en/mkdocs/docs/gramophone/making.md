@@ -11,7 +11,7 @@
 
 ## Gramophone Components List
 
-* x1 [Gramophone case](TODO)
+* x1 [Gramophone case](https://github.com/amstramgrame/amstramgrame/blob/master/gramophone/case/stls.zip)
 * x1 [LILYGO TTGO TAudio board](http://www.lilygo.cn/prod_view.aspx?TypeId=50033&Id=1104&FId=t3:50033:3)
 * x1 [AIYIMA 4 Ohms 3W speaker](https://fr.aliexpress.com/item/32593991938.html?spm=a2g0s.9042311.0.0.941c6c37Yz8qsL)
 * x1 [LI-ION 3.7V 2050mAh battery](https://fr.farnell.com/bak/103456a-1s-3m/batterie-lithium-ion-3-7v-2050/dp/2401856?CMP=i-ddd7-00001003)
