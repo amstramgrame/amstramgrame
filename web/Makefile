@@ -62,6 +62,7 @@ test:
 build:
 	$(MAKE) all
 	cd $(MKDIR) && mkdocs build
+	cd en && make build
 	git checkout ../docs/CNAME
 	
 serve:
