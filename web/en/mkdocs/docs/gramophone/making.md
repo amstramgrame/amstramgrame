@@ -49,7 +49,7 @@ with knob
 * x1 10mm wrench
 * x1 small Phillips screwdriver  
 * x1 pair of tweezers
-* x1 stripper (hell yeah!)
+* x1 stripper
 * x1 dentist tool
 * x1 heat gun
 * x1 multimeter
