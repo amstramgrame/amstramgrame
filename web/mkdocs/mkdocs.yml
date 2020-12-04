@@ -2,7 +2,7 @@ site_name: Amstramgrame
 site_description: Plateforme web du projet Amstramgrame.
 copyright: Copyright &copy; 2020 <a href="http://www.grame.fr">Grame-CNCM</a> & <a href="https://www.reseau-canope.fr/">Réseau Canopé</a>
 nav:
-    - Parcours pédagogiques:
+    - Tutos:
       - ' Hello World : mon premier programme Faust ' : scenari/hello-world.md
       - ' Faire fonctionner Hello World sur le Gramophone ' : scenari/hello-world-gramo.md
       #- ' Visite guidée des exemples de programme de Gramophone ' : scenari/examples.md
@@ -16,7 +16,7 @@ nav:
     - Faust:
       - ' Qu&#39;est-ce que c&#39;est ? ' : faust/about.md
       - ' Le Faust Web IDE ' : faust/ide.md
-      - ' Le Faust Playground ' : faust/playground.md
+      #- ' Le Faust Playground ' : faust/playground.md
     - À propos: about.md
 
 theme: 

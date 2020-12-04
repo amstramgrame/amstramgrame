@@ -34,7 +34,7 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Parcours pédagogiques <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tutos <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -81,10 +81,6 @@
                                     
 <li>
     <a href="../../faust/ide/" class="dropdown-item"> Le Faust Web IDE </a>
-</li>
-                                    
-<li>
-    <a href="../../faust/playground/" class="dropdown-item"> Le Faust Playground </a>
 </li>
                                 </ul>
                             </li>
@@ -134,10 +130,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#avec-le-faust-playground" class="nav-link">Avec le Faust Playground</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -183,43 +175,58 @@ process = os.sawtooth(freq);
 <p><strong>Pour modifier le programme, il suffit de changer le code dans le Faust Web IDE et de rappuyer sur le bouton "Gramo" : rien d'autre à faire, l'application GramoLoader se charge de tout !</strong></p>
 <p>Comme le programme Faust présenté au début de cette section ne contient aucun paramètre, il n'est actuellement pas possible d’interagir avec ce dernier. Pour apprendre à contrôler un programme Faust avec le Gramophone, tu peux maintenant lire le scenario : <a href="../../scenari/hello-world/">Hello World : mon premier programme pour Gramophone</a>.</p>
 <p>Une fois installé sur le Gramophone, le programme peut être également utilisé en <a href="../about/#mode-batterie">mode batterie</a>.</p>
-<h2 id="avec-le-faust-playground">Avec le Faust Playground</h2>
-<p><strong>Avant de débuter ce tutoriel, il est recommandé de lire <a href="../../faust/playground/">la page sur le Faust Playground</a></strong>.</p>
-<p>Construisons tout d'abord un programme très simple dans le <a href="https://faustplayground.grame.fr/">Faust Playground</a> en connectant par exemple une harpe "Kisana" (instrument) à un Echo (effet) :</p>
+<!--
+## Avec le Faust Playground
+
+**Avant de débuter ce tutoriel, il est recommandé de lire [la page sur le Faust Playground](../faust/playground.md)**.
+
+Construisons tout d'abord un programme très simple dans le [Faust Playground](https://faustplayground.grame.fr/) en connectant par exemple une harpe "Kisana" (instrument) à un Echo (effet) :
+
 <figure>
 <img src="img/playground-kis-echo.jpg" class="mx-auto d-block" width="100%">
 </figure>
 
-<p>Du son devrait être produit en déplaçant les potentiomètres "1 (Note 48)", "2 (Note 60)" ou "3 (Note 72)" de Kisana. </p>
-<p>Pour installer ce programme sur le Gramophone, il faut dans un premier temps cliquer sur le bouton "EXPORT" dans le menu en haut de la fenêtre :</p>
+Du son devrait être produit en déplaçant les potentiomètres "1 (Note 48)", "2 (Note 60)" ou "3 (Note 72)" de Kisana. 
+
+Pour installer ce programme sur le Gramophone, il faut dans un premier temps cliquer sur le bouton "EXPORT" dans le menu en haut de la fenêtre :
+
 <figure>
 <img src="img/playground-export.svg" class="mx-auto d-block" width="100%">
 </figure>
 
-<p>puis sur le bouton "+ d'options" :</p>
+puis sur le bouton "+ d'options" :
+
 <figure>
 <img src="img/playground-export-options.svg" class="mx-auto d-block" width="100%">
 </figure>
 
-<p>Dans les menus qui s'affichent, sélectionne "esp32" dans le menu du haut et "gramophoneFlash" dans le deuxième, puis clique sur le bouton "Export" :</p>
+Dans les menus qui s'affichent, sélectionne "esp32" dans le menu du haut et "gramophoneFlash" dans le deuxième, puis clique sur le bouton "Export" :
+
 <figure>
 <img src="img/playground-export-select.svg" class="mx-auto d-block" width="100%">
 </figure>
 
-<p>Après une quinzaine de secondes, un bouton "Download" devrait s'afficher dans le menu de gauche, clique dessus pour télécharger le fichier <code>binary.zip</code> contenant le programme du Gramophone sur ton ordinateur :</p>
+Après une quinzaine de secondes, un bouton "Download" devrait s'afficher dans le menu de gauche, clique dessus pour télécharger le fichier `binary.zip` contenant le programme du Gramophone sur ton ordinateur :
+
 <figure>
 <img src="img/playground-export-download.svg" class="mx-auto d-block" width="100%">
 </figure>
 
-<p>Une fois que <code>binary.zip</code> est téléchargé, connecte le Gramophone à ton ordinateur puis lance <a href="../loader/">l'application GramoLoader</a>. Assure-toi que <a href="../about/#demarrage-du-gramophone">ton Gramophone est en "mode programmation"</a> (l'interrupteur de mise en route du Gramophone doit être placé à gauche). Ensuite, sélectionne le fichier <code>binary.zip</code> sur l'ordinateur en cliquant sur le bouton "Sélectionner un fichier" :</p>
+Une fois que `binary.zip` est téléchargé, connecte le Gramophone à ton ordinateur puis lance [l'application GramoLoader](loader.md). Assure-toi que [ton Gramophone est en "mode programmation"](about.md#demarrage-du-gramophone) (l'interrupteur de mise en route du Gramophone doit être placé à gauche). Ensuite, sélectionne le fichier `binary.zip` sur l'ordinateur en cliquant sur le bouton "Sélectionner un fichier" :
+
 <figure>
 <img src="img/loader.jpg" class="mx-auto d-block" width="50%">
 </figure>
 
-<p>Le programme devrait alors être envoyé sur le Gramophone. Cette opération prend généralement une quinzaine de secondes. </p>
-<p>Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de <a href="../about/#mode-neutre">mettre le Gramophone en mode neutre</a> en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement <a href="../about/#passer-dun-programme-a-lautre">la mollette de sélection des programmes Faust</a> une fois. Un son correspondant au programme créé dans le Faust Playground lors de l'étape précédente devrait alors être émis.</p>
-<p><strong>Pour modifier le programme, il suffit de changer le patch dans le Faust Playground et de re-générer un fichier <code>binary.zip</code> : rien d'autre à faire, l'application GramoLoader se charge de tout !</strong>  </p>
-<p>Une fois installé sur le Gramophone, le programme peut être également utilisé en <a href="../about/#mode-batterie">mode batterie</a>. </p></div>
+Le programme devrait alors être envoyé sur le Gramophone. Cette opération prend généralement une quinzaine de secondes. 
+
+Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le programme. Pour cela, il suffit de [mettre le Gramophone en mode neutre](about.md#mode-neutre) en plaçant l'interrupteur de démarrage à droite et en pressant ensuite brièvement [la mollette de sélection des programmes Faust](about.md#passer-dun-programme-a-lautre) une fois. Un son correspondant au programme créé dans le Faust Playground lors de l'étape précédente devrait alors être émis.
+
+**Pour modifier le programme, il suffit de changer le patch dans le Faust Playground et de re-générer un fichier `binary.zip` : rien d'autre à faire, l'application GramoLoader se charge de tout !**  
+
+Une fois installé sur le Gramophone, le programme peut être également utilisé en [mode batterie](about.md#mode-batterie). 
+
+--></div>
             </div>
         </div>
 

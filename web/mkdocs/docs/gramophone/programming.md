@@ -47,6 +47,7 @@ Comme le programme Faust présenté au début de cette section ne contient aucun
 
 Une fois installé sur le Gramophone, le programme peut être également utilisé en [mode batterie](about.md#mode-batterie).
 
+<!--
 ## Avec le Faust Playground
 
 **Avant de débuter ce tutoriel, il est recommandé de lire [la page sur le Faust Playground](../faust/playground.md)**.
@@ -96,3 +97,5 @@ Si tout s'est bien passé, le Gramophone devrait être prêt à exécuter le pro
 **Pour modifier le programme, il suffit de changer le patch dans le Faust Playground et de re-générer un fichier `binary.zip` : rien d'autre à faire, l'application GramoLoader se charge de tout !**  
 
 Une fois installé sur le Gramophone, le programme peut être également utilisé en [mode batterie](about.md#mode-batterie). 
+
+-->
