@@ -75,6 +75,7 @@ Un projet destiné aux élèves de cycle primaire et secondaire, ainsi qu'à leu
 </div>
 </div>
 
+<!--
 ### LE FAUST PLAYGROUND
 
 <div class="row">
@@ -86,7 +87,7 @@ Un projet destiné aux élèves de cycle primaire et secondaire, ainsi qu'à leu
 </div>
 </div>
 
-<!--
+
 ### SMARTFAUST
 
 <div class="row">
@@ -97,7 +98,6 @@ SmartFaust est un concept d’applications musicales pour smartphones développ�
 <img src="img/smartFaust.png" width="50%">
 </div>
 </div>
--->
 
 ### GAMELAN
 
@@ -109,6 +109,7 @@ Ensemble d’applications musicales pour smartphone s’inspirant de la traditio
 <img src="img/gamelan.png" width=50%>
 </div>
 </div>
+-->
 
 ## Commencer à coder !
 
