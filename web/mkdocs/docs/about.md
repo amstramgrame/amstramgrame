@@ -48,3 +48,7 @@ ainsi que des ses lieux partenaires :
 * Lycée général et technologique, Le Cheylard (07)
 * Lycée des Chartreux, Lyon (69)
 * Médiathèque, Chambon-sur-Lignon (43)
+
+## Support technique
+
+Adressez vos questions d'ordre technique à : [transmission@grame.fr](mailto:transmission@grame.fr).
