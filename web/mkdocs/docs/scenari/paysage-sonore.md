@@ -1,10 +1,10 @@
-# Série d’applications Faust sur le paysage sonore naturel.
+# Série d’applications Faust sur le paysage sonore naturel
 
 **Enseignant :** Julien Drobeq
 
 **Intervenant :** Matteo Olivo
 
-Dans le cadre d’une série d’ateliers réalisé avec une classe 4ème du Collège Les Chartreux de Lyon, qui s’est déroulée de janvier à mars 2021, nous avons développé des applications musicales Faust autour du sujet du "paysage sonore naturel". La classe a été divisée en groupes de 4 élèves et chaque groupe a été chargé de créer une composition courte avec ces sonorités, et les autres applications fournies par le Grame.       
+Dans le cadre d’une série d’ateliers réalisée avec une classe 4ème du Collège Les Chartreux de Lyon, qui s’est déroulée de janvier à mars 2021, nous avons développé des applications musicales Faust autour du sujet du "paysage sonore naturel". La classe a été divisée en groupes de 4 élèves et chaque groupe a été chargé de créer une composition courte avec ces sonorités, et les autres applications fournies par le Grame.       
 
 ## Le thème et les objectifs des applications
 
