@@ -166,7 +166,6 @@
 <h2 id="tictac">TicTac</h2>
 <p>Le programme <code>TicTac</code> produit des petits clics à intervalles réguliers. Ces derniers sont filtrés pour appliquer une hauteur au son produit puis envoyés dans un écho pour augmenter la densité de la texture sonore produite. Les paramètres du son sont contrôlés avec l'<a href="../about/#les-capteurs-de-mouvements">accéléromètre</a> et le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. La production de "clics" est enclenchée lorsque le <a href="../about/#le-bouton-assignable">bouton assignable</a> est pressé.  </p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -191,13 +190,11 @@ ef.echo(0.4,del,fb) : ef.cubicnl(distDrive,0)*0.95;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust0/exfaust0.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <h2 id="pioupiou">Pioupiou</h2>
 <p><code>Pioupiou</code> est un programme pour Gramophone où la hauteur du son produit (une simple sinusoïde) est contrôlée par le <a href="#la-photoresistance">capteur de lumière</a> du Gramophone. Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet de lancer la production du son. </p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -216,13 +213,11 @@ process = os.osc(freq)*gate;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust1/exfaust1.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <h2 id="clarinet">Clarinet</h2>
 <p>Le programme <code>Clarinet</code> est basé sur un synthétiseur (modèle physique) de clarinette. La pression du souffle du clarinettiste, la raideur de l'anche, et le diamètre du pavillon sont contrôlés par les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone. La longueur du tube de la clarinette (qui impacte la hauteur du son) est contrôlée par le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'activer le souffle du clarinettiste. </p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -246,13 +241,11 @@ process = pm.clarinetModel(tube,pres,reed,bell);
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust2/exfaust2.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <h2 id="comb">Comb</h2>
 <p><code>Comb</code> est un instrument pour Gramophone très simple basé sur un filtre en peigne. Les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone contrôlent le volume et la hauteur du son produit. Le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a> contrôle l'agressivité et la résonance du son. Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'activer la production du son.</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -272,13 +265,11 @@ process = no.noise*gate*gain : fi.fb_fcomb(1024,del,1,fb);
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust3/exfaust3.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <h2 id="fm">FM</h2>
 <p><code>FM</code> est un instrument pour Gramophone basé sur un synthétiseur FM (modulation de fréquence). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> peut être utilisé comme un interrupteur pour activer et désactiver le son. La hauteur du son produit peut être contrôlée avec le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a>. Les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a> du Gramophone permettent de contrôler le timbre du son.</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -304,13 +295,11 @@ process = sy.fm((freq0,freq1,freq2),(index1,index2))*gate;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust4/exfaust4.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <h2 id="brass">Brass</h2>
 <p><code>Brass</code> est un instrument pour Gramophone basé sur un synthétiseur de trompette (modèle physique). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'activer le souffle. Le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a> contrôle la distortion du son et peut être utilisé pour augmenter le gain de l'instrument. Les autres paramètres du modèle sont contrôlés par les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a>.</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -334,13 +323,11 @@ process = pm.brassModel(tube,lips,0,pres) : ef.cubicnl(dist,0)*0.95;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust5/exfaust5.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <h2 id="violin">Violin</h2>
 <p><code>Violin</code> est un instrument pour Gramophone basé sur un synthétiseur de violon (modèle physique). Le <a href="../about/#le-bouton-assignable">bouton assignable</a> permet d'initier le mouvement de l'archet. Le <a href="../about/#le-potentiometre-assignable">potentiomètre assignable</a> contrôle la longueur de la corde et donc la hauteur du son produit. Les autres paramètres du modèle sont contrôlés par les <a href="../about/#les-capteurs-de-mouvements">capteurs de mouvements</a>.</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -361,7 +348,6 @@ process = pm.violinModel(stringLength,bowPressure,bowVelocity,bowPosition);
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/gramophone/programs/exfaust6/exfaust6.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run --></div>
             </div>
         </div>

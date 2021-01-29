@@ -7,6 +7,7 @@ nav:
       - ' Faire fonctionner Hello World sur le Gramophone ' : scenari/hello-world-gramo.md
       #- ' Visite guidée des exemples de programme de Gramophone ' : scenari/examples.md
       - ' Capter le geste : travailler avec l&#39;accéléromètre ' : scenari/gesture.md
+      - ' Applications sur le paysage sonore naturel ' : scenari/paysage-sonore.md
     - Le Gramophone:
       - ' Qu&#39;est-ce que c&#39;est ? ' : gramophone/about.md
       - ' Le GramoLoader ' : gramophone/loader.md

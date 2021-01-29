@@ -160,7 +160,6 @@
 <p>L'accéléromètre du Gramophone est capable de mesurer l'accélération dans plusieurs directions : X, Y et Z. Les différents axes de l'accéléromètre du Gramophone sont présentés <a href="../../gramophone/about/#les-capteurs-de-mouvements">ici</a>. </p>
 <p>Pour contrôler un paramètre d'un programme Faust avec un des axes de l'accéléromètre, il suffit d'utiliser la métadata <code>[acc: a b c d e]</code> dans la déclaration du nom du paramètre. <code>a</code> permet de choisir l'axe de l'accéléromètre (0 pour X, 1 pour Y et 2 pour Z). Par exemple, dans le programme pour Gramophone suivant :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -177,7 +176,6 @@ process = os.osc(freq)*gate;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/gesture/exfaust0/exfaust0.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p>le paramètre <code>freq</code> (fréquence) est contrôlé par l'axe X de l'accéléromètre (<code>acc: 0</code>). Lance ce programme sur le Gramophone et observe ce qui se passe. Pour qu'un son soit produit, il faut appuyer une fois sur le <a href="../../gramophone/about/#le-bouton-assignable">bouton assignable</a> du Gramophone. </p>
@@ -197,7 +195,6 @@ process = os.osc(freq)*gate;
 
 <p>Elles sont directement liées au paramètre <code>b</code> de l'accéléromètre. Dans l'exemple précédent, <code>b=0</code>, la valeur du paramètre évolue donc de manière croissante et linéaire le long de l'axe des X. Essaye de configurer <code>b=1</code> afin d'inverser l'orientation de l'accéléromètre :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -214,7 +211,6 @@ process = os.osc(freq)*gate;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/gesture/exfaust1/exfaust1.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p>Les courbes 2 et 3 présentent des comportements plus complexes. N'hésites pas à les essayer aussi !</p>
@@ -222,7 +218,6 @@ process = os.osc(freq)*gate;
 <p>Les paramètres <code>c</code>, <code>d</code> et <code>e</code> permettent de configurer l'accélération de référence du Gramophone pour différents points dans l'espace. Comme il s'agit de paramètres plus avancés, nous n'allons pas les détailler ici. </p>
 <p>Les paramètres d'un <code>hslider</code> jouent aussi un rôle important dans le comportement des accéléromètres. Dans les exemples précédents, la valeur initiale (1 050) du slider était toujours placée précisément entre la valeur minimale (100) et la valeur maximale (2 000) : <code>hslider("freq[acc: 0 1 -10 0 10]",1050,100,2000,0.01)</code>. La valeur initiale de <code>hslider</code> correspond toujours à la position centrale du Gramophone. Ainsi, si on la déplace plus ou moins près de la valeur maximale ou de la valeur minimale, on changera la comportement de l'accéléromètre. Par exemple, essaye de configurer la valeur initiale à 200 :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -239,14 +234,12 @@ process = os.osc(freq)*gate;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/gesture/exfaust2/exfaust2.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p>La hauteur du son évolue lentement de 100 à 200 Hz lorsque le Gramophone est placé à gauche, puis plus rapidement de 200 à 2 000 Hz lorsqu'il est placé à droite.</p>
 <h2 id="controler-plusieurs-parametres">Contrôler plusieurs paramètres</h2>
 <p>Plusieurs métadatas d'accéléromètre peuvent être déclarées en parallèle pour contrôler différents paramètres. Par exemple, il est possible d'ajouter un paramètre de contrôle du gain à notre synthétiseur précédent et de le contrôler avec l'axe des Y de l'accéléromètre :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -264,7 +257,6 @@ process = os.osc(freq)*gain*gate;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/gesture/exfaust3/exfaust3.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run --></div>
             </div>
         </div>

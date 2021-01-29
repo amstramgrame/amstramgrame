@@ -142,7 +142,6 @@
 <h2 id="tictac">TicTac</h2>
 <p>Pour rappel, le programme <a href="../../gramophone/programs/#tictac">TicTac</a> prend la forme suivante :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -167,12 +166,10 @@ ef.cubicnl(distDrive,0)*0.95;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/examples/exfaust0/exfaust0.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p>La dernière ligne <code>process</code> assemble les différents éléments de production du son. <code>os.lf_imptrain</code> produit des clics à intervalles réguliers (à une fréquence de <code>impFreq</code>). Essaye ce programme dans le Faust Web IDE pour entendre le son produit par cette fonction :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -186,12 +183,10 @@ process = os.lf_imptrain(impFreq);
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/examples/exfaust1/exfaust1.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p><code>fi.resonlp</code> est un filtre qui permet d'appliquer une hauteur aux clics produits par <code>os.lf_imptrain</code>. La hauteur des sons produits est déterminée par la fréquence <code>resFreq</code> du filtre. Le paramètre <code>q</code> du filtre détermine son "agressivité". Essaye ce programme dans le Faust Web IDE pour entendre l'effet de <code>fi.resonlp</code> sur <code>os.lf_imptrain</code> :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -207,7 +202,6 @@ process = os.lf_imptrain(impFreq) : fi.resonlp(resFreq,q,1);
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/examples/exfaust2/exfaust2.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p><code>ef.echo</code> est un écho  </p></div>

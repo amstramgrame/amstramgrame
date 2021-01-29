@@ -165,7 +165,6 @@
 
 <p>Reprenons le programme écrit dans <a href="../hello-world/">Hello World : mon premier programme Faust</a> implémentant une onde sinusoïdale contrôlée par un bouton et un potentiomètre :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -180,12 +179,10 @@ process = os.osc(freq)*on;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/hello-world-gramo/exfaust0/exfaust0.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p>Pour l'instant, supprimons le bouton car il bloquera le son au démarrage du Gramophone : </p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -199,7 +196,6 @@ process = os.osc(freq);
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/hello-world-gramo/exfaust1/exfaust1.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p>Dans le Faust Web IDE, clique sur le bouton Gramo :</p>
@@ -249,7 +245,6 @@ process = os.osc(freq);
 <p>pour activer le son lorsque l'on appuie dessus. Pour cela, il est nécessaire d'utiliser une "<a href="../../gramophone/about/#metadatas-de-programmation-du-gramophone">métadata</a>" dans le nom du paramètre du programme Faust permettant d'activer et de déactiver le son. La métadata correspondant au bouton assignable du Gramophone est : <code>[switch:1]</code>. Il suffit de placer cette dernière dans le nom du paramètre du programme Faust à contrôler :</p>
 <pre><code>on = button(&quot;on-off[switch:1]&quot;);
 </code></pre>
-
 <p>Ainsi, lorsque le bouton sur le Gramophone sera pressé, <code>on</code> sera égal à 1 et lorsqu'il ne sera pas pressé il sera égal à 0 !</p>
 <p>De la même manière, il est possible d'assigner le paramètre fréquence de notre programme Hello Word <a href="../../gramophone/about/#le-potentiometre-assignable">au potentiomètre à côté du bouton</a> :</p>
 <figure>
@@ -259,10 +254,8 @@ process = os.osc(freq);
 <p>en utilisant la <a href="../../gramophone/about/#le-potentiometre-assignable">métadata <code>[knob:2]</code></a> dans la déclaration du nom du paramètre <code>frequence</code> : </p>
 <pre><code>freq = hslider(&quot;frequence[knob:2]&quot;,440,20,3000,1);
 </code></pre>
-
 <p>Ton programme Faust devrait maintenant avoir la forme suivante :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -277,7 +270,6 @@ process = os.osc(freq)*on;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/hello-world-gramo/exfaust2/exfaust2.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p>Assure-toi que ton Gramophone est en mode programmation puis installe cette nouvelle version du programme Faust sur ton Gramophone simplement en appuyant sur le bouton "Gramo" dans le Faust Web IDE. <strong>Rien à faire du côté de l'application GramoLoader cette fois-ci à condition que tu enregistres le fichier <code>binary.zip</code> au même endroit que la dernière fois</strong>. Au bout d'une trentaine de secondes (et oui, lorsque l'on programme il faut être patient :) ), l'application GramoLoader devrait afficher "Programmation terminée". </p>
@@ -298,7 +290,6 @@ process = os.osc(freq)*on;
 <p>Tous les capteurs du Gramophone peuvent être utilisés pour contrôler n'importe quel paramètre d'un programme Faust. Dans cet exercice, essaye de contrôler la hauteur (fréquence) du son produit avec le capteur de lumière du Gramophone plutôt que le potentiomètre. La métadata correspondant au capteur de lumière est : <code>[knob:3]</code>.</p>
 <p>Le programme Faust correspondant devrait avoir la forme suivante :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -313,7 +304,6 @@ process = os.osc(freq)*on;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/hello-world-gramo/exfaust3/exfaust3.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run --></div>
             </div>
         </div>

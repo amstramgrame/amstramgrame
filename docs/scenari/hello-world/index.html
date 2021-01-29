@@ -185,7 +185,6 @@
 
 <p>Le programme Faust suivant produit une onde sinusoïdale :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -198,7 +197,6 @@ process = os.osc(440);
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/hello-world/exfaust0/exfaust0.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p>Clique sur le bouton "Éditer/exécuter le programme" ci-dessus et ce programme Faust devrait être ouvert dans le <a href="../../faust/ide/">Faust Web IDE</a>. Cet outil permet d'écrire du code Faust directement dans un navigateur web, d'entendre le son qu'il produit, puis de l'envoyer vers un Gramophone. D'une certaine manière, c'est une sorte "d'établi" pour luthier numérique. Ici pas de marteau ni de scie : la fabrication d'instruments de musique passe par le code. </p>
@@ -227,7 +225,6 @@ process = os.osc(440);
 <h3 id="ajouter-un-bouton-pour-activer-le-son">Ajouter un bouton pour activer le son</h3>
 <p>Commençons par le bouton : un bouton peut être créé en Faust avec <code>button("nom")</code> où <code>nom</code> est le nom du bouton. Cet élément est égal à 1 lorsqu'il est pressé et à 0 lorsqu'il ne l'est pas. Il suffit donc de le multiplier à <code>os.osc</code> (multiplier par 0 revient à supprimer le son de <code>os.osc</code> et multiplier par 1 à le laisser inchangé) :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -240,13 +237,11 @@ process = os.osc(440)*button(&quot;on-off&quot;);
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/hello-world/exfaust1/exfaust1.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p>Essaye ce programme dans le Faust Web IDE ! Un bouton devrait apparaître en bas de l'écran quand le code est exécuté. Appuie dessus pour observer son comportement.</p>
 <p>Afin de rendre ce programme plus propre, il est possible d'assigner notre bouton à une variable :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -260,14 +255,12 @@ process = os.osc(440)*on;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/hello-world/exfaust2/exfaust2.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p>Ici, <code>on</code> sera égal à 1 quand le bouton est pressé et à 0 quand il ne l'est pas. </p>
 <h3 id="ajouter-un-potentiometre-pour-controler-la-hauteur-du-son">Ajouter un potentiomètre pour contrôler la hauteur du son</h3>
 <p>Effectuons une opération similaire pour le paramètre fréquence de <code>os.osc</code> en lui assignant un potentiomètre. Cela est fait en Faust en utilisant l'objet <code>hslider("nom",a,b,c,d)</code> où <code>nom</code> est le nom du paramètre, <code>a</code> sa valeur initiale, <code>b</code> son minimum, <code>c</code> son maximum et <code>d</code> sa précision. Dans le cas du paramètre fréquence, <code>a</code> peut être égal à 440 puisqu'il s'agit de la valeur par défaut, <code>b</code> à 20 puisque c'est la fréquence la plus basse qui puisse être entendue par l'homme, <code>c</code> à 3 000 (pour ne pas trop nous casser les oreilles) et <code>d</code> à 1 pour que les valeurs changent de 1 en 1 (ce paramètre n'a pas vraiment d'importance dans le cas présent) :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -281,12 +274,10 @@ process = os.osc(hslider(&quot;frequence&quot;,440,20,3000,1))*on;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/hello-world/exfaust3/exfaust3.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <p>De la même manière que pour le bouton, le potentiomètre peut être placé dans une variable :</p>
 <!-- faust-run -->
-
 <div class="faust-run">
 
 <pre><code>
@@ -301,7 +292,6 @@ process = os.osc(freq)*on;
 <a href="https://faustide.grame.fr/?mode=amstram&code=https://www.amstramgrame.fr/scenari/hello-world/exfaust4/exfaust4.dsp" target="editor">
 <button type="button" class="btn btn-primary">Éditer/exécuter le programme >></button></a>
 </div>
-
 <!-- /faust-run -->
 
 <h2 id="quelques-points-importants-a-savoir">Quelques points importants à savoir</h2>
