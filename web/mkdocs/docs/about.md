@@ -14,6 +14,10 @@ Projet adapté à toutes les disciplines (ex. mathématiques, physique, technolo
 
 ## Les ateliers
 
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p3j9la8pzGU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
 En classe, les ateliers sont menés conjointement par un médiateur pédagogique Canopé et un artiste/scientifique Grame. Ils sont basés sur des scénarii pédagogiques courts et modulables, préalablement élaborés par les partenaires en lien avec les programmes scolaires. Chaque scénario a une approche soit artistique, soit scientifique, soit les deux. Le projet nécessite l'utilisation d'ordinateurs pour accéder au site web Amstramgrame, qui permet de construire des instruments de musique en ligne, avec quelques lignes de code, et de programmer les gramophones/smartphones. Les élèves expérimentent ensuite le contrôle gestuel de leurs instruments et imaginent des situations (performances musicales ou dansées, installations) en lien avec la lutherie numérique créée.
 
 ## Les partenaires
