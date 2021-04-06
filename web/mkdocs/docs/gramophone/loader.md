@@ -31,6 +31,8 @@ L'application GramoLoader est téléchargeable gratuitement depuis ce site et es
 
 Sous Windows, GramoLoader se présente sous la forme d'un fichier `.exe`. Ce dernier peut être placé n'importe où sur l'ordinateur. Il suffit de le lancer pour démarrer l'application.
 
+**En cas de problème :** Il peut arriver sur certains Mac que le Gramophone ne soit pas reconnu (ex. le GramoLoader affiche un message indiquant qu'il est impossible de se connecter au Gramophone). Cela est probablement dû au fait que le driver USB correspondant n'est pas installé. Dans ce cas, installer [le driver](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) devrait résoudre le problème. 
+
 ### MacOS
 
 [**>> Télécharger GramoLoader pour MacOS <<**](https://github.com/amstramgrame/amstramgrame/raw/master/gramophone/autoloader/bin/macos/GramoLoaderMac.zip)
