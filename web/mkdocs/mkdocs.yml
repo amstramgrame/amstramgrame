@@ -27,7 +27,7 @@ theme:
 #The available installed themes are: mkdocs, readthedocs, cinder, cosmo, flatly, spacelab, united, yeti
 
 site_dir: ../../docs
-
+site_url: https://www.amstramgrame.fr
 
 extra:
     social:
