@@ -40,18 +40,18 @@ Le tutoriel [Programmer le Gramophone](programming.md) donne plus de détails su
 
 ### Démarrage du Gramophone
 
-Le Gramophone abrite un interrupteur qui permet de le démarrer et de l'arrêter. Cet interrupteur a trois positions pour sélectionner le mode de fonctionnement :
+Le Gramophone abrite un interrupteur en métal qui permet de le démarrer et de l'arrêter. Cet interrupteur a trois positions pour sélectionner le mode de fonctionnement :
 
 * en position centrale, le Gramophone est en [mode neutre](#mode-neutre) ;
-* lorsqu'il est enclenché à gauche (en direction du [bouton de contrôle du volume](#controle-du-volume)), le Gramophone est démarré en [mode programmation](#mode-programmation) ;
-* lorsqu'il est enclenché à droite (dans la direction opposée du [bouton de contrôle du volume](#controle-du-volume)), le Gramophone est démarré en [mode batterie](#mode-batterie). 
+* lorsqu'il est enclenché en direction du [bouton de contrôle du volume](#controle-du-volume), le Gramophone est démarré en [mode programmation](#mode-programmation) ;
+* lorsqu'il est enclenché dans la direction opposée du [bouton de contrôle du volume](#controle-du-volume), le Gramophone est démarré en [mode batterie](#mode-batterie). 
 
 <figure>
 <img src="img/gramo-switch.jpg" class="mx-auto d-block" width=80%">
 <center><figcaption>L'interrupteur de démarrage du Gramophone</figcaption></center>
 </figure>
 
-**Typiquement, le [mode programmation](#mode-programmation) est utilisé pour programmer le Gramophone avec l'application [GramoLoader](loader.md), le [mode neutre](#mode-neutre) permet de lancer le Gramophone lorsqu'il est connecté à l'ordinateur en USB, le [mode batterie](#mode-batterie) permet de jouer du Gramophone sans le connecter à l'ordinateur et de charger la batterie.**
+**Typiquement, le [mode neutre](#mode-neutre) permet de lancer le Gramophone lorsqu'il est connecté à l'ordinateur en USB et de le programmer avec l’application Gramoloader. Le [mode programmation](#mode-programmation) est un mode "debug" qui permet de forcer un programme dans le Gramophone si le mode neutre ne fonctionne pas. Le [mode batterie](#mode-batterie) permet de jouer du Gramophone sans le connecter à l'ordinateur et de charger la batterie.**
 
 #### Mode Neutre
 
@@ -66,24 +66,20 @@ Le mode Neutre est recommandé pour l'exécution d'un programme Faust lorsque le
 
 #### Mode Programmation
 
-Le mode Programmation (interrupteur en position gauche) permet de forcer la programmation d'un Gramophone depuis le [Faust Web IDE](../faust/ide.md) ou le [Faust Playground](../faust/playground.md) via l'application [GramoLoader](loader.md). Si un programme Faust a du mal à être installé en mode Neutre, le mode Programmation devrait résoudre le problème. 
+Le mode Programmation (interrupteur en direction du bouton de contrôle du volume) permet de forcer la programmation d'un Gramophone depuis le [Faust Web IDE](../faust/ide.md) ou le [Faust Playground](../faust/playground.md) via l'application [GramoLoader](loader.md). Si un programme Faust a du mal à être installé en mode Neutre, le mode Programmation devrait résoudre le problème. 
 
 #### Mode Batterie
 
-Le mode Batterie (interrupteur en position droite) permet de :
+Le mode Batterie (interrupteur en position à l'opposé du bouton de contrôle du volume) permet de :
 
 * faire fonctionner le Gramophone sur la batterie ;
 * charger la batterie du Gramophone si celui-ci est connecté à un port USB.
-
-**Il est nécessaire de presser/appuyer sur [la molette de changement de programme](#passer-dun-programme-a-lautre) pour acter le lancement du premier programme Faust installé sur le Gramophone :**
 
 <figure>
 <img src="img/gramo-start.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
-On met donc d'abord le Gramophone en mode Batterie puis on appuie plusieurs fois sur le bouton de lancement du programme.
-
-**Il est important de remettre l'interrupteur en mode Neutre après avoir terminé de jouer si on ne veut pas vider la batterie !**
+**Après avoir mis l’interrupteur à l’opposé du bouton de contrôle du volume, il faut attendre quelque secondes et presser/appuyer sur la molette plate. Cela permet de lancer le programme. Si cela a fonctionné, tu devrais entendre un petit son "Poc !" qui sort du Gramophone, et tu devrais pouvoir apercevoir une lumière rouge depuis l’intérieur du Gramophone, en regardant par la prise USB. Si la manipulation n'a pas fonctionné, tu peux appuyer à nouveau sur la molette. Il est important de remettre l’interrupteur en mode neutre (position centrale) après avoir terminé de jouer si on ne veut pas vider la batterie !**
 
 ### Tenir le Gramophone
 
@@ -240,6 +236,7 @@ Pour charger la batterie du Gramophone, il suffit de le brancher à un chargeur 
 
 L'autonomie du Gramophone dépend de la complexité du programme exécuté, de la santé de la batterie, et du temps de charge. Il faut compter environ deux heures pour une charge complète. 
 
+<!--
 ### Passer d'un programme à l'autre
 
 Plusieurs programmes Faust peuvent être installés sur un seul Gramophone. Pour passer d'un programme à un autre, il suffit de tourner la molette noire placée en bas du Gramophone :
@@ -249,6 +246,7 @@ Plusieurs programmes Faust peuvent être installés sur un seul Gramophone. Pour
 </figure>
 
 Les programmes sont sélectionnés en boucle. Lorsque le Gramophone est démarré en [mode Neutre](#mode-neutre) ou en [mode Batterie](#mode-batterie), le premier programme est toujours sélectionné. Pour passer au deuxième programme, il suffit de tourner la molette vers la droite. Pour revenir en arrière, il faut la tourner vers la gauche. Une fois arrivé au dernier programme, tourner la molette vers la droite fait automatiquement revenir au premier programme, etc.
+-->
 
 ## Métadatas de programmation du Gramophone
 

@@ -15,11 +15,13 @@ Le [Faust Web IDE](../faust/ide.md) et le [Faust Playground](../faust/playground
 <center><figcaption>Programmation du Gramophone</figcaption></center>
 </figure>
 
-Pour que cela fonctionne, il est nécessaire que le Gramophone soit connecté à l'ordinateur avec un câble USB et [qu'il soit mis en mode programmation](about.md#mode-programmation).
+Pour que cela fonctionne (ou en mode programmation si le mode neutre ne fonctionne pas), il est nécessaire que le Gramophone soit connecté à l'ordinateur avec un câble USB et [qu'il soit mis en mode programmation](about.md#mode-programmation).
 
-Une fois sélectionné, toute nouvelle version de `binary.zip` étant téléchargée sur l'ordinateur sera automatiquement envoyée au Gramophone. **L'application GramoLoader doit évidemment rester ouverte pour que cela fonctionne.**
+Une fois sélectionné, toute nouvelle version de `binary.zip` étant téléchargée sur l'ordinateur sera automatiquement envoyée au Gramophone. **L'application GramoLoader doit rester ouverte pour que cela fonctionne.**
 
 Le bouton "Réessayer" permet de réinitialiser l'envoi de `binary.zip` au Gramophone. Le bouton "QUITTER" permet de quitter l'application.
+
+**Attention:** Avant de générer un nouveau fichier `binary.zip`, il faut d'abord supprimer l'ancien. Sinon, le nouveau fichier s'appellera `binary(1).zip` et ne fonctionnera pas sur le GramoLoader. Le fichier utilisé doit donc obligatoirement s'appeler `binary.zip`.
 
 ## Téléchargement/Installation
 
@@ -31,7 +33,7 @@ L'application GramoLoader est téléchargeable gratuitement depuis ce site et es
 
 Sous Windows, GramoLoader se présente sous la forme d'un fichier `.exe`. Ce dernier peut être placé n'importe où sur l'ordinateur. Il suffit de le lancer pour démarrer l'application.
 
-**En cas de problème :** Il peut arriver sur certains Mac que le Gramophone ne soit pas reconnu (ex. le GramoLoader affiche un message indiquant qu'il est impossible de se connecter au Gramophone). Cela est probablement dû au fait que le driver USB correspondant n'est pas installé. Dans ce cas, installer [le driver](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) devrait résoudre le problème. 
+**En cas de problème :** Il peut arriver sur certains ordinateurs sous Windows que le Gramophone ne soit pas reconnu (ex. le GramoLoader affiche un message indiquant qu'il est impossible de se connecter au Gramophone). Cela est probablement dû au fait que le driver USB correspondant n'est pas installé. Dans ce cas, installer [le driver](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) devrait résoudre le problème. 
 
 ### MacOS
 
