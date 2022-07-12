@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        
+        <link rel="canonical" href="https://www.amstramgrame.fr/gramophone/loader/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title> Le GramoLoader  - Amstramgrame</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -170,15 +170,16 @@
 <center><figcaption>Programmation du Gramophone</figcaption></center>
 </figure>
 
-<p>Pour que cela fonctionne, il est nécessaire que le Gramophone soit connecté à l'ordinateur avec un câble USB et <a href="../about/#mode-programmation">qu'il soit mis en mode programmation</a>.</p>
-<p>Une fois sélectionné, toute nouvelle version de <code>binary.zip</code> étant téléchargée sur l'ordinateur sera automatiquement envoyée au Gramophone. <strong>L'application GramoLoader doit évidemment rester ouverte pour que cela fonctionne.</strong></p>
+<p>Pour que cela fonctionne (ou en mode programmation si le mode neutre ne fonctionne pas), il est nécessaire que le Gramophone soit connecté à l'ordinateur avec un câble USB et <a href="../about/#mode-programmation">qu'il soit mis en mode programmation</a>.</p>
+<p>Une fois sélectionné, toute nouvelle version de <code>binary.zip</code> étant téléchargée sur l'ordinateur sera automatiquement envoyée au Gramophone. <strong>L'application GramoLoader doit rester ouverte pour que cela fonctionne.</strong></p>
 <p>Le bouton "Réessayer" permet de réinitialiser l'envoi de <code>binary.zip</code> au Gramophone. Le bouton "QUITTER" permet de quitter l'application.</p>
+<p><strong>Attention:</strong> Avant de générer un nouveau fichier <code>binary.zip</code>, il faut d'abord supprimer l'ancien. Sinon, le nouveau fichier s'appellera <code>binary(1).zip</code> et ne fonctionnera pas sur le GramoLoader. Le fichier utilisé doit donc obligatoirement s'appeler <code>binary.zip</code>.</p>
 <h2 id="telechargementinstallation">Téléchargement/Installation</h2>
 <p>L'application GramoLoader est téléchargeable gratuitement depuis ce site et est disponible pour Windows, MacOS et Linux.</p>
 <h3 id="windows">Windows</h3>
 <p><a href="https://github.com/amstramgrame/amstramgrame/raw/master/gramophone/autoloader/bin/windows/GramoLoader.exe"><strong>&gt;&gt; Télécharger GramoLoader pour Windows &lt;&lt;</strong></a></p>
 <p>Sous Windows, GramoLoader se présente sous la forme d'un fichier <code>.exe</code>. Ce dernier peut être placé n'importe où sur l'ordinateur. Il suffit de le lancer pour démarrer l'application.</p>
-<p><strong>En cas de problème :</strong> Il peut arriver sur certains Mac que le Gramophone ne soit pas reconnu (ex. le GramoLoader affiche un message indiquant qu'il est impossible de se connecter au Gramophone). Cela est probablement dû au fait que le driver USB correspondant n'est pas installé. Dans ce cas, installer <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers">le driver</a> devrait résoudre le problème. </p>
+<p><strong>En cas de problème :</strong> Il peut arriver sur certains ordinateurs sous Windows que le Gramophone ne soit pas reconnu (ex. le GramoLoader affiche un message indiquant qu'il est impossible de se connecter au Gramophone). Cela est probablement dû au fait que le driver USB correspondant n'est pas installé. Dans ce cas, installer <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers">le driver</a> devrait résoudre le problème. </p>
 <h3 id="macos">MacOS</h3>
 <p><a href="https://github.com/amstramgrame/amstramgrame/raw/master/gramophone/autoloader/bin/macos/GramoLoaderMac.zip"><strong>&gt;&gt; Télécharger GramoLoader pour MacOS &lt;&lt;</strong></a></p>
 <p><a href="https://github.com/amstramgrame/amstramgrame/raw/master/gramophone/autoloader/bin/macos/GramoLoaderMac14.zip"><strong>&gt;&gt; Télécharger GramoLoader pour MacOS 10.14 &lt;&lt;</strong></a> (Version temporaire résolvant un bug)</p>

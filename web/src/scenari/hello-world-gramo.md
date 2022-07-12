@@ -41,7 +41,7 @@ Dans le Faust Web IDE, clique sur le bouton Gramo :
 <img src="img/ide-gramo.jpg" class="mx-auto d-block" width="100%">
 </figure>
 
-Une roue devrait se mettre à tourner à gauche du bouton. Cette opération prend généralement une quinzaine de secondes (pas besoin de rappuyer sur le bouton, ça n'ira pas plus vite, il faut être patient ;) ). 
+Une roue devrait se mettre à tourner à gauche du bouton. Cette opération prend généralement une quinzaine de secondes (pas besoin de rappuyer sur le bouton, ça n'ira pas plus vite, il faut être patient). 
 
 Une fois terminé, le téléchargement d'un fichier appelé `binary.zip` devrait être lancé, rappelle-toi de l'emplacement dans lequel tu décides de l'enregistrer. 
 
@@ -127,7 +127,7 @@ Assure-toi que ton Gramophone est en mode programmation puis installe cette nouv
 
 Mets maintenant ton Gramophone en [mode neutre](../gramophone/about.md#mode-neutre) pour lancer le programme. Appuie sur le bouton en haut du Gramophone et essaye de tourner le potentiomètre assignable en même temps. Si aucun son n'est produit, assure-toi que le potentiomètre de contrôle du volume du son n'est pas à 0.
 
-Maintenant amuse-toi bien et casse les oreilles de ton prof ;).  
+Maintenant amuse-toi bien et casse les oreilles de ton prof.  
 
 ## Faire fonctionner le Gramophone en mode batterie
 
@@ -145,7 +145,7 @@ Pour en savoir plus sur les différents modes de fonctionnement du Gramophone, n
 
 ## Tenir le Gramophone
 
-Comme tout instrument de musique, le Gramophone ne se tient pas n'importe comment ;). Pour apprendre à tenir le Gramophone correctement, lis [cette section](../gramophone/about.md#tenir-le-gramophone).
+Comme tout instrument de musique, le Gramophone ne se tient pas n'importe comment. Pour apprendre à tenir le Gramophone correctement, lis [cette section](../gramophone/about.md#tenir-le-gramophone).
 
 ## Exercice : contrôler la hauteur du son avec le capteur de lumière
 

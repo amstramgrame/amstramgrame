@@ -2,19 +2,19 @@
 
 Imaginé par [Grame](http://www.grame.fr) et [Réseau Canopé](https://www.reseau-canope.fr/), Amstramgrame est un projet pédagogique arts & sciences réunissant ateliers et outils à destination de la communauté éducative permettant une mise en application concrète de concepts scientifiques parfois abstraits en utilisant la création sonore et la programmation informatique comme vecteurs.
 
-Le projet s'appuie sur [le langage de programmation Faust](faust/about.md) créé et développé par Grame depuis 15 ans et reconnu comme un standard dans le domaine du traitement du signal en temps réel pour l'audio. Ainsi le projet Am Stram Grame comprend :
+Le projet s'appuie sur [le langage de programmation Faust](faust/about.md) créé et développé par Grame depuis 15 ans et reconnu comme un standard dans le domaine du traitement du signal en temps réel pour l'audio. Ainsi le projet Amstramgrame comprend :
 
-* Une plateforme web (ce site, en l'occurrence) intégrant un espace créatif de programmation informatique pour apprendre à construire son propre instrument de musique en ligne, des scenarii pédagogiques téléchargeables, des partitions prêtes-à-l'emploi et une offre de formation à destination des enseignants (Éducation nationale, écoles de musiques, conservatoires, etc.).
+* Une plateforme web (ce site, en l'occurrence) intégrant un espace créatif de programmation informatique pour apprendre à construire son propre instrument de musique en ligne, des scenarii pédagogiques téléchargeable et une offre de formation à destination des enseignants (Éducation nationale, écoles de musiques, conservatoires, etc.).
 * Des mallettes d'expérimentation contenant des [Gramophones](gramophone/about.md) permettant de rendre tangibles les paramètres virtuels d’un programme informatique sur la synthèse de son.
 * Des ateliers avec des artistes pluridisciplinaires.
 
 ## Le public
 
-Projet adapté à toutes les disciplines (ex. mathématiques, physique, technologie, musique, français, EPS, etc.), à tous les niveaux d'âge (du cycle primaire au secondaire) et accessible aussi bien aux élèves inscrits dans un parcours d'enseignement musical, qu'à ceux sans aucun enseignement artistique.
+Amstramgrame est un projet adapté à toutes les disciplines (ex. mathématiques, physique, technologie, musique, français, EPS, etc.), à tous les niveaux d'âge (du cycle primaire au secondaire) et accessible aussi bien aux élèves inscrits dans un parcours d'enseignement musical, qu'à ceux sans aucun enseignement artistique.
 
 ## Les ateliers
 
-En classe, les ateliers sont menés conjointement par un médiateur pédagogique Canopé et un artiste/scientifique Grame. Ils sont basés sur des scénarii pédagogiques courts et modulables, préalablement élaborés par les partenaires en lien avec les programmes scolaires. Chaque scénario a une approche soit artistique, soit scientifique, soit les deux. Le projet nécessite l'utilisation d'ordinateurs pour accéder au site web Amstramgrame, qui permet de construire des instruments de musique en ligne, avec quelques lignes de code, et de programmer les gramophones/smartphones. Les élèves expérimentent ensuite le contrôle gestuel de leurs instruments et imaginent des situations (performances musicales ou dansées, installations) en lien avec la lutherie numérique créée.
+En classe, les ateliers sont menés par un artiste intervenant de GRAME. Les thématiques et disciplines abordées sont élaborées par les différents partenaires du projet, en lien avec les programmes scolaires. Chaque projet a une approche soit scientifique, soit artistique, ou les deux à la fois. Le projet nécessite l'utilisation d'ordinateurs pour accéder au site web Amstramgrame, qui permet de construire des instruments de musique en ligne, avec quelques lignes de code, et de programmer les gramophones/smartphones. Les élèves expérimentent ensuite le contrôle gestuel de leurs instruments et imaginent des situations (performances musicales ou dansées, installations) en lien avec la lutherie numérique créée.
 
 ## Les partenaires
 

@@ -8,7 +8,7 @@ Faust a été spécialement conçu pour programmer (synthétiser) et manipuler (
 
 ## Faust, c'est quoi ?
 
-En termes purement scientifiques, Faust est "un langage de programmation pour le traitement du signal en temps réel". Dit autrement, c'est un langage fait pour programmer des sons et les produire de manière instantanée. Faust est issu d'une longue lignée de langage de programmation spécialement conçus pour le domaine de la musique. Il peut être utilisé directement en ligne à travers la plateforme [Faust Web IDE](ide.md) ([https://faustide.grame.fr](https://faustide.grame.fr)) ou en [l'installant sur sa machine](https://github.com/grame-cncm/faust) (cette option s'adresse à des programmeurs expérimentés).
+En termes purement scientifiques, Faust est "un langage de programmation pour le traitement du signal en temps réel". Dit autrement, c'est un langage fait pour programmer des sons et les produire de manière instantanée. Faust est issu d'une longue lignée de langage de programmation spécialement conçus pour le domaine de la musique. Il peut être utilisé directement en ligne à travers la plateforme [Faust Web IDE](ide.md) ([https://faustide.grame.fr](https://faustide.grame.fr)) ou en [l'installant sur sa machine](https://github.com/grame-cncm/faust) (cette option s'adresse à des programmeurs expérimentés), mais aussi grâce au [Faust PlayGround](https://amstramgrame.github.io/faustplayground/), une version simplifiée du Faust Web IDE destinée aux débutants.
 
 Un programme Faust peut potentiellement être très court et ne faire que quelques lignes :
 

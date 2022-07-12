@@ -4,7 +4,7 @@ Le [Faust Web IDE](https://faustide.grame.fr/?mode=amstram) (accessible sur <htt
 
 ## Lancer le Faust Web IDE
 
-Bien que le Faust Web IDE soit compatible avec la plupart des navigateurs web, il est fortement recommandé d'utiliser Google Chrome ou Mozilla Firefox. Dans le cas où [MIDI](https://fr.wikipedia.org/wiki/Musical_Instrument_Digital_Interface) serait nécessaire pour le programme Faust, seul Google Chrome fonctionnera (la norme MIDI n'étant pas supportée dans Firefox).
+Bien que le Faust Web IDE soit compatible avec la plupart des navigateurs web, il est fortement recommandé d'utiliser Mozilla Firefox. Dans le cas où [MIDI](https://fr.wikipedia.org/wiki/Musical_Instrument_Digital_Interface) serait nécessaire pour le programme Faust, seul Google Chrome fonctionnera (la norme MIDI n'étant pas supportée dans Firefox).
 
 Trois versions du Faust Web IDE sont disponibles pour les utilisateurs du projet Amstramgrame :
 
@@ -38,7 +38,7 @@ La zone en dessous de l'éditeur de code affiche le diagramme ou l'interface uti
 <img src="img/ide-diagram.jpg" class="mx-auto d-block" width="100%">
 </figure>
 
-Notez que le Faust Web IDE est en anglais. La programmation informatique étant généralement effectuée dans cette langue, le Faust Web IDE ne déroge pas à cette règle :). 
+Notez que le Faust Web IDE est en anglais. La programmation informatique étant généralement effectuée dans cette langue, le Faust Web IDE ne déroge pas à cette règle. 
 
 ## Produire du son
 
@@ -92,4 +92,4 @@ Avant de pouvoir exécuter ce nouveau programme, il est nécessaire de le sélec
 
 À noter que l'onglet "Exemples" au-dessus de la zone d'édition du code donne accès à des dizaines d'exemples de programme Faust. De la même manière, n'importe quel programme Faust disponible en local sur la machine peut être "glissé" dans le Faust Web IDE. 
 
-D'autre fonctionnalités sont accessibles dans le menu de gauche du Faust Web IDE. N'hésitez pas à les découvrir par vous-même :). 
+D'autre fonctionnalités sont accessibles dans le menu de gauche du Faust Web IDE. N'hésitez pas à les découvrir par vous-même ! 
