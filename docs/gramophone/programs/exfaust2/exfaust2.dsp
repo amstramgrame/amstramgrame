@@ -1,15 +1,56 @@
 
+declare name            "Whale";
+declare version         "1.0";
+declare author          "Johann Philippe";
+declare license         "MIT";
+declare copyright       "(c) Johann Philippe 2022";
+
+/*
+    A simple gliding filtered sawtooth synthesizer with different echoes
+*/
+
 import("stdfaust.lib");
 
-// parameters
-gate = button("gate[switch:1]");
-pressure = hslider("pressure[acc: 0 1 -10 0 10]",0.5,0,1,0.01);
-reed = hslider("reed[knob:3]",0.5,0,1,0.01) : si.smooth(0.99);
-bell = hslider("bell[acc: 2 0 -10 0 10]",0.5,0,1,0.01) : si.smooth(0.99);
-tube = hslider("note[knob:2]",60,40,70,3) : ba.midikey2hz : pm.f2l : si.smooth(0.99);
+line(time, sig) = res
+letrec {
+	'changed = (sig' != sig) | (time' != time);
+	'steps = ma.SR * time;
+	'cntup = ba.countup(steps ,changed);  
+	'diff = ( sig - res);
+	'inc = diff / steps 
+        : ba.sAndH(changed);
+	'res = res, res + inc 
+        : select2(cntup <  steps);
+};
 
-// additional mappings
-pres = gate*pressure : si.smooth(0.99);
+mpulse(smps_dur, trig) = pulsation
+with {
+    count = ba.countdown(smps_dur, trig);
+    pulsation = 0, 1 
+        : select2(count > 0);
+};
+mpulse_dur(duration, trig) = mpulse(ba.sec2samp(duration), trig);
 
-process = pm.clarinetModel(tube,pres,reed,bell); 
+// Controls
+freq = hslider("freq[acc: 1 0 -10 0 10]", 1000, 400, 2000, 1) 
+    : si.smoo;
+rel = hslider("release[acc: 0 0 -10 0 10]", 0.5, 0.5, 3, 0.01);
+trig = button("trig[switch:1]");
+amp = hslider("amp", 0.05, 0, 1, 0.01) 
+    : si.smoo;
+
+ATQ = 0.5;
+env = trig 
+    : mpulse_dur(ATQ) 
+    : en.are(ATQ, rel);
+
+synt = os.sawtooth(freq) 
+    : fi.resonbp(freq, 10, 0.5) 
+    : fi.fbcombfilter(64, 32, 0.5) 
+    : fi.bandstop(2, 1100, 1600)  *(env); 
+
+echoed = synt 
+    : ef.echo(1, 0.12, 0.75);
+
+process = (synt + echoed * 0.6) * amp;
 
