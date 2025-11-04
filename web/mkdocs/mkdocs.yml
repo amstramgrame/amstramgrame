@@ -1,6 +1,6 @@
 site_name: Amstramgrame
 site_description: Plateforme web du projet Amstramgrame.
-copyright: Copyright &copy; 2020 <a href="http://www.grame.fr">Grame-CNCM</a> & <a href="https://www.reseau-canope.fr/">Réseau Canopé</a>
+copyright: Copyright &copy; 2020-2025 <a href="https://www.grame.fr">Grame-CNCM</a> & <a href="https://www.reseau-canope.fr/">Réseau Canopé</a>
 nav:
     - Tutos:
       - ' Hello World : mon premier programme Faust ' : scenari/hello-world.md
