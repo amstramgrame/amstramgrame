@@ -5,9 +5,9 @@ function makeFaust(code, i) {
 	folder = IMG"/"current;
 	dsp = folder"/"current".dsp";
 	svg = current"/"current".svg";
-	cmd = "[ -d " DOCROOT"/"folder " ] || mkdir -p " DOCROOT"/"folder;
-	system (cmd);
-	print code > DOCROOT"/"dsp;
+	cmd = "[ -d " DOCROOT "/" folder " ] || mkdir -p " DOCROOT "/" folder;
+	system(cmd);
+	print code > (DOCROOT "/" dsp);
 	print "<div class=\"faust-run\">"
 	print "~~~";
 	print code;
@@ -49,5 +49,4 @@ END {
 /<!-- faust-run -->/	{ 
 	INFAUST = 1;
 }
-
 

@@ -39,9 +39,14 @@ $ make build
 ~~~~~~~~~~~~~~~~
 The web site will be available from the `docs` folder at the root of the `faustdoc` folder
 
+If you do not have write access to the shared `docs` folder (for instance when working in a sandboxed environment), you can override the output directory while keeping the same workflow:
+~~~~~~~~~~~~~~~~
+$ SITE_DIR=site make build
+~~~~~~~~~~~~~~~~
+This stores the French documentation in `web/mkdocs/site`. The English documentation will be generated in `web/mkdocs/site/en` unless you explicitly set `SITE_DIR_EN`.
+
 
 More details on the build process:
 ~~~~~~~~~~~~~~~~
 $ make help
 ~~~~~~~~~~~~~~~~
-

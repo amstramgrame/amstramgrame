@@ -5,26 +5,20 @@ AWK		?= awk
 MKDIR    := mkdocs
 DOCDIR   := $(MKDIR)/docs
 FAUSTDIR ?= ../../../faust
+EXDIR    ?= ../../examples
 
-UNAME := $(shell uname)
-
-MAXDEPTH := '-d'
-ifeq ($(UNAME), Linux)
-MAXDEPTH := '-maxdepth'
-endif
-
-SRC   	 := $(shell find src -name "*.md")
+SRC   	 := $(shell [ -d src ] && find src -name "*.md" -print || printf "")
 MD   	 := $(SRC:src/%=$(DOCDIR)/%)
-DSP   	 := $(shell find $(DOCDIR) -name "*.dsp" | grep -v mix4.dsp )
-SVGDIRS  := $(shell find $(DOCDIR) -type d -name "exfaust*")
+DSP   	 := $(shell [ -d "$(DOCDIR)" ] && find "$(DOCDIR)" -name "*.dsp" ! -name "mix4.dsp" -print || printf "")
+SVGDIRS  := $(shell [ -d "$(DOCDIR)" ] && find $(DOCDIR) -type d -name "exfaust*" -print || printf "")
 SVG   	 := $(DSP:%.dsp=%.svg)
 
-EXSRC    := $(shell find $(EXDIR) $(MAXDEPTH) 1 -type d | sort -f | grep -v old)
+EXSRC    := $(shell [ -d "$(EXDIR)" ] && ls -1d $(EXDIR)/*/ 2>/dev/null | sed 's:/*$$::' | sort -f | grep -v old || printf "")
 EXLIST   := $(EXSRC:$(EXDIR)/%=%)
 EXOUT    := $(GEN:%=%.md)
 
 
-GENERATED := $(shell find $(DOCDIR) -type d -name "exfaust*")
+GENERATED := $(shell [ -d "$(DOCDIR)" ] && find $(DOCDIR) -type d -name "exfaust*" -print || printf "")
 #TOOLS    := $(wildcard $(FAUSTDIR)/tools/faust2appls/faust2*)
 IGNORED := "atomsnippets|dummy|faust2eps|firefox|graph|jackinternal|javaswing|mathviewer|faust2md|octave|owl|faust2pdf|faust2png|faust2pure|faust2ros|faust2sig|supercollider|faust2svg|faust2teensy|faust2vst|faust2w32|faust2w64|faust2winunity"
 TOOLS    := $(shell find $(FAUSTDIR)/tools/faust2appls -name "faust2*" | egrep -v $(IGNORED) | sort)
@@ -61,7 +55,7 @@ test:
 ####################################################################
 build:
 	$(MAKE) all
-	cd $(MKDIR) && mkdocs build
+	cd $(MKDIR) && if [ -n "$(SITE_DIR)" ]; then mkdocs build --site-dir "$(SITE_DIR)"; else mkdocs build; fi
 	
 serve:
 	@echo "you can browse the site at http://localhost:8000"
