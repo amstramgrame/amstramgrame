@@ -1,6 +1,11 @@
 
 MAKE 	?= make
+
+ifeq ($(origin AWK), undefined)
+AWK := $(strip $(shell command -v gawk 2>/dev/null || command -v awk 2>/dev/null || echo awk))
+endif
 AWK		?= awk
+AWK_ENV ?= LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
 MKDIR    := mkdocs
 DOCDIR   := $(MKDIR)/docs
@@ -86,7 +91,7 @@ md : $(MD)
 $(DOCDIR)/%.md:src/%.md 
 	@echo ========= building $<
 	@[ -d $(DOCDIR)/$* ] | mkdir -p $(DOCDIR)/$*
-	cat $< | $(AWK) -f scripts/faustcode.awk IMG=$* DOCROOT=$(DOCDIR) > $@
+	$(AWK_ENV) $(AWK) -f scripts/faustcode.awk IMG=$* DOCROOT=$(DOCDIR) < $< > $@
 
 svg : $(SVG)
 %.svg:%.dsp
