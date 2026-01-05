@@ -51,4 +51,4 @@ ainsi que des ses lieux partenaires :
 
 ## Support technique
 
-Adressez vos questions d'ordre technique à : [transmission@grame.fr](mailto:transmission@grame.fr).
+Adressez vos questions d'ordre technique à : [mediation@grame.fr](mailto:mediation@grame.fr).
