@@ -5,3 +5,5 @@ gramophone/autoloader/src/GramoLoader.spec
 thoughts.md
 gramophone/case/stl
 .DS_Store
+/docs
+/site

@@ -26,7 +26,7 @@ theme:
   navigation_depth: 4
 #The available installed themes are: mkdocs, readthedocs, cinder, cosmo, flatly, spacelab, united, yeti
 
-site_dir: ../../docs
+site_dir: ../../site
 site_url: https://www.amstramgrame.fr
 
 extra:

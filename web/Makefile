@@ -68,7 +68,6 @@ build:
 	$(MAKE) all
 	cd $(MKDIR) && if [ -n "$(SITE_DIR)" ]; then mkdocs build --site-dir "$(SITE_DIR)"; else mkdocs build; fi
 	if [ -n "$(SITE_DIR_EN)" ]; then cd en && SITE_DIR="$(SITE_DIR_EN)" $(MAKE) build; else cd en && $(MAKE) build; fi
-	if [ -z "$(SITE_DIR)" ]; then git checkout ../docs/CNAME; fi
 	
 serve:
 	@echo "you can browse the site at http://localhost:8000"
